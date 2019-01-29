@@ -1,2 +1,4 @@
 /target
 **/*.rs.bk
+
+src/web/node_modules/*
