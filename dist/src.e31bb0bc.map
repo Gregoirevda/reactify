@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AACAA,OAAO,CAACC,GAAR,CAAY,QAAZ;AACA","file":"src.e31bb0bc.map","sourceRoot":"../src","sourcesContent":["import { main } from './lib.rs'; \nconsole.log(\"logged\");\nmain();\n"]}

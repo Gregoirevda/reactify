@@ -1,0 +1,15 @@
+{
+  "name": "reactify",
+  "collaborators": [
+    "Grégoire Van der Auwermeulen <gregoirevandera@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "reactify_bg.wasm",
+    "reactify.js",
+    "reactify.d.ts"
+  ],
+  "module": "reactify.js",
+  "types": "reactify.d.ts",
+  "sideEffects": "false"
+}
