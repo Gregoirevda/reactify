@@ -70,7 +70,7 @@ fn render(v_element: VElement, parent_dom: &web_sys::Element) -> Result<(), JsVa
 
             // Add attributes
             for (name, value) in props {
-                if isListener(&name) {
+                if is_listener(&name) {
                     let callback = js_sys::Function::new_no_args(&value);
                     dom.add_event_listener_with_callback(&name.to_lowercase()[2..], &callback); 
                 } else {
@@ -122,16 +122,7 @@ fn id(name: &str) -> (String, String) {
     ("id".to_string(), name.to_string())
 }
 
-
-fn on_click(js_fn: String) -> (String, String) {
-    ("onClick".to_string(), js_fn)
-}
-
-fn id(name: &str) -> (String, String) {
-    ("id".to_string(), name.to_string())
-}
-
 // Helper functions
-fn isListener(attribute_name: &str) -> bool {
+fn is_listener(attribute_name: &str) -> bool {
     attribute_name.starts_with("on")
 }
