@@ -4528,3 +4528,2790 @@ Jan 29 15:00:30.756 INFO Building the wasm bindings...
 Jan 29 15:00:30.839 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
 Jan 29 15:00:30.840 INFO Done in 0 seconds.
 Jan 29 15:00:30.840 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 15:52:45.358 INFO Running build command...
+Jan 29 15:52:45.360 INFO Checking rustc version...
+Jan 29 15:52:45.453 INFO rustc version is 31.
+Jan 29 15:52:45.454 INFO Checking crate configuration...
+Jan 29 15:52:45.454 INFO Crate is correctly configured.
+Jan 29 15:52:45.454 INFO Adding wasm-target...
+Jan 29 15:52:45.543 INFO Adding wasm-target was successful.
+Jan 29 15:52:45.544 INFO Building wasm...
+Jan 29 15:52:46.255 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `:` or `@`, found `,`
+  --> src/lib.rs:37:22
+   |
+37 |     fn div(attributes, _children) {
+   |                      ^ expected one of `:` or `@` here
+
+error: expected one of `:` or `@`, found `)`
+  --> src/lib.rs:37:33
+   |
+37 |     fn div(attributes, _children) {
+   |                                 ^ expected one of `:` or `@` here
+
+error: expected type, found `"div"`
+  --> src/lib.rs:44:20
+   |
+44 |             type_: "div",
+   |                    ^^^^^ expecting a type here because of type ascription
+
+error: expected one of `.`, `;`, `?`, or an operator, found `}`
+  --> src/lib.rs:48:5
+   |
+47 |         }    
+   |          - expected one of `.`, `;`, `?`, or an operator here
+48 |     }
+   |     ^ unexpected token
+
+error: expected one of: `_`, `box`, `-`, literal, parentheses, `&`, square brackets
+
+error: aborting due to 5 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 15:53:19.599 INFO Running build command...
+Jan 29 15:53:19.600 INFO Checking rustc version...
+Jan 29 15:53:19.649 INFO rustc version is 31.
+Jan 29 15:53:19.650 INFO Checking crate configuration...
+Jan 29 15:53:19.650 INFO Crate is correctly configured.
+Jan 29 15:53:19.650 INFO Adding wasm-target...
+Jan 29 15:53:19.734 INFO Adding wasm-target was successful.
+Jan 29 15:53:19.734 INFO Building wasm...
+Jan 29 15:53:21.063 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected type, found `"div"`
+  --> src/lib.rs:44:20
+   |
+44 |             type_: "div",
+   |                    ^^^^^ expecting a type here because of type ascription
+
+error: expected one of `.`, `;`, `?`, or an operator, found `}`
+  --> src/lib.rs:48:5
+   |
+47 |         }    
+   |          - expected one of `.`, `;`, `?`, or an operator here
+48 |     }
+   |     ^ unexpected token
+
+error[E0412]: cannot find type `VEleemnt` in this scope
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+             found type `[_; 0]`
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `VElement`
+             found type `()`
+
+error: aborting due to 5 previous errors
+
+Some errors occurred: E0308, E0412.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 15:53:54.272 INFO Running build command...
+Jan 29 15:53:54.274 INFO Checking rustc version...
+Jan 29 15:53:54.324 INFO rustc version is 31.
+Jan 29 15:53:54.325 INFO Checking crate configuration...
+Jan 29 15:53:54.325 INFO Crate is correctly configured.
+Jan 29 15:53:54.325 INFO Adding wasm-target...
+Jan 29 15:53:54.409 INFO Adding wasm-target was successful.
+Jan 29 15:53:54.409 INFO Building wasm...
+Jan 29 15:53:55.298 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `.`, `;`, `?`, or an operator, found `}`
+  --> src/lib.rs:48:5
+   |
+47 |         }    
+   |          - expected one of `.`, `;`, `?`, or an operator here
+48 |     }
+   |     ^ unexpected token
+
+error[E0412]: cannot find type `VEleemnt` in this scope
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+             found type `[_; 0]`
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `VElement`
+             found type `()`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0412.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 15:53:58.820 INFO Running build command...
+Jan 29 15:53:58.821 INFO Checking rustc version...
+Jan 29 15:53:58.875 INFO rustc version is 31.
+Jan 29 15:53:58.875 INFO Checking crate configuration...
+Jan 29 15:53:58.875 INFO Crate is correctly configured.
+Jan 29 15:53:58.876 INFO Adding wasm-target...
+Jan 29 15:53:58.955 INFO Adding wasm-target was successful.
+Jan 29 15:53:58.955 INFO Building wasm...
+Jan 29 15:53:59.922 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0412]: cannot find type `VEleemnt` in this scope
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+             found type `[_; 0]`
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `VElement`
+             found type `()`
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `std::string::String`
+             found type `&'static str`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0412.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 15:54:21.900 INFO Running build command...
+Jan 29 15:54:21.901 INFO Checking rustc version...
+Jan 29 15:54:21.949 INFO rustc version is 31.
+Jan 29 15:54:21.949 INFO Checking crate configuration...
+Jan 29 15:54:21.950 INFO Crate is correctly configured.
+Jan 29 15:54:21.950 INFO Adding wasm-target...
+Jan 29 15:54:22.034 INFO Adding wasm-target was successful.
+Jan 29 15:54:22.035 INFO Building wasm...
+Jan 29 15:54:22.737 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  |
+  = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+             found type `[_; 0]`
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `std::vec::Vec<VElement>`
+             found type `[_; 0]`
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `VElement`
+             found type `()`
+
+error[E0599]: no method named `length` found for type `std::vec::Vec<VElement>` in the current scope
+
+error[E0308]: mismatched types
+  |
+  = note: expected type `std::string::String`
+             found type `&'static str`
+
+error: aborting due to 5 previous errors
+
+Some errors occurred: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 16:51:32.045 INFO Running build command...
+Jan 29 16:51:32.063 INFO Checking rustc version...
+Jan 29 16:51:32.136 INFO rustc version is 32.
+Jan 29 16:51:32.136 INFO Checking crate configuration...
+Jan 29 16:51:32.136 INFO Crate is correctly configured.
+Jan 29 16:51:32.136 INFO Adding wasm-target...
+Jan 29 16:51:32.285 INFO Adding wasm-target was successful.
+Jan 29 16:51:32.287 INFO Building wasm...
+Jan 29 16:51:51.067 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 16:51:51.068 INFO Creating a pkg directory...
+Jan 29 16:51:51.068 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 16:51:51.068 INFO Writing a package.json...
+Jan 29 16:51:51.069 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 16:51:51.069 INFO Copying readme from crate...
+Jan 29 16:51:51.069 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 16:51:51.070 INFO Identifying wasm-bindgen dependency...
+Jan 29 16:51:51.123 INFO Installing wasm-bindgen-cli...
+Jan 29 16:51:51.146 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 16:51:51.146 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 16:51:51.147 INFO Getting the crate name from the manifest...
+Jan 29 16:51:51.147 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 16:51:51.147 INFO Building the wasm bindings...
+Jan 29 16:51:51.211 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 16:51:51.211 INFO Done in 19 seconds.
+Jan 29 16:51:51.212 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 16:53:33.529 INFO Running build command...
+Jan 29 16:53:33.530 INFO Checking rustc version...
+Jan 29 16:53:33.586 INFO rustc version is 32.
+Jan 29 16:53:33.586 INFO Checking crate configuration...
+Jan 29 16:53:33.586 INFO Crate is correctly configured.
+Jan 29 16:53:33.586 INFO Adding wasm-target...
+Jan 29 16:53:33.664 INFO Adding wasm-target was successful.
+Jan 29 16:53:33.664 INFO Building wasm...
+Jan 29 16:53:34.365 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:50:25
+   |
+50 |     let v_element = div([], []);
+   |                         ^^ expected slice, found array of 0 elements
+   |
+   = note: expected type `[std::collections::HashMap<std::string::String, std::string::String>]`
+              found type `[_; 0]`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:50:29
+   |
+50 |     let v_element = div([], []);
+   |                             ^^ expected slice, found array of 0 elements
+   |
+   = note: expected type `[VElement]`
+              found type `[_; 0]`
+
+error[E0277]: the size for values of type `[std::collections::HashMap<std::string::String, std::string::String>]` cannot be known at compilation time
+  --> src/lib.rs:50:21
+   |
+50 |     let v_element = div([], []);
+   |                     ^^^ doesn't have a size known at compile-time
+   |
+   = help: the trait `std::marker::Sized` is not implemented for `[std::collections::HashMap<std::string::String, std::string::String>]`
+   = note: to learn more, visit <https://doc.rust-lang.org/book/second-edition/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+   = note: all function arguments must have a statically known size
+   = help: unsized locals are gated as an unstable feature
+
+error[E0277]: the size for values of type `[VElement]` cannot be known at compilation time
+  --> src/lib.rs:50:21
+   |
+50 |     let v_element = div([], []);
+   |                     ^^^ doesn't have a size known at compile-time
+   |
+   = help: the trait `std::marker::Sized` is not implemented for `[VElement]`
+   = note: to learn more, visit <https://doc.rust-lang.org/book/second-edition/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+   = note: all function arguments must have a statically known size
+   = help: unsized locals are gated as an unstable feature
+
+error[E0277]: the size for values of type `[std::collections::HashMap<std::string::String, std::string::String>]` cannot be known at compilation time
+  --> src/lib.rs:37:12
+   |
+37 |     fn div(attributes: [HashMap<String, String>], _children: [VElement]) -> VElement {
+   |            ^^^^^^^^^^ doesn't have a size known at compile-time
+   |
+   = help: the trait `std::marker::Sized` is not implemented for `[std::collections::HashMap<std::string::String, std::string::String>]`
+   = note: to learn more, visit <https://doc.rust-lang.org/book/second-edition/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+   = note: all local variables must have a statically known size
+   = help: unsized locals are gated as an unstable feature
+
+error[E0277]: the size for values of type `[VElement]` cannot be known at compilation time
+  --> src/lib.rs:37:51
+   |
+37 |     fn div(attributes: [HashMap<String, String>], _children: [VElement]) -> VElement {
+   |                                                   ^^^^^^^^^ doesn't have a size known at compile-time
+   |
+   = help: the trait `std::marker::Sized` is not implemented for `[VElement]`
+   = note: to learn more, visit <https://doc.rust-lang.org/book/second-edition/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+   = note: all local variables must have a statically known size
+   = help: unsized locals are gated as an unstable feature
+
+error: aborting due to 6 previous errors
+
+Some errors occurred: E0277, E0308.
+For more information about an error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:22:20.935 INFO Running build command...
+Jan 29 17:22:20.937 INFO Checking rustc version...
+Jan 29 17:22:21.010 INFO Running build command...
+Jan 29 17:22:21.014 INFO Checking rustc version...
+Jan 29 17:22:21.018 INFO rustc version is 32.
+Jan 29 17:22:21.018 INFO Checking crate configuration...
+Jan 29 17:22:21.019 INFO Crate is correctly configured.
+Jan 29 17:22:21.019 INFO Adding wasm-target...
+Jan 29 17:22:21.022 INFO Running build command...
+Jan 29 17:22:21.024 INFO Checking rustc version...
+Jan 29 17:22:21.095 INFO rustc version is 32.
+Jan 29 17:22:21.095 INFO Checking crate configuration...
+Jan 29 17:22:21.096 INFO Crate is correctly configured.
+Jan 29 17:22:21.096 INFO Adding wasm-target...
+Jan 29 17:22:21.103 INFO rustc version is 32.
+Jan 29 17:22:21.104 INFO Checking crate configuration...
+Jan 29 17:22:21.104 INFO Crate is correctly configured.
+Jan 29 17:22:21.104 INFO Adding wasm-target...
+Jan 29 17:22:21.170 INFO Adding wasm-target was successful.
+Jan 29 17:22:21.170 INFO Building wasm...
+Jan 29 17:22:21.236 INFO Adding wasm-target was successful.
+Jan 29 17:22:21.236 INFO Building wasm...
+Jan 29 17:22:21.254 INFO Adding wasm-target was successful.
+Jan 29 17:22:21.254 INFO Building wasm...
+Jan 29 17:22:22.929 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:22:22.929 INFO Creating a pkg directory...
+Jan 29 17:22:22.929 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:22:22.930 INFO Writing a package.json...
+Jan 29 17:22:22.930 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:22:22.930 INFO Copying readme from crate...
+Jan 29 17:22:22.931 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:22.931 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:22:23.000 INFO Installing wasm-bindgen-cli...
+Jan 29 17:22:23.020 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:22:23.021 INFO Creating a pkg directory...
+Jan 29 17:22:23.021 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:22:23.021 INFO Writing a package.json...
+Jan 29 17:22:23.021 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:22:23.022 INFO Copying readme from crate...
+Jan 29 17:22:23.022 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:23.022 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:22:23.035 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:22:23.036 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:22:23.036 INFO Getting the crate name from the manifest...
+Jan 29 17:22:23.037 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:22:23.037 INFO Building the wasm bindings...
+Jan 29 17:22:23.106 INFO Installing wasm-bindgen-cli...
+Jan 29 17:22:23.111 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:22:23.111 INFO Creating a pkg directory...
+Jan 29 17:22:23.111 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:22:23.111 INFO Writing a package.json...
+Jan 29 17:22:23.112 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:22:23.112 INFO Copying readme from crate...
+Jan 29 17:22:23.112 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:23.112 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:22:23.127 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:22:23.127 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:22:23.128 INFO Getting the crate name from the manifest...
+Jan 29 17:22:23.128 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:22:23.128 INFO Building the wasm bindings...
+Jan 29 17:22:23.132 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:23.133 INFO Done in 2 seconds.
+Jan 29 17:22:23.133 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:23.183 INFO Installing wasm-bindgen-cli...
+Jan 29 17:22:23.201 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:22:23.201 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:22:23.201 INFO Getting the crate name from the manifest...
+Jan 29 17:22:23.202 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:22:23.202 INFO Building the wasm bindings...
+Jan 29 17:22:23.212 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:23.212 INFO Done in 2 seconds.
+Jan 29 17:22:23.212 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:23.276 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:22:23.277 INFO Done in 2 seconds.
+Jan 29 17:22:23.277 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:24:32.833 INFO Running build command...
+Jan 29 17:24:32.835 INFO Checking rustc version...
+Jan 29 17:24:32.923 INFO rustc version is 32.
+Jan 29 17:24:32.923 INFO Checking crate configuration...
+Jan 29 17:24:32.924 INFO Crate is correctly configured.
+Jan 29 17:24:32.924 INFO Adding wasm-target...
+Jan 29 17:24:33.007 INFO Adding wasm-target was successful.
+Jan 29 17:24:33.008 INFO Building wasm...
+Jan 29 17:24:34.411 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:56:9
+   |
+53 |     fn id(name: &str) {
+   |                       - help: try adding a return type: `-> std::collections::HashMap<&str, std::string::String>`
+...
+56 |         attribute
+   |         ^^^^^^^^^ expected (), found struct `std::collections::HashMap`
+   |
+   = note: expected type `()`
+              found type `std::collections::HashMap<&str, std::string::String>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:24:53.165 INFO Running build command...
+Jan 29 17:24:53.166 INFO Checking rustc version...
+Jan 29 17:24:53.229 INFO rustc version is 32.
+Jan 29 17:24:53.229 INFO Checking crate configuration...
+Jan 29 17:24:53.229 INFO Crate is correctly configured.
+Jan 29 17:24:53.230 INFO Adding wasm-target...
+Jan 29 17:24:53.322 INFO Adding wasm-target was successful.
+Jan 29 17:24:53.323 INFO Building wasm...
+Jan 29 17:24:54.125 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:56:9
+   |
+53 |     fn id(name: &str) -> HashMap<String, String> {
+   |                          ----------------------- expected `std::collections::HashMap<std::string::String, std::string::String>` because of return type
+...
+56 |         attribute
+   |         ^^^^^^^^^ expected struct `std::string::String`, found &str
+   |
+   = note: expected type `std::collections::HashMap<std::string::String, _>`
+              found type `std::collections::HashMap<&str, _>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:25:34.096 INFO Running build command...
+Jan 29 17:25:34.097 INFO Checking rustc version...
+Jan 29 17:25:34.144 INFO rustc version is 32.
+Jan 29 17:25:34.144 INFO Checking crate configuration...
+Jan 29 17:25:34.145 INFO Crate is correctly configured.
+Jan 29 17:25:34.145 INFO Adding wasm-target...
+Jan 29 17:25:34.223 INFO Adding wasm-target was successful.
+Jan 29 17:25:34.223 INFO Building wasm...
+Jan 29 17:25:34.723 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0596]: cannot borrow `attribute` as mutable, as it is not declared as mutable
+  --> src/lib.rs:55:9
+   |
+54 |         let attribute = HashMap::new();
+   |             --------- help: consider changing this to be mutable: `mut attribute`
+55 |         attribute.insert("id".to_string(), name.to_string());
+   |         ^^^^^^^^^ cannot borrow as mutable
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0596`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:25:41.724 INFO Running build command...
+Jan 29 17:25:41.725 INFO Checking rustc version...
+Jan 29 17:25:41.777 INFO rustc version is 32.
+Jan 29 17:25:41.777 INFO Checking crate configuration...
+Jan 29 17:25:41.778 INFO Crate is correctly configured.
+Jan 29 17:25:41.778 INFO Adding wasm-target...
+Jan 29 17:25:41.855 INFO Adding wasm-target was successful.
+Jan 29 17:25:41.856 INFO Building wasm...
+Jan 29 17:25:43.063 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:25:43.063 INFO Creating a pkg directory...
+Jan 29 17:25:43.063 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:25:43.064 INFO Writing a package.json...
+Jan 29 17:25:43.064 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:25:43.064 INFO Copying readme from crate...
+Jan 29 17:25:43.064 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:25:43.065 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:25:43.110 INFO Installing wasm-bindgen-cli...
+Jan 29 17:25:43.136 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:25:43.137 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:25:43.137 INFO Getting the crate name from the manifest...
+Jan 29 17:25:43.137 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:25:43.138 INFO Building the wasm bindings...
+Jan 29 17:25:43.198 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:25:43.198 INFO Done in 1 second.
+Jan 29 17:25:43.198 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:26:01.756 INFO Running build command...
+Jan 29 17:26:01.757 INFO Checking rustc version...
+Jan 29 17:26:01.803 INFO rustc version is 32.
+Jan 29 17:26:01.803 INFO Checking crate configuration...
+Jan 29 17:26:01.803 INFO Crate is correctly configured.
+Jan 29 17:26:01.803 INFO Adding wasm-target...
+Jan 29 17:26:01.883 INFO Adding wasm-target was successful.
+Jan 29 17:26:01.883 INFO Building wasm...
+Jan 29 17:26:02.337 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:59:28
+   |
+59 |     let v_element = div(&[ id("container")], &[]);
+   |                            ^^^^^^^^^^^^^^^ expected fn pointer, found struct `std::collections::HashMap`
+   |
+   = note: expected type `fn() -> (std::string::String, std::string::String)`
+              found type `std::collections::HashMap<std::string::String, std::string::String>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:26:08.396 INFO Running build command...
+Jan 29 17:26:08.397 INFO Checking rustc version...
+Jan 29 17:26:08.451 INFO rustc version is 32.
+Jan 29 17:26:08.451 INFO Checking crate configuration...
+Jan 29 17:26:08.451 INFO Crate is correctly configured.
+Jan 29 17:26:08.451 INFO Adding wasm-target...
+Jan 29 17:26:08.527 INFO Adding wasm-target was successful.
+Jan 29 17:26:08.528 INFO Building wasm...
+Jan 29 17:26:09.041 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:59:27
+   |
+59 |     let v_element = div(&[id("container")], &[]);
+   |                           ^^^^^^^^^^^^^^^ expected fn pointer, found struct `std::collections::HashMap`
+   |
+   = note: expected type `fn() -> (std::string::String, std::string::String)`
+              found type `std::collections::HashMap<std::string::String, std::string::String>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:26:47.203 INFO Running build command...
+Jan 29 17:26:47.204 INFO Checking rustc version...
+Jan 29 17:26:47.254 INFO rustc version is 32.
+Jan 29 17:26:47.254 INFO Checking crate configuration...
+Jan 29 17:26:47.254 INFO Crate is correctly configured.
+Jan 29 17:26:47.255 INFO Adding wasm-target...
+Jan 29 17:26:47.341 INFO Adding wasm-target was successful.
+Jan 29 17:26:47.342 INFO Building wasm...
+Jan 29 17:26:47.917 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:40:20
+   |
+40 |             props: props,
+   |                    ^^^^^ expected struct `std::collections::HashMap`, found reference
+   |
+   = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+              found type `&[std::collections::HashMap<std::string::String, std::string::String>]`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:28:42.279 INFO Running build command...
+Jan 29 17:28:42.281 INFO Checking rustc version...
+Jan 29 17:28:42.332 INFO rustc version is 32.
+Jan 29 17:28:42.333 INFO Checking crate configuration...
+Jan 29 17:28:42.333 INFO Crate is correctly configured.
+Jan 29 17:28:42.333 INFO Adding wasm-target...
+Jan 29 17:28:42.415 INFO Adding wasm-target was successful.
+Jan 29 17:28:42.415 INFO Building wasm...
+Jan 29 17:28:43.116 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `props` in this scope
+  --> src/lib.rs:41:13
+   |
+41 |             props.insert(name, value);
+   |             ^^^^^ not found in this scope
+
+error[E0425]: cannot find value `props` in this scope
+  --> src/lib.rs:46:20
+   |
+46 |             props: props,
+   |                    ^^^^^ not found in this scope
+
+error[E0308]: mismatched types
+  --> src/lib.rs:56:27
+   |
+56 |     let v_element = div(&[id("container")], &[]);
+   |                           ^^^^^^^^^^^^^^^ expected struct `std::collections::HashMap`, found tuple
+   |
+   = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+              found type `(std::string::String, std::string::String)`
+
+error[E0618]: expected function, found `&std::collections::HashMap<std::string::String, std::string::String>`
+  --> src/lib.rs:40:33
+   |
+39 |         for prop_fn in array_prop {
+   |             ------- `&std::collections::HashMap<std::string::String, std::string::String>` defined here
+40 |             let (name, value) = prop_fn();
+   |                                 ^^^^^^^--
+   |                                 |
+   |                                 call expression requires function
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425, E0618.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:30:14.542 INFO Running build command...
+Jan 29 17:30:14.544 INFO Checking rustc version...
+Jan 29 17:30:14.599 INFO rustc version is 32.
+Jan 29 17:30:14.599 INFO Checking crate configuration...
+Jan 29 17:30:14.599 INFO Crate is correctly configured.
+Jan 29 17:30:14.599 INFO Adding wasm-target...
+Jan 29 17:30:14.680 INFO Adding wasm-target was successful.
+Jan 29 17:30:14.680 INFO Building wasm...
+Jan 29 17:30:15.166 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused import: `std::collections::HashMap`
+ --> src/lib.rs:6:5
+  |
+6 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+error[E0106]: missing lifetime specifier
+  --> src/lib.rs:28:12
+   |
+28 |     props: &[(String, String)],
+   |            ^ expected lifetime parameter
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0106`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:30:57.362 INFO Running build command...
+Jan 29 17:30:57.364 INFO Checking rustc version...
+Jan 29 17:30:57.433 INFO rustc version is 32.
+Jan 29 17:30:57.434 INFO Checking crate configuration...
+Jan 29 17:30:57.434 INFO Crate is correctly configured.
+Jan 29 17:30:57.434 INFO Adding wasm-target...
+Jan 29 17:30:57.518 INFO Adding wasm-target was successful.
+Jan 29 17:30:57.519 INFO Building wasm...
+Jan 29 17:30:57.954 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused import: `std::collections::HashMap`
+ --> src/lib.rs:6:5
+  |
+6 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+error[E0277]: the size for values of type `[(std::string::String, std::string::String)]` cannot be known at compilation time
+  --> src/lib.rs:28:5
+   |
+28 |     props: [(String, String)],
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+   |
+   = help: the trait `std::marker::Sized` is not implemented for `[(std::string::String, std::string::String)]`
+   = note: to learn more, visit <https://doc.rust-lang.org/book/second-edition/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+   = note: only the last field of a struct may have a dynamically sized type
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:31:06.703 INFO Running build command...
+Jan 29 17:31:06.704 INFO Checking rustc version...
+Jan 29 17:31:06.759 INFO rustc version is 32.
+Jan 29 17:31:06.760 INFO Checking crate configuration...
+Jan 29 17:31:06.760 INFO Crate is correctly configured.
+Jan 29 17:31:06.760 INFO Adding wasm-target...
+Jan 29 17:31:06.835 INFO Adding wasm-target was successful.
+Jan 29 17:31:06.835 INFO Building wasm...
+Jan 29 17:31:07.239 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused import: `std::collections::HashMap`
+ --> src/lib.rs:6:5
+  |
+6 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+error[E0106]: missing lifetime specifier
+  --> src/lib.rs:28:12
+   |
+28 |     props: &[(String, String)],
+   |            ^ expected lifetime parameter
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0106`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:32:03.151 INFO Running build command...
+Jan 29 17:32:03.152 INFO Checking rustc version...
+Jan 29 17:32:03.200 INFO rustc version is 32.
+Jan 29 17:32:03.201 INFO Checking crate configuration...
+Jan 29 17:32:03.201 INFO Crate is correctly configured.
+Jan 29 17:32:03.202 INFO Adding wasm-target...
+Jan 29 17:32:03.281 INFO Adding wasm-target was successful.
+Jan 29 17:32:03.282 INFO Building wasm...
+Jan 29 17:32:03.926 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `props` in this scope
+  --> src/lib.rs:41:13
+   |
+41 |             props.insert(name, value);
+   |             ^^^^^ did you mean `prop`?
+
+error[E0425]: cannot find value `props` in this scope
+  --> src/lib.rs:46:20
+   |
+46 |             props: props,
+   |                    ^^^^^ not found in this scope
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0425`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:32:32.694 INFO Running build command...
+Jan 29 17:32:32.695 INFO Checking rustc version...
+Jan 29 17:32:32.742 INFO rustc version is 32.
+Jan 29 17:32:32.742 INFO Checking crate configuration...
+Jan 29 17:32:32.743 INFO Crate is correctly configured.
+Jan 29 17:32:32.743 INFO Adding wasm-target...
+Jan 29 17:32:32.827 INFO Adding wasm-target was successful.
+Jan 29 17:32:32.828 INFO Building wasm...
+Jan 29 17:32:33.368 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:47:20
+   |
+47 |             props: props,
+   |                    ^^^^^ expected struct `std::string::String`, found reference
+   |
+   = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+              found type `std::collections::HashMap<&std::string::String, &std::string::String>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:34:41.812 INFO Running build command...
+Jan 29 17:34:41.813 INFO Checking rustc version...
+Jan 29 17:34:41.869 INFO rustc version is 32.
+Jan 29 17:34:41.869 INFO Checking crate configuration...
+Jan 29 17:34:41.869 INFO Crate is correctly configured.
+Jan 29 17:34:41.869 INFO Adding wasm-target...
+Jan 29 17:34:41.964 INFO Adding wasm-target was successful.
+Jan 29 17:34:41.964 INFO Building wasm...
+Jan 29 17:34:42.550 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:49:20
+   |
+49 |             props: props,
+   |                    ^^^^^ expected struct `std::string::String`, found reference
+   |
+   = note: expected type `std::collections::HashMap<std::string::String, std::string::String>`
+              found type `std::collections::HashMap<&std::string::String, &std::string::String>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:36:56.890 INFO Running build command...
+Jan 29 17:36:56.891 INFO Checking rustc version...
+Jan 29 17:36:56.939 INFO rustc version is 32.
+Jan 29 17:36:56.939 INFO Checking crate configuration...
+Jan 29 17:36:56.940 INFO Crate is correctly configured.
+Jan 29 17:36:56.940 INFO Adding wasm-target...
+Jan 29 17:36:57.020 INFO Adding wasm-target was successful.
+Jan 29 17:36:57.021 INFO Building wasm...
+Jan 29 17:36:58.004 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:36:58.005 INFO Creating a pkg directory...
+Jan 29 17:36:58.005 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:36:58.005 INFO Writing a package.json...
+Jan 29 17:36:58.006 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:36:58.006 INFO Copying readme from crate...
+Jan 29 17:36:58.006 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:36:58.007 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:36:58.052 INFO Installing wasm-bindgen-cli...
+Jan 29 17:36:58.069 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:36:58.069 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:36:58.070 INFO Getting the crate name from the manifest...
+Jan 29 17:36:58.070 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:36:58.070 INFO Building the wasm bindings...
+Jan 29 17:36:58.124 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:36:58.124 INFO Done in 1 second.
+Jan 29 17:36:58.124 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:38:04.528 INFO Running build command...
+Jan 29 17:38:04.529 INFO Checking rustc version...
+Jan 29 17:38:04.580 INFO rustc version is 32.
+Jan 29 17:38:04.580 INFO Checking crate configuration...
+Jan 29 17:38:04.580 INFO Crate is correctly configured.
+Jan 29 17:38:04.580 INFO Adding wasm-target...
+Jan 29 17:38:04.657 INFO Adding wasm-target was successful.
+Jan 29 17:38:04.657 INFO Building wasm...
+Jan 29 17:38:05.681 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:38:05.682 INFO Creating a pkg directory...
+Jan 29 17:38:05.682 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:38:05.682 INFO Writing a package.json...
+Jan 29 17:38:05.683 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:38:05.683 INFO Copying readme from crate...
+Jan 29 17:38:05.683 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:38:05.683 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:38:05.727 INFO Installing wasm-bindgen-cli...
+Jan 29 17:38:05.740 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:38:05.741 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:38:05.741 INFO Getting the crate name from the manifest...
+Jan 29 17:38:05.741 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:38:05.741 INFO Building the wasm bindings...
+Jan 29 17:38:05.795 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:38:05.795 INFO Done in 1 second.
+Jan 29 17:38:05.796 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:39:41.977 INFO Running build command...
+Jan 29 17:39:41.978 INFO Checking rustc version...
+Jan 29 17:39:42.033 INFO rustc version is 32.
+Jan 29 17:39:42.033 INFO Checking crate configuration...
+Jan 29 17:39:42.033 INFO Crate is correctly configured.
+Jan 29 17:39:42.034 INFO Adding wasm-target...
+Jan 29 17:39:42.117 INFO Adding wasm-target was successful.
+Jan 29 17:39:42.118 INFO Building wasm...
+Jan 29 17:39:42.897 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find function `div` in this scope
+  --> src/lib.rs:58:21
+   |
+58 |     let v_element = div(
+   |                     ^^^ not found in this scope
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0425`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:45:16.554 INFO Running build command...
+Jan 29 17:45:16.555 INFO Checking rustc version...
+Jan 29 17:45:16.647 INFO rustc version is 32.
+Jan 29 17:45:16.647 INFO Checking crate configuration...
+Jan 29 17:45:16.647 INFO Crate is correctly configured.
+Jan 29 17:45:16.647 INFO Adding wasm-target...
+Jan 29 17:45:16.731 INFO Adding wasm-target was successful.
+Jan 29 17:45:16.732 INFO Building wasm...
+Jan 29 17:45:17.384 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `,`, `:`, or `@`, found `children`
+  --> src/lib.rs:54:27
+   |
+54 |     let div = |array_prop children| primitive_component("div", array_prop, children);
+   |                           ^^^^^^^^ expected one of `,`, `:`, or `@` here
+
+error: expected `,`
+  --> src/lib.rs:54:27
+   |
+54 |     let div = |array_prop children| primitive_component("div", array_prop, children);
+   |                           ^^^^^^^^
+
+error: aborting due to 2 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:45:23.830 INFO Running build command...
+Jan 29 17:45:23.831 INFO Checking rustc version...
+Jan 29 17:45:23.880 INFO rustc version is 32.
+Jan 29 17:45:23.880 INFO Checking crate configuration...
+Jan 29 17:45:23.880 INFO Crate is correctly configured.
+Jan 29 17:45:23.880 INFO Adding wasm-target...
+Jan 29 17:45:23.959 INFO Adding wasm-target was successful.
+Jan 29 17:45:23.959 INFO Building wasm...
+Jan 29 17:45:25.183 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:54:58
+   |
+54 |     let div = |array_prop, children| primitive_component("div", array_prop, children);
+   |                                                          ^^^^^
+   |                                                          |
+   |                                                          expected struct `std::string::String`, found reference
+   |                                                          help: try using a conversion method: `"div".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:45:54.940 INFO Running build command...
+Jan 29 17:45:54.941 INFO Checking rustc version...
+Jan 29 17:45:54.992 INFO rustc version is 32.
+Jan 29 17:45:54.992 INFO Checking crate configuration...
+Jan 29 17:45:54.992 INFO Crate is correctly configured.
+Jan 29 17:45:54.992 INFO Adding wasm-target...
+Jan 29 17:45:55.067 INFO Adding wasm-target was successful.
+Jan 29 17:45:55.068 INFO Building wasm...
+Jan 29 17:45:56.371 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:45:56.371 INFO Creating a pkg directory...
+Jan 29 17:45:56.371 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:45:56.371 INFO Writing a package.json...
+Jan 29 17:45:56.372 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:45:56.372 INFO Copying readme from crate...
+Jan 29 17:45:56.372 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:45:56.372 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:45:56.417 INFO Installing wasm-bindgen-cli...
+Jan 29 17:45:56.445 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:45:56.446 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:45:56.446 INFO Getting the crate name from the manifest...
+Jan 29 17:45:56.446 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:45:56.446 INFO Building the wasm bindings...
+Jan 29 17:45:56.522 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:45:56.522 INFO Done in 1 second.
+Jan 29 17:45:56.523 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:47:02.653 INFO Running build command...
+Jan 29 17:47:02.654 INFO Checking rustc version...
+Jan 29 17:47:02.706 INFO rustc version is 32.
+Jan 29 17:47:02.706 INFO Checking crate configuration...
+Jan 29 17:47:02.706 INFO Crate is correctly configured.
+Jan 29 17:47:02.707 INFO Adding wasm-target...
+Jan 29 17:47:02.785 INFO Adding wasm-target was successful.
+Jan 29 17:47:02.785 INFO Building wasm...
+Jan 29 17:47:03.268 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:64:18
+   |
+64 |             span([], [])
+   |                  ^^
+   |                  |
+   |                  expected reference, found array of 0 elements
+   |                  help: consider borrowing here: `&[]`
+   |
+   = note: expected type `&[(std::string::String, std::string::String)]`
+              found type `[_; 0]`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:64:22
+   |
+64 |             span([], [])
+   |                      ^^
+   |                      |
+   |                      expected &[VElement], found array of 0 elements
+   |                      help: consider borrowing here: `&[]`
+   |
+   = note: expected type `&[VElement]`
+              found type `[_; 0]`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:47:11.946 INFO Running build command...
+Jan 29 17:47:11.947 INFO Checking rustc version...
+Jan 29 17:47:12.000 INFO rustc version is 32.
+Jan 29 17:47:12.001 INFO Checking crate configuration...
+Jan 29 17:47:12.001 INFO Crate is correctly configured.
+Jan 29 17:47:12.001 INFO Adding wasm-target...
+Jan 29 17:47:12.078 INFO Adding wasm-target was successful.
+Jan 29 17:47:12.078 INFO Building wasm...
+Jan 29 17:47:13.285 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:47:13.285 INFO Creating a pkg directory...
+Jan 29 17:47:13.285 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:47:13.285 INFO Writing a package.json...
+Jan 29 17:47:13.286 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:47:13.286 INFO Copying readme from crate...
+Jan 29 17:47:13.286 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:47:13.286 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:47:13.354 INFO Installing wasm-bindgen-cli...
+Jan 29 17:47:13.375 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:47:13.375 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:47:13.376 INFO Getting the crate name from the manifest...
+Jan 29 17:47:13.376 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:47:13.376 INFO Building the wasm bindings...
+Jan 29 17:47:13.458 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:47:13.459 INFO Done in 1 second.
+Jan 29 17:47:13.459 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:47:56.869 INFO Running build command...
+Jan 29 17:47:56.870 INFO Checking rustc version...
+Jan 29 17:47:56.920 INFO rustc version is 32.
+Jan 29 17:47:56.920 INFO Checking crate configuration...
+Jan 29 17:47:56.920 INFO Crate is correctly configured.
+Jan 29 17:47:56.920 INFO Adding wasm-target...
+Jan 29 17:47:57.004 INFO Adding wasm-target was successful.
+Jan 29 17:47:57.004 INFO Building wasm...
+Jan 29 17:47:58.126 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:47:58.127 INFO Creating a pkg directory...
+Jan 29 17:47:58.127 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:47:58.127 INFO Writing a package.json...
+Jan 29 17:47:58.128 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:47:58.128 INFO Copying readme from crate...
+Jan 29 17:47:58.128 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:47:58.128 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:47:58.184 INFO Installing wasm-bindgen-cli...
+Jan 29 17:47:58.210 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:47:58.210 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:47:58.211 INFO Getting the crate name from the manifest...
+Jan 29 17:47:58.211 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:47:58.211 INFO Building the wasm bindings...
+Jan 29 17:47:58.279 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:47:58.279 INFO Done in 1 second.
+Jan 29 17:47:58.280 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:48:26.079 INFO Running build command...
+Jan 29 17:48:26.080 INFO Checking rustc version...
+Jan 29 17:48:26.133 INFO rustc version is 32.
+Jan 29 17:48:26.133 INFO Checking crate configuration...
+Jan 29 17:48:26.134 INFO Crate is correctly configured.
+Jan 29 17:48:26.134 INFO Adding wasm-target...
+Jan 29 17:48:26.212 INFO Adding wasm-target was successful.
+Jan 29 17:48:26.212 INFO Building wasm...
+Jan 29 17:48:27.153 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:48:27.154 INFO Creating a pkg directory...
+Jan 29 17:48:27.154 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:48:27.154 INFO Writing a package.json...
+Jan 29 17:48:27.154 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:48:27.155 INFO Copying readme from crate...
+Jan 29 17:48:27.155 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:48:27.155 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:48:27.197 INFO Installing wasm-bindgen-cli...
+Jan 29 17:48:27.210 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:48:27.210 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:48:27.211 INFO Getting the crate name from the manifest...
+Jan 29 17:48:27.211 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:48:27.211 INFO Building the wasm bindings...
+Jan 29 17:48:27.264 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:48:27.265 INFO Done in 1 second.
+Jan 29 17:48:27.265 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:49:10.808 INFO Running build command...
+Jan 29 17:49:10.809 INFO Checking rustc version...
+Jan 29 17:49:10.862 INFO rustc version is 32.
+Jan 29 17:49:10.862 INFO Checking crate configuration...
+Jan 29 17:49:10.862 INFO Crate is correctly configured.
+Jan 29 17:49:10.862 INFO Adding wasm-target...
+Jan 29 17:49:10.946 INFO Adding wasm-target was successful.
+Jan 29 17:49:10.947 INFO Building wasm...
+Jan 29 17:49:11.407 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:39:13
+   |
+39 |         log(type_);
+   |             ^^^^^
+   |             |
+   |             expected &str, found struct `std::string::String`
+   |             help: consider borrowing here: `&type_`
+   |
+   = note: expected type `&str`
+              found type `std::string::String`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:49:25.000 INFO Running build command...
+Jan 29 17:49:25.001 INFO Checking rustc version...
+Jan 29 17:49:25.048 INFO rustc version is 32.
+Jan 29 17:49:25.048 INFO Checking crate configuration...
+Jan 29 17:49:25.048 INFO Crate is correctly configured.
+Jan 29 17:49:25.049 INFO Adding wasm-target...
+Jan 29 17:49:25.130 INFO Adding wasm-target was successful.
+Jan 29 17:49:25.131 INFO Building wasm...
+Jan 29 17:49:26.283 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 17:49:26.283 INFO Creating a pkg directory...
+Jan 29 17:49:26.283 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 17:49:26.284 INFO Writing a package.json...
+Jan 29 17:49:26.284 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 17:49:26.284 INFO Copying readme from crate...
+Jan 29 17:49:26.284 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:49:26.284 INFO Identifying wasm-bindgen dependency...
+Jan 29 17:49:26.340 INFO Installing wasm-bindgen-cli...
+Jan 29 17:49:26.354 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 17:49:26.355 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 17:49:26.355 INFO Getting the crate name from the manifest...
+Jan 29 17:49:26.355 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 17:49:26.355 INFO Building the wasm bindings...
+Jan 29 17:49:26.426 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:49:26.426 INFO Done in 1 second.
+Jan 29 17:49:26.426 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 17:50:55.705 INFO Running build command...
+Jan 29 17:50:55.706 INFO Checking rustc version...
+Jan 29 17:50:55.761 INFO rustc version is 32.
+Jan 29 17:50:55.761 INFO Checking crate configuration...
+Jan 29 17:50:55.761 INFO Crate is correctly configured.
+Jan 29 17:50:55.761 INFO Adding wasm-target...
+Jan 29 17:50:55.862 INFO Adding wasm-target was successful.
+Jan 29 17:50:55.863 INFO Building wasm...
+Jan 29 17:50:56.397 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected expression, found `}`
+  --> src/lib.rs:56:9
+   |
+52 |        VElement {
+   |        -------- while parsing this struct
+...
+56 |         }
+   |         ^ expected expression
+
+error[E0599]: no method named `length` found for type `&[VElement]` in the current scope
+
+error[E0063]: missing field `children` in initializer of `VElement`
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0063, E0599.
+For more information about an error, try `rustc --explain E0063`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:51:00.066 INFO Running build command...
+Jan 29 17:51:00.068 INFO Checking rustc version...
+Jan 29 17:51:00.126 INFO rustc version is 32.
+Jan 29 17:51:00.126 INFO Checking crate configuration...
+Jan 29 17:51:00.126 INFO Crate is correctly configured.
+Jan 29 17:51:00.126 INFO Adding wasm-target...
+Jan 29 17:51:00.202 INFO Adding wasm-target was successful.
+Jan 29 17:51:00.202 INFO Building wasm...
+Jan 29 17:51:00.907 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `length` found for type `&[VElement]` in the current scope
+  --> src/lib.rs:47:40
+   |
+47 |         let children = match _children.length() {
+   |                                        ^^^^^^
+
+error[E0308]: mismatched types
+  --> src/lib.rs:55:13
+   |
+55 |             children
+   |             ^^^^^^^^ expected struct `std::vec::Vec`, found &[VElement]
+   |
+   = note: expected type `std::option::Option<std::vec::Vec<VElement>>`
+              found type `std::option::Option<&[VElement]>`
+
+error: aborting due to 2 previous errors
+
+Some errors occurred: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:51:05.197 INFO Running build command...
+Jan 29 17:51:05.198 INFO Checking rustc version...
+Jan 29 17:51:05.250 INFO rustc version is 32.
+Jan 29 17:51:05.250 INFO Checking crate configuration...
+Jan 29 17:51:05.251 INFO Crate is correctly configured.
+Jan 29 17:51:05.251 INFO Adding wasm-target...
+Jan 29 17:51:05.327 INFO Adding wasm-target was successful.
+Jan 29 17:51:05.327 INFO Building wasm...
+Jan 29 17:51:06.144 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `length` found for type `&[VElement]` in the current scope
+  --> src/lib.rs:47:40
+   |
+47 |         let children = match _children.length() {
+   |                                        ^^^^^^
+
+error[E0308]: mismatched types
+  --> src/lib.rs:55:23
+   |
+55 |             children: children
+   |                       ^^^^^^^^ expected struct `std::vec::Vec`, found &[VElement]
+   |
+   = note: expected type `std::option::Option<std::vec::Vec<VElement>>`
+              found type `std::option::Option<&[VElement]>`
+
+error: aborting due to 2 previous errors
+
+Some errors occurred: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:51:19.523 INFO Running build command...
+Jan 29 17:51:19.524 INFO Checking rustc version...
+Jan 29 17:51:19.577 INFO rustc version is 32.
+Jan 29 17:51:19.577 INFO Checking crate configuration...
+Jan 29 17:51:19.577 INFO Crate is correctly configured.
+Jan 29 17:51:19.577 INFO Adding wasm-target...
+Jan 29 17:51:19.655 INFO Adding wasm-target was successful.
+Jan 29 17:51:19.655 INFO Building wasm...
+Jan 29 17:51:20.358 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `length` found for type `&[VElement]` in the current scope
+  --> src/lib.rs:47:41
+   |
+47 |         let children = match &_children.length() {
+   |                                         ^^^^^^
+
+error[E0308]: mismatched types
+  --> src/lib.rs:55:23
+   |
+55 |             children: children
+   |                       ^^^^^^^^ expected struct `std::vec::Vec`, found &[VElement]
+   |
+   = note: expected type `std::option::Option<std::vec::Vec<VElement>>`
+              found type `std::option::Option<&[VElement]>`
+
+error: aborting due to 2 previous errors
+
+Some errors occurred: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:51:33.771 INFO Running build command...
+Jan 29 17:51:33.773 INFO Checking rustc version...
+Jan 29 17:51:33.828 INFO rustc version is 32.
+Jan 29 17:51:33.828 INFO Checking crate configuration...
+Jan 29 17:51:33.828 INFO Crate is correctly configured.
+Jan 29 17:51:33.828 INFO Adding wasm-target...
+Jan 29 17:51:33.906 INFO Adding wasm-target was successful.
+Jan 29 17:51:33.906 INFO Building wasm...
+Jan 29 17:51:34.571 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `length` found for type `&[VElement]` in the current scope
+  --> src/lib.rs:47:40
+   |
+47 |         let children = match _children.length() {
+   |                                        ^^^^^^
+
+error[E0308]: mismatched types
+  --> src/lib.rs:55:23
+   |
+55 |             children: children
+   |                       ^^^^^^^^ expected struct `std::vec::Vec`, found &[VElement]
+   |
+   = note: expected type `std::option::Option<std::vec::Vec<VElement>>`
+              found type `std::option::Option<&[VElement]>`
+
+error: aborting due to 2 previous errors
+
+Some errors occurred: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:52:16.308 INFO Running build command...
+Jan 29 17:52:16.309 INFO Checking rustc version...
+Jan 29 17:52:16.360 INFO rustc version is 32.
+Jan 29 17:52:16.360 INFO Checking crate configuration...
+Jan 29 17:52:16.360 INFO Crate is correctly configured.
+Jan 29 17:52:16.361 INFO Adding wasm-target...
+Jan 29 17:52:16.446 INFO Adding wasm-target was successful.
+Jan 29 17:52:16.447 INFO Building wasm...
+Jan 29 17:52:17.120 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:55:23
+   |
+55 |             children: children
+   |                       ^^^^^^^^ expected struct `std::vec::Vec`, found &[VElement]
+   |
+   = note: expected type `std::option::Option<std::vec::Vec<VElement>>`
+              found type `std::option::Option<&[VElement]>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:52:46.265 INFO Running build command...
+Jan 29 17:52:46.268 INFO Checking rustc version...
+Jan 29 17:52:46.315 INFO rustc version is 32.
+Jan 29 17:52:46.316 INFO Checking crate configuration...
+Jan 29 17:52:46.316 INFO Crate is correctly configured.
+Jan 29 17:52:46.316 INFO Adding wasm-target...
+Jan 29 17:52:46.395 INFO Adding wasm-target was successful.
+Jan 29 17:52:46.396 INFO Building wasm...
+Jan 29 17:52:46.819 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0277]: the size for values of type `[VElement]` cannot be known at compilation time
+  --> src/lib.rs:29:5
+   |
+29 |     children: Option<[VElement]>
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+   |
+   = help: the trait `std::marker::Sized` is not implemented for `[VElement]`
+   = note: to learn more, visit <https://doc.rust-lang.org/book/second-edition/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+   = note: required by `std::option::Option`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 17:52:49.202 INFO Running build command...
+Jan 29 17:52:49.203 INFO Checking rustc version...
+Jan 29 17:52:49.256 INFO rustc version is 32.
+Jan 29 17:52:49.257 INFO Checking crate configuration...
+Jan 29 17:52:49.257 INFO Crate is correctly configured.
+Jan 29 17:52:49.257 INFO Adding wasm-target...
+Jan 29 17:52:49.335 INFO Adding wasm-target was successful.
+Jan 29 17:52:49.336 INFO Building wasm...
+Jan 29 17:52:49.761 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0106]: missing lifetime specifier
+  --> src/lib.rs:29:22
+   |
+29 |     children: Option<&[VElement]>
+   |                      ^ expected lifetime parameter
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0106`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:00:55.454 INFO Running build command...
+Jan 29 18:00:55.457 INFO Checking rustc version...
+Jan 29 18:00:55.549 INFO rustc version is 32.
+Jan 29 18:00:55.549 INFO Checking crate configuration...
+Jan 29 18:00:55.549 INFO Crate is correctly configured.
+Jan 29 18:00:55.549 INFO Adding wasm-target...
+Jan 29 18:00:55.642 INFO Adding wasm-target was successful.
+Jan 29 18:00:55.642 INFO Building wasm...
+Jan 29 18:00:55.948 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: incorrect close delimiter: `]`
+  --> src/lib.rs:29:34
+   |
+26 | struct VElement {
+   |                 - un-closed delimiter
+...
+29 |     children: Option<Vec<VElement]>
+   |                                  ^ incorrect close delimiter
+
+error: unexpected close delimiter: `}`
+  --> src/lib.rs:30:1
+   |
+30 | }
+   | ^ unexpected close delimiter
+
+error: aborting due to 2 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:01:09.843 INFO Running build command...
+Jan 29 18:01:09.844 INFO Checking rustc version...
+Jan 29 18:01:09.895 INFO rustc version is 32.
+Jan 29 18:01:09.895 INFO Checking crate configuration...
+Jan 29 18:01:09.895 INFO Crate is correctly configured.
+Jan 29 18:01:09.895 INFO Adding wasm-target...
+Jan 29 18:01:09.975 INFO Adding wasm-target was successful.
+Jan 29 18:01:09.976 INFO Building wasm...
+Jan 29 18:01:11.798 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `length` found for type `&[VElement]` in the current scope
+  --> src/lib.rs:47:40
+   |
+47 |         let children = match _children.length() {
+   |                                        ^^^^^^
+
+error[E0308]: mismatched types
+  --> src/lib.rs:55:23
+   |
+55 |             children: children
+   |                       ^^^^^^^^ expected struct `std::vec::Vec`, found &[VElement]
+   |
+   = note: expected type `std::option::Option<std::vec::Vec<VElement>>`
+              found type `std::option::Option<&[VElement]>`
+
+error: aborting due to 2 previous errors
+
+Some errors occurred: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:01:18.084 INFO Running build command...
+Jan 29 18:01:18.086 INFO Checking rustc version...
+Jan 29 18:01:18.140 INFO rustc version is 32.
+Jan 29 18:01:18.140 INFO Checking crate configuration...
+Jan 29 18:01:18.141 INFO Crate is correctly configured.
+Jan 29 18:01:18.141 INFO Adding wasm-target...
+Jan 29 18:01:18.215 INFO Adding wasm-target was successful.
+Jan 29 18:01:18.216 INFO Building wasm...
+Jan 29 18:01:18.889 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:55:23
+   |
+55 |             children: children
+   |                       ^^^^^^^^ expected struct `std::vec::Vec`, found &[VElement]
+   |
+   = note: expected type `std::option::Option<std::vec::Vec<VElement>>`
+              found type `std::option::Option<&[VElement]>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:10:29.201 INFO Running build command...
+Jan 29 18:10:29.202 INFO Checking rustc version...
+Jan 29 18:10:29.277 INFO rustc version is 32.
+Jan 29 18:10:29.277 INFO Checking crate configuration...
+Jan 29 18:10:29.277 INFO Crate is correctly configured.
+Jan 29 18:10:29.278 INFO Adding wasm-target...
+Jan 29 18:10:29.363 INFO Adding wasm-target was successful.
+Jan 29 18:10:29.364 INFO Building wasm...
+Jan 29 18:10:30.792 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `to_vec` found for type `std::option::Option<&[VElement]>` in the current scope
+  --> src/lib.rs:55:32
+   |
+55 |             children: children.to_vec()
+   |                                ^^^^^^
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0599`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:10:46.060 INFO Running build command...
+Jan 29 18:10:46.061 INFO Checking rustc version...
+Jan 29 18:10:46.111 INFO rustc version is 32.
+Jan 29 18:10:46.111 INFO Checking crate configuration...
+Jan 29 18:10:46.111 INFO Crate is correctly configured.
+Jan 29 18:10:46.111 INFO Adding wasm-target...
+Jan 29 18:10:46.189 INFO Adding wasm-target was successful.
+Jan 29 18:10:46.190 INFO Building wasm...
+Jan 29 18:10:46.368 INFO Running build command...
+Jan 29 18:10:46.369 INFO Checking rustc version...
+Jan 29 18:10:46.421 INFO rustc version is 32.
+Jan 29 18:10:46.422 INFO Checking crate configuration...
+Jan 29 18:10:46.422 INFO Crate is correctly configured.
+Jan 29 18:10:46.422 INFO Adding wasm-target...
+Jan 29 18:10:46.497 INFO Adding wasm-target was successful.
+Jan 29 18:10:46.498 INFO Building wasm...
+Jan 29 18:10:46.730 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0277]: the trait bound `VElement: std::clone::Clone` is not satisfied
+  --> src/lib.rs:49:33
+   |
+49 |             _ => Some(_children.to_vec())
+   |                                 ^^^^^^ the trait `std::clone::Clone` is not implemented for `VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:10:47.099 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0277]: the trait bound `VElement: std::clone::Clone` is not satisfied
+  --> src/lib.rs:49:33
+   |
+49 |             _ => Some(_children.to_vec())
+   |                                 ^^^^^^ the trait `std::clone::Clone` is not implemented for `VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:10:47.722 INFO Running build command...
+Jan 29 18:10:47.723 INFO Checking rustc version...
+Jan 29 18:10:47.785 INFO rustc version is 32.
+Jan 29 18:10:47.785 INFO Checking crate configuration...
+Jan 29 18:10:47.786 INFO Crate is correctly configured.
+Jan 29 18:10:47.786 INFO Adding wasm-target...
+Jan 29 18:10:47.888 INFO Adding wasm-target was successful.
+Jan 29 18:10:47.888 INFO Building wasm...
+Jan 29 18:10:48.556 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0277]: the trait bound `VElement: std::clone::Clone` is not satisfied
+  --> src/lib.rs:49:33
+   |
+49 |             _ => Some(_children.to_vec())
+   |                                 ^^^^^^ the trait `std::clone::Clone` is not implemented for `VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:13:22.776 INFO Running build command...
+Jan 29 18:13:22.777 INFO Checking rustc version...
+Jan 29 18:13:22.874 INFO rustc version is 32.
+Jan 29 18:13:22.875 INFO Checking crate configuration...
+Jan 29 18:13:22.875 INFO Crate is correctly configured.
+Jan 29 18:13:22.875 INFO Adding wasm-target...
+Jan 29 18:13:22.972 INFO Adding wasm-target was successful.
+Jan 29 18:13:22.973 INFO Building wasm...
+Jan 29 18:13:24.592 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0507]: cannot move out of borrowed content
+  --> src/lib.rs:33:35
+   |
+33 |     fn clone(&self) -> VElement { *self }
+   |                                   ^^^^^ cannot move out of borrowed content
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0507`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:14:07.467 INFO Running build command...
+Jan 29 18:14:07.468 INFO Checking rustc version...
+Jan 29 18:14:07.517 INFO rustc version is 32.
+Jan 29 18:14:07.517 INFO Checking crate configuration...
+Jan 29 18:14:07.518 INFO Crate is correctly configured.
+Jan 29 18:14:07.518 INFO Adding wasm-target...
+Jan 29 18:14:07.596 INFO Adding wasm-target was successful.
+Jan 29 18:14:07.597 INFO Building wasm...
+Jan 29 18:14:08.408 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:33:35
+   |
+33 |     fn clone(&self) -> VElement { self }
+   |                        --------   ^^^^ expected struct `VElement`, found &VElement
+   |                        |
+   |                        expected `VElement` because of return type
+   |
+   = note: expected type `VElement`
+              found type `&VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:14:29.242 INFO Running build command...
+Jan 29 18:14:29.243 INFO Checking rustc version...
+Jan 29 18:14:29.288 INFO rustc version is 32.
+Jan 29 18:14:29.289 INFO Checking crate configuration...
+Jan 29 18:14:29.289 INFO Crate is correctly configured.
+Jan 29 18:14:29.289 INFO Adding wasm-target...
+Jan 29 18:14:29.366 INFO Adding wasm-target was successful.
+Jan 29 18:14:29.367 INFO Building wasm...
+Jan 29 18:14:29.794 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0053]: method `clone` has an incompatible type for trait
+  --> src/lib.rs:33:5
+   |
+33 |     fn clone(self) -> VElement { self }
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ expected &VElement, found struct `VElement`
+   |
+   = note: expected type `fn(&VElement) -> VElement`
+              found type `fn(VElement) -> VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0053`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:14:38.682 INFO Running build command...
+Jan 29 18:14:38.684 INFO Checking rustc version...
+Jan 29 18:14:38.745 INFO rustc version is 32.
+Jan 29 18:14:38.745 INFO Checking crate configuration...
+Jan 29 18:14:38.745 INFO Crate is correctly configured.
+Jan 29 18:14:38.745 INFO Adding wasm-target...
+Jan 29 18:14:38.822 INFO Adding wasm-target was successful.
+Jan 29 18:14:38.822 INFO Building wasm...
+Jan 29 18:14:39.525 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:33:35
+   |
+33 |     fn clone(&self) -> VElement { self }
+   |                        --------   ^^^^ expected struct `VElement`, found &VElement
+   |                        |
+   |                        expected `VElement` because of return type
+   |
+   = note: expected type `VElement`
+              found type `&VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:15:24.189 INFO Running build command...
+Jan 29 18:15:24.190 INFO Checking rustc version...
+Jan 29 18:15:24.237 INFO rustc version is 32.
+Jan 29 18:15:24.238 INFO Checking crate configuration...
+Jan 29 18:15:24.238 INFO Crate is correctly configured.
+Jan 29 18:15:24.238 INFO Adding wasm-target...
+Jan 29 18:15:24.316 INFO Adding wasm-target was successful.
+Jan 29 18:15:24.317 INFO Building wasm...
+Jan 29 18:15:24.943 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `!`, `(`, `::`, `;`, `<`, or `}`, found `.`
+  --> src/lib.rs:34:20
+   |
+34 |         type_: self.type_,
+   |                    ^ expected one of `!`, `(`, `::`, `;`, `<`, or `}` here
+
+error[E0425]: cannot find value `type_` in this scope
+  --> src/lib.rs:34:9
+   |
+34 |         type_: self.type_,
+   |         ^^^^^ help: try: `self.type_`
+
+error[E0573]: expected type, found module `self`
+  --> src/lib.rs:34:16
+   |
+34 |         type_: self.type_,
+   |                ^^^^ did you mean `Self`?
+
+error[E0658]: type ascription is experimental (see issue #23416)
+  --> src/lib.rs:34:9
+   |
+34 |         type_: self.type_,
+   |         ^^^^^^^^^^^
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0425, E0573, E0658.
+For more information about an error, try `rustc --explain E0425`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 18:15:58.200 INFO Running build command...
+Jan 29 18:15:58.201 INFO Checking rustc version...
+Jan 29 18:15:58.250 INFO rustc version is 32.
+Jan 29 18:15:58.250 INFO Checking crate configuration...
+Jan 29 18:15:58.250 INFO Crate is correctly configured.
+Jan 29 18:15:58.250 INFO Adding wasm-target...
+Jan 29 18:15:58.328 INFO Adding wasm-target was successful.
+Jan 29 18:15:58.328 INFO Building wasm...
+Jan 29 18:15:58.816 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0507]: cannot move out of borrowed content
+  --> src/lib.rs:35:20
+   |
+35 |             type_: self.type_,
+   |                    ^^^^^^^^^^ cannot move out of borrowed content
+
+error[E0507]: cannot move out of borrowed content
+  --> src/lib.rs:36:20
+   |
+36 |             props: self.props,
+   |                    ^^^^^^^^^^ cannot move out of borrowed content
+
+error[E0507]: cannot move out of borrowed content
+  --> src/lib.rs:37:23
+   |
+37 |             children: self.children
+   |                       ^^^^^^^^^^^^^ cannot move out of borrowed content
+
+error: aborting due to 3 previous errors
+
+For more information about this error, try `rustc --explain E0507`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:09:11.401 INFO Running build command...
+Jan 29 23:09:11.403 INFO Checking rustc version...
+Jan 29 23:09:11.459 INFO rustc version is 32.
+Jan 29 23:09:11.459 INFO Checking crate configuration...
+Jan 29 23:09:11.460 INFO Crate is correctly configured.
+Jan 29 23:09:11.460 INFO Adding wasm-target...
+Jan 29 23:09:11.544 INFO Adding wasm-target was successful.
+Jan 29 23:09:11.544 INFO Building wasm...
+Jan 29 23:09:12.806 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0277]: the trait bound `VElement: std::clone::Clone` is not satisfied
+  --> src/lib.rs:46:33
+   |
+46 |             _ => Some(_children.to_vec())
+   |                                 ^^^^^^ the trait `std::clone::Clone` is not implemented for `VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:10:51.775 INFO Running build command...
+Jan 29 23:10:51.776 INFO Checking rustc version...
+Jan 29 23:10:51.825 INFO rustc version is 32.
+Jan 29 23:10:51.825 INFO Checking crate configuration...
+Jan 29 23:10:51.825 INFO Crate is correctly configured.
+Jan 29 23:10:51.826 INFO Adding wasm-target...
+Jan 29 23:10:51.905 INFO Adding wasm-target was successful.
+Jan 29 23:10:51.906 INFO Building wasm...
+Jan 29 23:10:52.362 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0277]: the trait bound `VElement: std::clone::Clone` is not satisfied
+  --> src/lib.rs:46:33
+   |
+46 |             _ => Some(_children.to_vec())
+   |                                 ^^^^^^ the trait `std::clone::Clone` is not implemented for `VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:10:58.757 INFO Running build command...
+Jan 29 23:10:58.758 INFO Checking rustc version...
+Jan 29 23:10:58.815 INFO rustc version is 32.
+Jan 29 23:10:58.815 INFO Checking crate configuration...
+Jan 29 23:10:58.815 INFO Crate is correctly configured.
+Jan 29 23:10:58.815 INFO Adding wasm-target...
+Jan 29 23:10:58.895 INFO Adding wasm-target was successful.
+Jan 29 23:10:58.895 INFO Building wasm...
+Jan 29 23:11:00.188 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 23:11:00.189 INFO Creating a pkg directory...
+Jan 29 23:11:00.189 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 23:11:00.189 INFO Writing a package.json...
+Jan 29 23:11:00.190 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 23:11:00.190 INFO Copying readme from crate...
+Jan 29 23:11:00.190 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:11:00.191 INFO Identifying wasm-bindgen dependency...
+Jan 29 23:11:00.234 INFO Installing wasm-bindgen-cli...
+Jan 29 23:11:00.262 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 23:11:00.262 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 23:11:00.262 INFO Getting the crate name from the manifest...
+Jan 29 23:11:00.263 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 23:11:00.263 INFO Building the wasm bindings...
+Jan 29 23:11:00.325 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:11:00.325 INFO Done in 1 second.
+Jan 29 23:11:00.325 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:21:46.323 INFO Running build command...
+Jan 29 23:21:46.324 INFO Checking rustc version...
+Jan 29 23:21:46.373 INFO rustc version is 32.
+Jan 29 23:21:46.374 INFO Checking crate configuration...
+Jan 29 23:21:46.374 INFO Crate is correctly configured.
+Jan 29 23:21:46.374 INFO Adding wasm-target...
+Jan 29 23:21:46.452 INFO Adding wasm-target was successful.
+Jan 29 23:21:46.452 INFO Building wasm...
+Jan 29 23:21:47.354 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `array_prop` in this scope
+  --> src/lib.rs:56:72
+   |
+56 |     let div = |props, children| primitive_component("div".to_string(), array_prop, children);
+   |                                                                        ^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find value `array_prop` in this scope
+  --> src/lib.rs:57:74
+   |
+57 |     let span = |props, children| primitive_component("span".to_string(), array_prop, children);
+   |                                                                          ^^^^^^^^^^ not found in this scope
+
+error[E0308]: mismatched types
+  --> src/lib.rs:58:64
+   |
+58 |     let text = |value| primitive_component("text".to_string(), [("value", value)], []);
+   |                                                                ^^^^^^^^^^^^^^^^^^ expected struct `std::vec::Vec`, found array of 1 elements
+   |
+   = note: expected type `std::vec::Vec<(std::string::String, std::string::String)>`
+              found type `[(&str, _); 1]`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:58:84
+   |
+58 |     let text = |value| primitive_component("text".to_string(), [("value", value)], []);
+   |                                                                                    ^^
+   |                                                                                    |
+   |                                                                                    expected struct `std::vec::Vec`, found array of 0 elements
+   |                                                                                    help: try using a conversion method: `[].to_vec()`
+   |
+   = note: expected type `std::vec::Vec<VElement>`
+              found type `[_; 0]`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:22:01.006 INFO Running build command...
+Jan 29 23:22:01.007 INFO Checking rustc version...
+Jan 29 23:22:01.065 INFO rustc version is 32.
+Jan 29 23:22:01.066 INFO Checking crate configuration...
+Jan 29 23:22:01.066 INFO Crate is correctly configured.
+Jan 29 23:22:01.066 INFO Adding wasm-target...
+Jan 29 23:22:01.140 INFO Adding wasm-target was successful.
+Jan 29 23:22:01.140 INFO Building wasm...
+Jan 29 23:22:01.837 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:58:64
+   |
+58 |     let text = |value| primitive_component("text".to_string(), [("value", value)], []);
+   |                                                                ^^^^^^^^^^^^^^^^^^ expected struct `std::vec::Vec`, found array of 1 elements
+   |
+   = note: expected type `std::vec::Vec<(std::string::String, std::string::String)>`
+              found type `[(&str, _); 1]`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:58:84
+   |
+58 |     let text = |value| primitive_component("text".to_string(), [("value", value)], []);
+   |                                                                                    ^^
+   |                                                                                    |
+   |                                                                                    expected struct `std::vec::Vec`, found array of 0 elements
+   |                                                                                    help: try using a conversion method: `[].to_vec()`
+   |
+   = note: expected type `std::vec::Vec<VElement>`
+              found type `[_; 0]`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:22:07.557 INFO Running build command...
+Jan 29 23:22:07.559 INFO Checking rustc version...
+Jan 29 23:22:07.624 INFO rustc version is 32.
+Jan 29 23:22:07.624 INFO Checking crate configuration...
+Jan 29 23:22:07.625 INFO Crate is correctly configured.
+Jan 29 23:22:07.625 INFO Adding wasm-target...
+Jan 29 23:22:07.706 INFO Adding wasm-target was successful.
+Jan 29 23:22:07.707 INFO Building wasm...
+Jan 29 23:22:08.552 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:58:70
+   |
+58 |     let text = |value| primitive_component("text".to_string(), vec![("value", value)], []);
+   |                                                                      ^^^^^^^
+   |                                                                      |
+   |                                                                      expected struct `std::string::String`, found reference
+   |                                                                      help: try using a conversion method: `"value".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:58:88
+   |
+58 |     let text = |value| primitive_component("text".to_string(), vec![("value", value)], []);
+   |                                                                                        ^^
+   |                                                                                        |
+   |                                                                                        expected struct `std::vec::Vec`, found array of 0 elements
+   |                                                                                        help: try using a conversion method: `[].to_vec()`
+   |
+   = note: expected type `std::vec::Vec<VElement>`
+              found type `[_; 0]`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:66:26
+   |
+66 |                     text("Hello World")
+   |                          ^^^^^^^^^^^^^
+   |                          |
+   |                          expected struct `std::string::String`, found reference
+   |                          help: try using a conversion method: `"Hello World".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error: aborting due to 3 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:22:32.102 INFO Running build command...
+Jan 29 23:22:32.103 INFO Checking rustc version...
+Jan 29 23:22:32.155 INFO rustc version is 32.
+Jan 29 23:22:32.155 INFO Checking crate configuration...
+Jan 29 23:22:32.155 INFO Crate is correctly configured.
+Jan 29 23:22:32.156 INFO Adding wasm-target...
+Jan 29 23:22:32.237 INFO Adding wasm-target was successful.
+Jan 29 23:22:32.238 INFO Building wasm...
+Jan 29 23:22:32.851 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:58:100
+   |
+58 |     let text = |value| primitive_component("text".to_string(), vec![("value".to_string(), value)], []);
+   |                                                                                                    ^^
+   |                                                                                                    |
+   |                                                                                                    expected struct `std::vec::Vec`, found array of 0 elements
+   |                                                                                                    help: try using a conversion method: `[].to_vec()`
+   |
+   = note: expected type `std::vec::Vec<VElement>`
+              found type `[_; 0]`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:66:26
+   |
+66 |                     text("Hello World")
+   |                          ^^^^^^^^^^^^^
+   |                          |
+   |                          expected struct `std::string::String`, found reference
+   |                          help: try using a conversion method: `"Hello World".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:22:40.050 INFO Running build command...
+Jan 29 23:22:40.051 INFO Checking rustc version...
+Jan 29 23:22:40.109 INFO rustc version is 32.
+Jan 29 23:22:40.109 INFO Checking crate configuration...
+Jan 29 23:22:40.109 INFO Crate is correctly configured.
+Jan 29 23:22:40.110 INFO Adding wasm-target...
+Jan 29 23:22:40.187 INFO Adding wasm-target was successful.
+Jan 29 23:22:40.187 INFO Building wasm...
+Jan 29 23:22:40.821 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:66:26
+   |
+66 |                     text("Hello World")
+   |                          ^^^^^^^^^^^^^
+   |                          |
+   |                          expected struct `std::string::String`, found reference
+   |                          help: try using a conversion method: `"Hello World".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:22:59.852 INFO Running build command...
+Jan 29 23:22:59.853 INFO Checking rustc version...
+Jan 29 23:22:59.912 INFO rustc version is 32.
+Jan 29 23:22:59.912 INFO Checking crate configuration...
+Jan 29 23:22:59.913 INFO Crate is correctly configured.
+Jan 29 23:22:59.913 INFO Adding wasm-target...
+Jan 29 23:22:59.999 INFO Adding wasm-target was successful.
+Jan 29 23:23:00.000 INFO Building wasm...
+Jan 29 23:23:00.916 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 23:23:00.916 INFO Creating a pkg directory...
+Jan 29 23:23:00.916 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 23:23:00.917 INFO Writing a package.json...
+Jan 29 23:23:00.917 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 23:23:00.917 INFO Copying readme from crate...
+Jan 29 23:23:00.917 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:23:00.918 INFO Identifying wasm-bindgen dependency...
+Jan 29 23:23:00.958 INFO Installing wasm-bindgen-cli...
+Jan 29 23:23:00.972 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 23:23:00.972 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 23:23:00.972 INFO Getting the crate name from the manifest...
+Jan 29 23:23:00.973 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 23:23:00.973 INFO Building the wasm bindings...
+Jan 29 23:23:01.024 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:23:01.024 INFO Done in 1 second.
+Jan 29 23:23:01.025 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:29:50.559 INFO Running build command...
+Jan 29 23:29:50.560 INFO Checking rustc version...
+Jan 29 23:29:50.655 INFO rustc version is 32.
+Jan 29 23:29:50.656 INFO Checking crate configuration...
+Jan 29 23:29:50.656 INFO Crate is correctly configured.
+Jan 29 23:29:50.656 INFO Adding wasm-target...
+Jan 29 23:29:50.754 INFO Adding wasm-target was successful.
+Jan 29 23:29:50.755 INFO Building wasm...
+Jan 29 23:29:51.529 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected argument name, found keyword `fn`
+  --> src/lib.rs:60:17
+   |
+60 |     fn on_click(fn: String) {
+   |                 ^^ expected argument name
+
+error: expected expression, found keyword `fn`
+  --> src/lib.rs:61:31
+   |
+61 |         ("click".to_string(), fn)
+   |                               ^^ expected expression
+
+error: expected one of: `_`, `box`, `-`, literal, parentheses, `&`, square brackets
+
+error: aborting due to 3 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:30:07.342 INFO Running build command...
+Jan 29 23:30:07.343 INFO Checking rustc version...
+Jan 29 23:30:07.394 INFO rustc version is 32.
+Jan 29 23:30:07.395 INFO Checking crate configuration...
+Jan 29 23:30:07.395 INFO Crate is correctly configured.
+Jan 29 23:30:07.395 INFO Adding wasm-target...
+Jan 29 23:30:07.480 INFO Adding wasm-target was successful.
+Jan 29 23:30:07.481 INFO Building wasm...
+Jan 29 23:30:07.878 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected expression, found keyword `fn`
+  --> src/lib.rs:61:31
+   |
+61 |         ("click".to_string(), fn)
+   |                               ^^ expected expression
+
+error: expected expression
+  --> src/lib.rs:61:31
+   |
+61 |         ("click".to_string(), fn)
+   |                               ^^
+
+error: aborting due to 2 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:30:14.675 INFO Running build command...
+Jan 29 23:30:14.676 INFO Checking rustc version...
+Jan 29 23:30:14.736 INFO rustc version is 32.
+Jan 29 23:30:14.736 INFO Checking crate configuration...
+Jan 29 23:30:14.737 INFO Crate is correctly configured.
+Jan 29 23:30:14.737 INFO Adding wasm-target...
+Jan 29 23:30:14.817 INFO Adding wasm-target was successful.
+Jan 29 23:30:14.817 INFO Building wasm...
+Jan 29 23:30:16.201 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:69:49
+   |
+69 |                 span(vec![id("child"), on_click("console.log(arguments)")], vec![
+   |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+   |                                                 |
+   |                                                 expected struct `std::string::String`, found reference
+   |                                                 help: try using a conversion method: `"console.log(arguments)".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:69:40
+   |
+69 |                 span(vec![id("child"), on_click("console.log(arguments)")], vec![
+   |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected tuple, found ()
+   |
+   = note: expected type `(std::string::String, std::string::String)`
+              found type `()`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:61:9
+   |
+60 |     fn on_click(js_fn: String) {
+   |                                - help: try adding a return type: `-> (std::string::String, std::string::String)`
+61 |         ("click".to_string(), js_fn)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected (), found tuple
+   |
+   = note: expected type `()`
+              found type `(std::string::String, std::string::String)`
+
+error: aborting due to 3 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:30:36.150 INFO Running build command...
+Jan 29 23:30:36.152 INFO Checking rustc version...
+Jan 29 23:30:36.203 INFO rustc version is 32.
+Jan 29 23:30:36.203 INFO Checking crate configuration...
+Jan 29 23:30:36.203 INFO Crate is correctly configured.
+Jan 29 23:30:36.204 INFO Adding wasm-target...
+Jan 29 23:30:36.284 INFO Adding wasm-target was successful.
+Jan 29 23:30:36.284 INFO Building wasm...
+Jan 29 23:30:36.927 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:69:40
+   |
+69 |                 span(vec![id("child"), on_click("console.log(arguments)".to_string())], vec![
+   |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected tuple, found ()
+   |
+   = note: expected type `(std::string::String, std::string::String)`
+              found type `()`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:61:9
+   |
+60 |     fn on_click(js_fn: String) {
+   |                                - help: try adding a return type: `-> (std::string::String, std::string::String)`
+61 |         ("click".to_string(), js_fn)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected (), found tuple
+   |
+   = note: expected type `()`
+              found type `(std::string::String, std::string::String)`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:31:27.612 INFO Running build command...
+Jan 29 23:31:27.613 INFO Checking rustc version...
+Jan 29 23:31:27.673 INFO rustc version is 32.
+Jan 29 23:31:27.674 INFO Checking crate configuration...
+Jan 29 23:31:27.674 INFO Crate is correctly configured.
+Jan 29 23:31:27.674 INFO Adding wasm-target...
+Jan 29 23:31:27.755 INFO Adding wasm-target was successful.
+Jan 29 23:31:27.755 INFO Building wasm...
+Jan 29 23:31:28.416 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:69:40
+   |
+69 |                 span(vec![id("child"), on_click("console.log(arguments)".to_string())], vec![
+   |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected tuple, found ()
+   |
+   = note: expected type `(std::string::String, std::string::String)`
+              found type `()`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:61:9
+   |
+60 |     fn on_click(js_fn: String) {
+   |                                - help: try adding a return type: `-> (std::string::String, std::string::String)`
+61 |         ("click".to_string(), js_fn)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected (), found tuple
+   |
+   = note: expected type `()`
+              found type `(std::string::String, std::string::String)`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:32:02.398 INFO Running build command...
+Jan 29 23:32:02.399 INFO Checking rustc version...
+Jan 29 23:32:02.452 INFO rustc version is 32.
+Jan 29 23:32:02.452 INFO Checking crate configuration...
+Jan 29 23:32:02.452 INFO Crate is correctly configured.
+Jan 29 23:32:02.453 INFO Adding wasm-target...
+Jan 29 23:32:02.544 INFO Adding wasm-target was successful.
+Jan 29 23:32:02.545 INFO Building wasm...
+Jan 29 23:32:03.220 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:69:40
+   |
+69 |                 span(vec![id("child"), on_click("console.log(arguments)".to_string())], vec![
+   |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected tuple, found ()
+   |
+   = note: expected type `(std::string::String, std::string::String)`
+              found type `()`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:61:9
+   |
+60 |     fn on_click(js_fn: String) {
+   |                                - help: try adding a return type: `-> (std::string::String, std::string::String)`
+61 |         ("click".to_string(), js_fn.to_string())
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected (), found tuple
+   |
+   = note: expected type `()`
+              found type `(std::string::String, std::string::String)`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 29 23:32:23.560 INFO Running build command...
+Jan 29 23:32:23.561 INFO Checking rustc version...
+Jan 29 23:32:23.623 INFO rustc version is 32.
+Jan 29 23:32:23.623 INFO Checking crate configuration...
+Jan 29 23:32:23.623 INFO Crate is correctly configured.
+Jan 29 23:32:23.623 INFO Adding wasm-target...
+Jan 29 23:32:23.704 INFO Adding wasm-target was successful.
+Jan 29 23:32:23.704 INFO Building wasm...
+Jan 29 23:32:25.151 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 23:32:25.151 INFO Creating a pkg directory...
+Jan 29 23:32:25.151 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 23:32:25.151 INFO Writing a package.json...
+Jan 29 23:32:25.152 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 23:32:25.152 INFO Copying readme from crate...
+Jan 29 23:32:25.153 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:32:25.153 INFO Identifying wasm-bindgen dependency...
+Jan 29 23:32:25.219 INFO Installing wasm-bindgen-cli...
+Jan 29 23:32:25.247 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 23:32:25.247 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 23:32:25.248 INFO Getting the crate name from the manifest...
+Jan 29 23:32:25.248 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 23:32:25.248 INFO Building the wasm bindings...
+Jan 29 23:32:25.313 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:32:25.314 INFO Done in 1 second.
+Jan 29 23:32:25.314 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:32:31.917 INFO Running build command...
+Jan 29 23:32:31.919 INFO Checking rustc version...
+Jan 29 23:32:31.984 INFO rustc version is 32.
+Jan 29 23:32:31.984 INFO Checking crate configuration...
+Jan 29 23:32:31.984 INFO Crate is correctly configured.
+Jan 29 23:32:31.985 INFO Adding wasm-target...
+Jan 29 23:32:32.065 INFO Adding wasm-target was successful.
+Jan 29 23:32:32.065 INFO Building wasm...
+Jan 29 23:32:33.198 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 23:32:33.198 INFO Creating a pkg directory...
+Jan 29 23:32:33.198 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 23:32:33.199 INFO Writing a package.json...
+Jan 29 23:32:33.199 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 23:32:33.199 INFO Copying readme from crate...
+Jan 29 23:32:33.199 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:32:33.199 INFO Identifying wasm-bindgen dependency...
+Jan 29 23:32:33.243 INFO Installing wasm-bindgen-cli...
+Jan 29 23:32:33.257 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 23:32:33.258 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 23:32:33.258 INFO Getting the crate name from the manifest...
+Jan 29 23:32:33.258 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 23:32:33.258 INFO Building the wasm bindings...
+Jan 29 23:32:33.317 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:32:33.318 INFO Done in 1 second.
+Jan 29 23:32:33.318 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:33:16.639 INFO Running build command...
+Jan 29 23:33:16.640 INFO Checking rustc version...
+Jan 29 23:33:16.699 INFO rustc version is 32.
+Jan 29 23:33:16.699 INFO Checking crate configuration...
+Jan 29 23:33:16.699 INFO Crate is correctly configured.
+Jan 29 23:33:16.700 INFO Adding wasm-target...
+Jan 29 23:33:16.780 INFO Adding wasm-target was successful.
+Jan 29 23:33:16.781 INFO Building wasm...
+Jan 29 23:33:18.464 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 29 23:33:18.464 INFO Creating a pkg directory...
+Jan 29 23:33:18.464 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 29 23:33:18.464 INFO Writing a package.json...
+Jan 29 23:33:18.465 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 29 23:33:18.465 INFO Copying readme from crate...
+Jan 29 23:33:18.465 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:33:18.465 INFO Identifying wasm-bindgen dependency...
+Jan 29 23:33:18.508 INFO Installing wasm-bindgen-cli...
+Jan 29 23:33:18.534 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 29 23:33:18.535 INFO Installing wasm-bindgen-cli was successful.
+Jan 29 23:33:18.535 INFO Getting the crate name from the manifest...
+Jan 29 23:33:18.535 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 29 23:33:18.535 INFO Building the wasm bindings...
+Jan 29 23:33:18.595 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 29 23:33:18.595 INFO Done in 1 second.
+Jan 29 23:33:18.595 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 10:13:29.563 INFO Running build command...
+Jan 30 10:13:29.565 INFO Checking rustc version...
+Jan 30 10:13:29.624 INFO rustc version is 32.
+Jan 30 10:13:29.624 INFO Checking crate configuration...
+Jan 30 10:13:29.625 INFO Crate is correctly configured.
+Jan 30 10:13:29.625 INFO Adding wasm-target...
+Jan 30 10:13:29.711 INFO Adding wasm-target was successful.
+Jan 30 10:13:29.712 INFO Building wasm...
+Jan 30 10:13:31.831 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 30 10:13:31.831 INFO Creating a pkg directory...
+Jan 30 10:13:31.832 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 30 10:13:31.832 INFO Writing a package.json...
+Jan 30 10:13:31.832 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 30 10:13:31.832 INFO Copying readme from crate...
+Jan 30 10:13:31.833 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 10:13:31.833 INFO Identifying wasm-bindgen dependency...
+Jan 30 10:13:31.879 INFO Installing wasm-bindgen-cli...
+Jan 30 10:13:31.904 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 30 10:13:31.905 INFO Installing wasm-bindgen-cli was successful.
+Jan 30 10:13:31.905 INFO Getting the crate name from the manifest...
+Jan 30 10:13:31.905 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 30 10:13:31.905 INFO Building the wasm bindings...
+Jan 30 10:13:31.967 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 10:13:31.967 INFO Done in 2 seconds.
+Jan 30 10:13:31.967 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 10:13:48.081 INFO Running build command...
+Jan 30 10:13:48.083 INFO Checking rustc version...
+Jan 30 10:13:48.132 INFO rustc version is 32.
+Jan 30 10:13:48.132 INFO Checking crate configuration...
+Jan 30 10:13:48.133 INFO Crate is correctly configured.
+Jan 30 10:13:48.133 INFO Adding wasm-target...
+Jan 30 10:13:48.212 INFO Adding wasm-target was successful.
+Jan 30 10:13:48.213 INFO Building wasm...
+Jan 30 10:13:49.337 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 30 10:13:49.337 INFO Creating a pkg directory...
+Jan 30 10:13:49.337 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 30 10:13:49.338 INFO Writing a package.json...
+Jan 30 10:13:49.338 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 30 10:13:49.338 INFO Copying readme from crate...
+Jan 30 10:13:49.338 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 10:13:49.339 INFO Identifying wasm-bindgen dependency...
+Jan 30 10:13:49.381 INFO Installing wasm-bindgen-cli...
+Jan 30 10:13:49.407 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 30 10:13:49.407 INFO Installing wasm-bindgen-cli was successful.
+Jan 30 10:13:49.408 INFO Getting the crate name from the manifest...
+Jan 30 10:13:49.408 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 30 10:13:49.408 INFO Building the wasm bindings...
+Jan 30 10:13:49.468 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 10:13:49.468 INFO Done in 1 second.
+Jan 30 10:13:49.468 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 10:28:34.997 INFO Running build command...
+Jan 30 10:28:34.998 INFO Checking rustc version...
+Jan 30 10:28:35.087 INFO rustc version is 32.
+Jan 30 10:28:35.087 INFO Checking crate configuration...
+Jan 30 10:28:35.088 INFO Crate is correctly configured.
+Jan 30 10:28:35.088 INFO Adding wasm-target...
+Jan 30 10:28:35.173 INFO Adding wasm-target was successful.
+Jan 30 10:28:35.174 INFO Building wasm...
+Jan 30 10:28:36.137 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0106]: missing lifetime specifier
+  --> src/lib.rs:29:22
+   |
+29 |     children: Option<&[VElement]>
+   |                      ^ expected lifetime parameter
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0106`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 10:34:58.626 INFO Running build command...
+Jan 30 10:34:58.628 INFO Checking rustc version...
+Jan 30 10:34:58.735 INFO rustc version is 32.
+Jan 30 10:34:58.736 INFO Checking crate configuration...
+Jan 30 10:34:58.736 INFO Crate is correctly configured.
+Jan 30 10:34:58.736 INFO Adding wasm-target...
+Jan 30 10:34:58.832 INFO Adding wasm-target was successful.
+Jan 30 10:34:58.833 INFO Building wasm...
+Jan 30 10:34:59.973 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0106]: missing lifetime specifier
+  --> src/lib.rs:29:22
+   |
+29 |     children: Option<&[VElement]>
+   |                      ^ expected lifetime parameter
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0106`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 10:35:32.661 INFO Running build command...
+Jan 30 10:35:32.663 INFO Checking rustc version...
+Jan 30 10:35:32.708 INFO rustc version is 32.
+Jan 30 10:35:32.709 INFO Checking crate configuration...
+Jan 30 10:35:32.709 INFO Crate is correctly configured.
+Jan 30 10:35:32.709 INFO Adding wasm-target...
+Jan 30 10:35:32.786 INFO Adding wasm-target was successful.
+Jan 30 10:35:32.787 INFO Building wasm...
+Jan 30 10:35:33.192 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0106]: missing lifetime specifier
+  --> src/lib.rs:29:22
+   |
+29 |     children: Option<&[VElement]>
+   |                      ^ expected lifetime parameter
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0106`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 10:36:54.398 INFO Running build command...
+Jan 30 10:36:54.399 INFO Checking rustc version...
+Jan 30 10:36:54.449 INFO rustc version is 32.
+Jan 30 10:36:54.449 INFO Checking crate configuration...
+Jan 30 10:36:54.449 INFO Crate is correctly configured.
+Jan 30 10:36:54.449 INFO Adding wasm-target...
+Jan 30 10:36:54.532 INFO Adding wasm-target was successful.
+Jan 30 10:36:54.533 INFO Building wasm...
+Jan 30 10:36:55.171 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0106]: missing lifetime specifier
+  --> src/lib.rs:29:26
+   |
+29 |     children: Option<&'a[VElement]>
+   |                          ^^^^^^^^ expected lifetime parameter
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0106`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 10:42:40.029 INFO Running build command...
+Jan 30 10:42:40.031 INFO Checking rustc version...
+Jan 30 10:42:40.122 INFO rustc version is 32.
+Jan 30 10:42:40.122 INFO Checking crate configuration...
+Jan 30 10:42:40.123 INFO Crate is correctly configured.
+Jan 30 10:42:40.123 INFO Adding wasm-target...
+Jan 30 10:42:40.219 INFO Adding wasm-target was successful.
+Jan 30 10:42:40.220 INFO Building wasm...
+Jan 30 10:42:40.519 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: character literal may only contain one codepoint: '>
+  --> src/lib.rs:26:25
+   |
+26 | struct VElement<'a, T: a'> {
+   |                         ^^
+
+error: aborting due to previous error
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 10:42:46.444 INFO Running build command...
+Jan 30 10:42:46.445 INFO Checking rustc version...
+Jan 30 10:42:46.496 INFO rustc version is 32.
+Jan 30 10:42:46.497 INFO Checking crate configuration...
+Jan 30 10:42:46.497 INFO Crate is correctly configured.
+Jan 30 10:42:46.497 INFO Adding wasm-target...
+Jan 30 10:42:46.574 INFO Adding wasm-target was successful.
+Jan 30 10:42:46.575 INFO Building wasm...
+Jan 30 10:42:48.238 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:52:23
+   |
+52 |             children: children
+   |                       ^^^^^^^^ expected reference, found struct `std::vec::Vec`
+   |
+   = note: expected type `std::option::Option<&[VElement<'_>]>`
+              found type `std::option::Option<std::vec::Vec<VElement<'_>>>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:143:28
+    |
+143 |                     render(childElement, &dom);
+    |                            ^^^^^^^^^^^^ expected struct `VElement`, found reference
+    |
+    = note: expected type `VElement<'_>`
+               found type `&VElement<'_>`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 11:17:16.096 INFO Running build command...
+Jan 30 11:17:16.098 INFO Checking rustc version...
+Jan 30 11:17:16.189 INFO rustc version is 32.
+Jan 30 11:17:16.190 INFO Checking crate configuration...
+Jan 30 11:17:16.190 INFO Crate is correctly configured.
+Jan 30 11:17:16.190 INFO Adding wasm-target...
+Jan 30 11:17:16.289 INFO Adding wasm-target was successful.
+Jan 30 11:17:16.289 INFO Building wasm...
+Jan 30 11:17:18.123 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Jan 30 11:17:18.124 INFO Creating a pkg directory...
+Jan 30 11:17:18.124 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Jan 30 11:17:18.124 INFO Writing a package.json...
+Jan 30 11:17:18.124 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Jan 30 11:17:18.124 INFO Copying readme from crate...
+Jan 30 11:17:18.125 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 11:17:18.125 INFO Identifying wasm-bindgen dependency...
+Jan 30 11:17:18.171 INFO Installing wasm-bindgen-cli...
+Jan 30 11:17:18.197 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Jan 30 11:17:18.197 INFO Installing wasm-bindgen-cli was successful.
+Jan 30 11:17:18.198 INFO Getting the crate name from the manifest...
+Jan 30 11:17:18.198 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Jan 30 11:17:18.198 INFO Building the wasm bindings...
+Jan 30 11:17:18.262 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 11:17:18.262 INFO Done in 2 seconds.
+Jan 30 11:17:18.262 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Jan 30 11:20:39.856 INFO Running build command...
+Jan 30 11:20:39.858 INFO Checking rustc version...
+Jan 30 11:20:39.950 INFO rustc version is 32.
+Jan 30 11:20:39.950 INFO Checking crate configuration...
+Jan 30 11:20:39.950 INFO Crate is correctly configured.
+Jan 30 11:20:39.950 INFO Adding wasm-target...
+Jan 30 11:20:40.040 INFO Adding wasm-target was successful.
+Jan 30 11:20:40.041 INFO Building wasm...
+Jan 30 11:20:40.850 INFO Running build command...
+Jan 30 11:20:40.850 INFO Checking rustc version...
+Jan 30 11:20:40.919 INFO rustc version is 32.
+Jan 30 11:20:40.920 INFO Checking crate configuration...
+Jan 30 11:20:40.920 INFO Crate is correctly configured.
+Jan 30 11:20:40.920 INFO Adding wasm-target...
+Jan 30 11:20:40.961 INFO Running build command...
+Jan 30 11:20:40.965 INFO Checking rustc version...
+Jan 30 11:20:41.043 INFO Adding wasm-target was successful.
+Jan 30 11:20:41.043 INFO Building wasm...
+Jan 30 11:20:41.048 INFO rustc version is 32.
+Jan 30 11:20:41.053 INFO Checking crate configuration...
+Jan 30 11:20:41.056 INFO Crate is correctly configured.
+Jan 30 11:20:41.056 INFO Adding wasm-target...
+Jan 30 11:20:41.255 INFO Adding wasm-target was successful.
+Jan 30 11:20:41.256 INFO Building wasm...
+Jan 30 11:20:41.517 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0428]: the name `on_click` is defined multiple times
+   --> src/lib.rs:126:1
+    |
+117 | fn on_click(js_fn: String) -> (String, String) {
+    | ---------------------------------------------- previous definition of the value `on_click` here
+...
+126 | fn on_click(js_fn: String) -> (String, String) {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `on_click` redefined here
+    |
+    = note: `on_click` must be defined only once in the value namespace of this module
+
+error[E0428]: the name `id` is defined multiple times
+   --> src/lib.rs:130:1
+    |
+121 | fn id(name: &str) -> (String, String) {
+    | ------------------------------------- previous definition of the value `id` here
+...
+130 | fn id(name: &str) -> (String, String) {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `id` redefined here
+    |
+    = note: `id` must be defined only once in the value namespace of this module
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0428`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 11:20:41.864 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0428]: the name `on_click` is defined multiple times
+   --> src/lib.rs:126:1
+    |
+117 | fn on_click(js_fn: String) -> (String, String) {
+    | ---------------------------------------------- previous definition of the value `on_click` here
+...
+126 | fn on_click(js_fn: String) -> (String, String) {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `on_click` redefined here
+    |
+    = note: `on_click` must be defined only once in the value namespace of this module
+
+error[E0428]: the name `id` is defined multiple times
+   --> src/lib.rs:130:1
+    |
+121 | fn id(name: &str) -> (String, String) {
+    | ------------------------------------- previous definition of the value `id` here
+...
+130 | fn id(name: &str) -> (String, String) {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `id` redefined here
+    |
+    = note: `id` must be defined only once in the value namespace of this module
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0428`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Jan 30 11:20:42.191 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0428]: the name `on_click` is defined multiple times
+   --> src/lib.rs:126:1
+    |
+117 | fn on_click(js_fn: String) -> (String, String) {
+    | ---------------------------------------------- previous definition of the value `on_click` here
+...
+126 | fn on_click(js_fn: String) -> (String, String) {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `on_click` redefined here
+    |
+    = note: `on_click` must be defined only once in the value namespace of this module
+
+error[E0428]: the name `id` is defined multiple times
+   --> src/lib.rs:130:1
+    |
+121 | fn id(name: &str) -> (String, String) {
+    | ------------------------------------- previous definition of the value `id` here
+...
+130 | fn id(name: &str) -> (String, String) {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `id` redefined here
+    |
+    = note: `id` must be defined only once in the value namespace of this module
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0428`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+

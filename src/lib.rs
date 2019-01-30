@@ -29,37 +29,19 @@ struct VElement {
     children: Option<Vec<VElement>>
 }
 
-
 #[wasm_bindgen(start)]
 pub fn run() {
-    // Generate state representation
-    let mut props1 = HashMap::new();
-    props1.insert(String::from("id"), String::from("container"));
-    props1.insert(String::from("onClick"), "console.log('click')".to_string());
+    // create primitive components
+    let div = |props, children| primitive_component("div".to_string(), props, children);
+    let span = |props, children| primitive_component("span".to_string(), props, children);
+    let text = |value| primitive_component("text".to_string(), vec![("value".to_string(), value)], vec![]);
 
-    let mut props2 = HashMap::new();
-    props2.insert(String::from("id"), String::from("child"));
-
-    let mut txtProps = HashMap::new();
-    txtProps.insert("value".to_string(), "click me".to_string());
-
-    let text = VElement {
-        type_: String::from("text"),
-        props: txtProps,
-        children: None
-    };
-
-    let child = VElement {
-        type_: String::from("span"),
-        props: props2,
-        children: Some(vec![text])
-    };
-
-    let v_element = VElement {
-        type_: String::from("div"),
-        props: props1,
-        children: Some(vec![child])
-    };
+    let v_element = div(vec![id("container")], vec![
+                span(vec![id("child"), on_click("console.log(arguments)".to_string())], vec![
+                    text("Hello World".to_string())
+                ])
+            ]
+        );
 
     let window = web_sys::window().expect("should have a Window");
     let document = window.document().expect("should have a Document");
@@ -107,6 +89,46 @@ fn render(v_element: VElement, parent_dom: &web_sys::Element) -> Result<(), JsVa
     };
 
     Ok(())
+}
+
+// create primitive components
+fn primitive_component(type_: String, array_prop: Vec<(String, String)>, _children: Vec<VElement>) -> VElement {
+    // Convert [(String, String)] -> HashMap<String, String>;
+    // VElement.props can't be a &[(String, String)]
+    let mut props = HashMap::new();
+    for prop in array_prop {
+        let (name, value) = prop;
+        props.insert(name.to_string(), value.to_string());
+    }
+
+    let children = match _children.len() {
+        0 => None,
+        _ => Some(_children)
+    };
+
+   VElement {
+        type_: type_,
+        props: props,
+        children: children
+    }
+}
+
+// Attribute functions
+fn on_click(js_fn: String) -> (String, String) {
+    ("onClick".to_string(), js_fn)
+}
+
+fn id(name: &str) -> (String, String) {
+    ("id".to_string(), name.to_string())
+}
+
+
+fn on_click(js_fn: String) -> (String, String) {
+    ("onClick".to_string(), js_fn)
+}
+
+fn id(name: &str) -> (String, String) {
+    ("id".to_string(), name.to_string())
 }
 
 // Helper functions
