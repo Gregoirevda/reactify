@@ -7926,3 +7926,853 @@ error: Could not compile `reactify`.
 
 To learn more, run the command again with --verbose.
 
+Feb 05 16:14:22.908 INFO Running build command...
+Feb 05 16:14:22.909 INFO Checking rustc version...
+Feb 05 16:14:23.046 INFO rustc version is 32.
+Feb 05 16:14:23.046 INFO Checking crate configuration...
+Feb 05 16:14:23.047 INFO Crate is correctly configured.
+Feb 05 16:14:23.047 INFO Adding wasm-target...
+Feb 05 16:14:23.189 INFO Adding wasm-target was successful.
+Feb 05 16:14:23.189 INFO Building wasm...
+Feb 05 16:14:26.365 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 05 16:14:26.365 INFO Creating a pkg directory...
+Feb 05 16:14:26.365 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 05 16:14:26.366 INFO Writing a package.json...
+Feb 05 16:14:26.366 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 05 16:14:26.366 INFO Copying readme from crate...
+Feb 05 16:14:26.367 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:14:26.367 INFO Identifying wasm-bindgen dependency...
+Feb 05 16:14:26.435 INFO Installing wasm-bindgen-cli...
+Feb 05 16:14:26.463 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 05 16:14:26.463 INFO Installing wasm-bindgen-cli was successful.
+Feb 05 16:14:26.463 INFO Getting the crate name from the manifest...
+Feb 05 16:14:26.463 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 05 16:14:26.464 INFO Building the wasm bindings...
+Feb 05 16:14:26.537 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:14:26.537 INFO Done in 3 seconds.
+Feb 05 16:14:26.537 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:00.723 INFO Running build command...
+Feb 05 16:16:00.726 INFO Checking rustc version...
+Feb 05 16:16:00.845 INFO rustc version is 32.
+Feb 05 16:16:00.845 INFO Checking crate configuration...
+Feb 05 16:16:00.845 INFO Crate is correctly configured.
+Feb 05 16:16:00.845 INFO Adding wasm-target...
+Feb 05 16:16:00.972 INFO Adding wasm-target was successful.
+Feb 05 16:16:00.973 INFO Building wasm...
+Feb 05 16:16:02.563 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `node_value`
+   --> src/lib.rs:149:25
+    |
+148 |                           log("YES")
+    |                                     - expected one of `.`, `;`, `?`, `}`, or an operator here
+149 |                         node_value = &value;  
+    |                         ^^^^^^^^^^ unexpected token
+
+error: aborting due to previous error
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:16:04.241 INFO Running build command...
+Feb 05 16:16:04.242 INFO Checking rustc version...
+Feb 05 16:16:04.298 INFO rustc version is 32.
+Feb 05 16:16:04.298 INFO Checking crate configuration...
+Feb 05 16:16:04.298 INFO Crate is correctly configured.
+Feb 05 16:16:04.299 INFO Adding wasm-target...
+Feb 05 16:16:04.401 INFO Adding wasm-target was successful.
+Feb 05 16:16:04.401 INFO Building wasm...
+Feb 05 16:16:05.833 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 05 16:16:05.834 INFO Creating a pkg directory...
+Feb 05 16:16:05.834 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 05 16:16:05.834 INFO Writing a package.json...
+Feb 05 16:16:05.834 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 05 16:16:05.835 INFO Copying readme from crate...
+Feb 05 16:16:05.835 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:05.835 INFO Identifying wasm-bindgen dependency...
+Feb 05 16:16:05.891 INFO Installing wasm-bindgen-cli...
+Feb 05 16:16:05.919 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 05 16:16:05.920 INFO Installing wasm-bindgen-cli was successful.
+Feb 05 16:16:05.920 INFO Getting the crate name from the manifest...
+Feb 05 16:16:05.920 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 05 16:16:05.921 INFO Building the wasm bindings...
+Feb 05 16:16:05.981 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:05.981 INFO Done in 1 second.
+Feb 05 16:16:05.982 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:25.104 INFO Running build command...
+Feb 05 16:16:25.106 INFO Checking rustc version...
+Feb 05 16:16:25.160 INFO rustc version is 32.
+Feb 05 16:16:25.160 INFO Checking crate configuration...
+Feb 05 16:16:25.161 INFO Crate is correctly configured.
+Feb 05 16:16:25.161 INFO Adding wasm-target...
+Feb 05 16:16:25.258 INFO Adding wasm-target was successful.
+Feb 05 16:16:25.258 INFO Building wasm...
+Feb 05 16:16:26.270 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 05 16:16:26.270 INFO Creating a pkg directory...
+Feb 05 16:16:26.270 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 05 16:16:26.271 INFO Writing a package.json...
+Feb 05 16:16:26.271 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 05 16:16:26.271 INFO Copying readme from crate...
+Feb 05 16:16:26.272 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:26.272 INFO Identifying wasm-bindgen dependency...
+Feb 05 16:16:26.322 INFO Installing wasm-bindgen-cli...
+Feb 05 16:16:26.338 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 05 16:16:26.339 INFO Installing wasm-bindgen-cli was successful.
+Feb 05 16:16:26.339 INFO Getting the crate name from the manifest...
+Feb 05 16:16:26.339 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 05 16:16:26.339 INFO Building the wasm bindings...
+Feb 05 16:16:26.394 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:26.394 INFO Done in 1 second.
+Feb 05 16:16:26.395 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:36.945 INFO Running build command...
+Feb 05 16:16:36.946 INFO Checking rustc version...
+Feb 05 16:16:37.007 INFO rustc version is 32.
+Feb 05 16:16:37.007 INFO Checking crate configuration...
+Feb 05 16:16:37.007 INFO Crate is correctly configured.
+Feb 05 16:16:37.008 INFO Adding wasm-target...
+Feb 05 16:16:37.096 INFO Adding wasm-target was successful.
+Feb 05 16:16:37.097 INFO Building wasm...
+Feb 05 16:16:38.364 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 05 16:16:38.364 INFO Creating a pkg directory...
+Feb 05 16:16:38.364 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 05 16:16:38.364 INFO Writing a package.json...
+Feb 05 16:16:38.365 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 05 16:16:38.365 INFO Copying readme from crate...
+Feb 05 16:16:38.365 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:38.365 INFO Identifying wasm-bindgen dependency...
+Feb 05 16:16:38.418 INFO Installing wasm-bindgen-cli...
+Feb 05 16:16:38.434 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 05 16:16:38.435 INFO Installing wasm-bindgen-cli was successful.
+Feb 05 16:16:38.435 INFO Getting the crate name from the manifest...
+Feb 05 16:16:38.435 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 05 16:16:38.436 INFO Building the wasm bindings...
+Feb 05 16:16:38.496 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:16:38.496 INFO Done in 1 second.
+Feb 05 16:16:38.496 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:17:14.433 INFO Running build command...
+Feb 05 16:17:14.435 INFO Checking rustc version...
+Feb 05 16:17:14.497 INFO rustc version is 32.
+Feb 05 16:17:14.497 INFO Checking crate configuration...
+Feb 05 16:17:14.497 INFO Crate is correctly configured.
+Feb 05 16:17:14.498 INFO Adding wasm-target...
+Feb 05 16:17:14.595 INFO Adding wasm-target was successful.
+Feb 05 16:17:14.595 INFO Building wasm...
+Feb 05 16:17:16.462 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 05 16:17:16.462 INFO Creating a pkg directory...
+Feb 05 16:17:16.462 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 05 16:17:16.462 INFO Writing a package.json...
+Feb 05 16:17:16.463 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 05 16:17:16.463 INFO Copying readme from crate...
+Feb 05 16:17:16.463 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:17:16.463 INFO Identifying wasm-bindgen dependency...
+Feb 05 16:17:16.525 INFO Installing wasm-bindgen-cli...
+Feb 05 16:17:16.553 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 05 16:17:16.553 INFO Installing wasm-bindgen-cli was successful.
+Feb 05 16:17:16.553 INFO Getting the crate name from the manifest...
+Feb 05 16:17:16.554 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 05 16:17:16.554 INFO Building the wasm bindings...
+Feb 05 16:17:16.624 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:17:16.625 INFO Done in 2 seconds.
+Feb 05 16:17:16.625 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:18:56.265 INFO Running build command...
+Feb 05 16:18:56.266 INFO Checking rustc version...
+Feb 05 16:18:56.327 INFO rustc version is 32.
+Feb 05 16:18:56.328 INFO Checking crate configuration...
+Feb 05 16:18:56.328 INFO Crate is correctly configured.
+Feb 05 16:18:56.328 INFO Adding wasm-target...
+Feb 05 16:18:56.428 INFO Adding wasm-target was successful.
+Feb 05 16:18:56.429 INFO Building wasm...
+Feb 05 16:18:58.378 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 05 16:18:58.378 INFO Creating a pkg directory...
+Feb 05 16:18:58.378 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 05 16:18:58.379 INFO Writing a package.json...
+Feb 05 16:18:58.379 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 05 16:18:58.379 INFO Copying readme from crate...
+Feb 05 16:18:58.379 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:18:58.380 INFO Identifying wasm-bindgen dependency...
+Feb 05 16:18:58.428 INFO Installing wasm-bindgen-cli...
+Feb 05 16:18:58.453 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 05 16:18:58.453 INFO Installing wasm-bindgen-cli was successful.
+Feb 05 16:18:58.453 INFO Getting the crate name from the manifest...
+Feb 05 16:18:58.454 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 05 16:18:58.454 INFO Building the wasm bindings...
+Feb 05 16:18:58.516 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:18:58.516 INFO Done in 2 seconds.
+Feb 05 16:18:58.516 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:20:13.597 INFO Running build command...
+Feb 05 16:20:13.599 INFO Checking rustc version...
+Feb 05 16:20:13.707 INFO rustc version is 32.
+Feb 05 16:20:13.707 INFO Checking crate configuration...
+Feb 05 16:20:13.707 INFO Crate is correctly configured.
+Feb 05 16:20:13.707 INFO Adding wasm-target...
+Feb 05 16:20:13.806 INFO Adding wasm-target was successful.
+Feb 05 16:20:13.807 INFO Building wasm...
+Feb 05 16:20:15.384 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0621]: explicit lifetime required in the type of `instance`
+   --> src/lib.rs:107:50
+    |
+82  |     instance: Option<Instance>,
+    |               ---------------- help: add explicit lifetime `'a` to the type of `instance`: `std::option::Option<Instance<'a>>`
+...
+107 |             (Some(instance), Some(v_element)) => Some(instance),
+    |                                                  ^^^^^^^^^^^^^^ lifetime `'a` required
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0621`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:21:07.807 INFO Running build command...
+Feb 05 16:21:07.818 INFO Checking rustc version...
+Feb 05 16:21:07.886 INFO rustc version is 32.
+Feb 05 16:21:07.886 INFO Checking crate configuration...
+Feb 05 16:21:07.887 INFO Crate is correctly configured.
+Feb 05 16:21:07.887 INFO Adding wasm-target...
+Feb 05 16:21:07.986 INFO Adding wasm-target was successful.
+Feb 05 16:21:07.986 INFO Building wasm...
+Feb 05 16:21:08.562 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0621]: explicit lifetime required in the type of `root_instance`
+  --> src/lib.rs:77:5
+   |
+73 |     root_instance: Option<Instance>
+   |                    ---------------- help: add explicit lifetime `'a` to the type of `root_instance`: `std::option::Option<Instance<'a>>`
+...
+77 |     next_instance
+   |     ^^^^^^^^^^^^^ lifetime `'a` required
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0621`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:21:26.996 INFO Running build command...
+Feb 05 16:21:26.997 INFO Checking rustc version...
+Feb 05 16:21:27.059 INFO rustc version is 32.
+Feb 05 16:21:27.059 INFO Checking crate configuration...
+Feb 05 16:21:27.059 INFO Crate is correctly configured.
+Feb 05 16:21:27.060 INFO Adding wasm-target...
+Feb 05 16:21:27.147 INFO Adding wasm-target was successful.
+Feb 05 16:21:27.148 INFO Building wasm...
+Feb 05 16:21:28.558 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 05 16:21:28.558 INFO Creating a pkg directory...
+Feb 05 16:21:28.558 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 05 16:21:28.558 INFO Writing a package.json...
+Feb 05 16:21:28.559 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 05 16:21:28.559 INFO Copying readme from crate...
+Feb 05 16:21:28.559 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:21:28.559 INFO Identifying wasm-bindgen dependency...
+Feb 05 16:21:28.611 INFO Installing wasm-bindgen-cli...
+Feb 05 16:21:28.639 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 05 16:21:28.640 INFO Installing wasm-bindgen-cli was successful.
+Feb 05 16:21:28.640 INFO Getting the crate name from the manifest...
+Feb 05 16:21:28.640 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 05 16:21:28.640 INFO Building the wasm bindings...
+Feb 05 16:21:28.702 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:21:28.703 INFO Done in 1 second.
+Feb 05 16:21:28.703 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 05 16:24:42.981 INFO Running build command...
+Feb 05 16:24:42.982 INFO Checking rustc version...
+Feb 05 16:24:43.047 INFO rustc version is 32.
+Feb 05 16:24:43.047 INFO Checking crate configuration...
+Feb 05 16:24:43.048 INFO Crate is correctly configured.
+Feb 05 16:24:43.048 INFO Adding wasm-target...
+Feb 05 16:24:43.154 INFO Adding wasm-target was successful.
+Feb 05 16:24:43.155 INFO Building wasm...
+Feb 05 16:24:44.700 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:77
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                             ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:39
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                       ^^^^^^^^^^^^ expected reference, found struct `web_sys::Node`
+    |
+    = note: expected type `&web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:53
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                     |
+    |                                                     expected reference, found struct `std::vec::Vec`
+    |                                                     help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:25:18.895 INFO Running build command...
+Feb 05 16:25:18.896 INFO Checking rustc version...
+Feb 05 16:25:18.948 INFO rustc version is 32.
+Feb 05 16:25:18.949 INFO Checking crate configuration...
+Feb 05 16:25:18.949 INFO Crate is correctly configured.
+Feb 05 16:25:18.949 INFO Adding wasm-target...
+Feb 05 16:25:19.042 INFO Adding wasm-target was successful.
+Feb 05 16:25:19.042 INFO Building wasm...
+Feb 05 16:25:19.879 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:77
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                             ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:39
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                       ^^^^^^^^^^^^ expected struct `web_sys::Element`, found struct `web_sys::Node`
+    |
+    = note: expected type `web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:53
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                     |
+    |                                                     expected reference, found struct `std::vec::Vec`
+    |                                                     help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:167:43
+    |
+167 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^
+    |                                           |
+    |                                           expected struct `web_sys::Element`, found reference
+    |                                           help: consider removing the borrow: `dom`
+    |
+    = note: expected type `web_sys::Element`
+               found type `&web_sys::Element`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:25:24.586 INFO Running build command...
+Feb 05 16:25:24.590 INFO Checking rustc version...
+Feb 05 16:25:24.654 INFO rustc version is 32.
+Feb 05 16:25:24.654 INFO Checking crate configuration...
+Feb 05 16:25:24.655 INFO Crate is correctly configured.
+Feb 05 16:25:24.655 INFO Adding wasm-target...
+Feb 05 16:25:24.749 INFO Adding wasm-target was successful.
+Feb 05 16:25:24.750 INFO Building wasm...
+Feb 05 16:25:25.861 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:77
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                             ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:39
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                       ^^^^^^^^^^^^ expected struct `web_sys::Element`, found struct `web_sys::Node`
+    |
+    = note: expected type `web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:53
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                     |
+    |                                                     expected reference, found struct `std::vec::Vec`
+    |                                                     help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:167:43
+    |
+167 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^
+    |                                           |
+    |                                           expected struct `web_sys::Element`, found reference
+    |                                           help: consider removing the borrow: `dom`
+    |
+    = note: expected type `web_sys::Element`
+               found type `&web_sys::Element`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:25:47.712 INFO Running build command...
+Feb 05 16:25:47.715 INFO Checking rustc version...
+Feb 05 16:25:47.773 INFO rustc version is 32.
+Feb 05 16:25:47.773 INFO Checking crate configuration...
+Feb 05 16:25:47.773 INFO Crate is correctly configured.
+Feb 05 16:25:47.774 INFO Adding wasm-target...
+Feb 05 16:25:47.868 INFO Adding wasm-target was successful.
+Feb 05 16:25:47.868 INFO Building wasm...
+Feb 05 16:25:48.851 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:98
+    |
+108 |                 update_dom_properties(web_sys::Node::from(instance.dom), instance.element.props, element.props);
+    |                                                                                                  ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:39
+    |
+108 |                 update_dom_properties(web_sys::Node::from(instance.dom), instance.element.props, element.props);
+    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `web_sys::Element`, found struct `web_sys::Node`
+    |
+    = note: expected type `web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:74
+    |
+108 |                 update_dom_properties(web_sys::Node::from(instance.dom), instance.element.props, element.props);
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                                          |
+    |                                                                          expected reference, found struct `std::vec::Vec`
+    |                                                                          help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:167:43
+    |
+167 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^
+    |                                           |
+    |                                           expected struct `web_sys::Element`, found reference
+    |                                           help: consider removing the borrow: `dom`
+    |
+    = note: expected type `web_sys::Element`
+               found type `&web_sys::Element`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:26:06.539 INFO Running build command...
+Feb 05 16:26:06.540 INFO Checking rustc version...
+Feb 05 16:26:06.602 INFO rustc version is 32.
+Feb 05 16:26:06.603 INFO Checking crate configuration...
+Feb 05 16:26:06.603 INFO Crate is correctly configured.
+Feb 05 16:26:06.603 INFO Adding wasm-target...
+Feb 05 16:26:06.709 INFO Adding wasm-target was successful.
+Feb 05 16:26:06.710 INFO Building wasm...
+Feb 05 16:26:07.821 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:98
+    |
+108 |                 update_dom_properties(web_sys::Node::from(instance.dom), instance.element.props, element.props);
+    |                                                                                                  ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:74
+    |
+108 |                 update_dom_properties(web_sys::Node::from(instance.dom), instance.element.props, element.props);
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                                          |
+    |                                                                          expected reference, found struct `std::vec::Vec`
+    |                                                                          help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:167:43
+    |
+167 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^ expected struct `web_sys::Node`, found reference
+    |
+    = note: expected type `web_sys::Node`
+               found type `&web_sys::Element`
+
+error[E0599]: no method named `set_attribute` found for type `web_sys::Node` in the current scope
+   --> src/lib.rs:214:17
+    |
+214 |             dom.set_attribute(&name, &value);
+    |                 ^^^^^^^^^^^^^
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:26:25.455 INFO Running build command...
+Feb 05 16:26:25.456 INFO Checking rustc version...
+Feb 05 16:26:25.524 INFO rustc version is 32.
+Feb 05 16:26:25.524 INFO Checking crate configuration...
+Feb 05 16:26:25.524 INFO Crate is correctly configured.
+Feb 05 16:26:25.525 INFO Adding wasm-target...
+Feb 05 16:26:25.625 INFO Adding wasm-target was successful.
+Feb 05 16:26:25.626 INFO Building wasm...
+Feb 05 16:26:26.993 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:77
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                             ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:39
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                       ^^^^^^^^^^^^ expected struct `web_sys::Element`, found struct `web_sys::Node`
+    |
+    = note: expected type `web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:53
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                     |
+    |                                                     expected reference, found struct `std::vec::Vec`
+    |                                                     help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:167:43
+    |
+167 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^
+    |                                           |
+    |                                           expected struct `web_sys::Element`, found reference
+    |                                           help: consider removing the borrow: `dom`
+    |
+    = note: expected type `web_sys::Element`
+               found type `&web_sys::Element`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:27:51.265 INFO Running build command...
+Feb 05 16:27:51.266 INFO Checking rustc version...
+Feb 05 16:27:51.331 INFO rustc version is 32.
+Feb 05 16:27:51.332 INFO Checking crate configuration...
+Feb 05 16:27:51.332 INFO Crate is correctly configured.
+Feb 05 16:27:51.333 INFO Adding wasm-target...
+Feb 05 16:27:51.431 INFO Adding wasm-target was successful.
+Feb 05 16:27:51.431 INFO Building wasm...
+Feb 05 16:27:52.987 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0532]: expected tuple struct/variant, found struct `web_sys::Element`
+   --> src/lib.rs:108:24
+    |
+108 |                 if let web_sys::Element(dom) = instance.dom {
+    |                        ^^^^^^^^^^^^^^^^ did you mean `web_sys::Element { /* fields */ }`?
+
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:109:81
+    |
+109 |                     update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                                 ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:109:43
+    |
+109 |                     update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                           ^^^^^^^^^^^^ expected struct `web_sys::Element`, found struct `web_sys::Node`
+    |
+    = note: expected type `web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:109:57
+    |
+109 |                     update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                         ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                         |
+    |                                                         expected reference, found struct `std::vec::Vec`
+    |                                                         help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:169:43
+    |
+169 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^
+    |                                           |
+    |                                           expected struct `web_sys::Element`, found reference
+    |                                           help: consider removing the borrow: `dom`
+    |
+    = note: expected type `web_sys::Element`
+               found type `&web_sys::Element`
+
+error: aborting due to 5 previous errors
+
+Some errors occurred: E0308, E0425, E0532.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:28:17.275 INFO Running build command...
+Feb 05 16:28:17.278 INFO Checking rustc version...
+Feb 05 16:28:17.347 INFO rustc version is 32.
+Feb 05 16:28:17.347 INFO Checking crate configuration...
+Feb 05 16:28:17.347 INFO Crate is correctly configured.
+Feb 05 16:28:17.348 INFO Adding wasm-target...
+Feb 05 16:28:17.450 INFO Adding wasm-target was successful.
+Feb 05 16:28:17.450 INFO Building wasm...
+Feb 05 16:28:18.368 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:109:81
+    |
+109 |                     update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                                 ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:24
+    |
+108 |                 if let web_sys::Element { dom } = instance.dom {
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `web_sys::Node`, found struct `web_sys::Element`
+    |
+    = note: expected type `web_sys::Node`
+               found type `web_sys::Element`
+
+error[E0026]: struct `web_sys::Element` does not have a field named `dom`
+   --> src/lib.rs:108:43
+    |
+108 |                 if let web_sys::Element { dom } = instance.dom {
+    |                                           ^^^ struct `web_sys::Element` does not have this field
+
+error[E0027]: pattern does not mention field `obj`
+   --> src/lib.rs:108:24
+    |
+108 |                 if let web_sys::Element { dom } = instance.dom {
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^^ missing field `obj`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:109:43
+    |
+109 |                     update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                           ^^^^^^^^^^^^ expected struct `web_sys::Element`, found struct `web_sys::Node`
+    |
+    = note: expected type `web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:109:57
+    |
+109 |                     update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                         ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                         |
+    |                                                         expected reference, found struct `std::vec::Vec`
+    |                                                         help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:169:43
+    |
+169 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^
+    |                                           |
+    |                                           expected struct `web_sys::Element`, found reference
+    |                                           help: consider removing the borrow: `dom`
+    |
+    = note: expected type `web_sys::Element`
+               found type `&web_sys::Element`
+
+error: aborting due to 7 previous errors
+
+Some errors occurred: E0026, E0027, E0308, E0425.
+For more information about an error, try `rustc --explain E0026`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:30:25.344 INFO Running build command...
+Feb 05 16:30:25.345 INFO Checking rustc version...
+Feb 05 16:30:25.451 INFO rustc version is 32.
+Feb 05 16:30:25.451 INFO Checking crate configuration...
+Feb 05 16:30:25.452 INFO Crate is correctly configured.
+Feb 05 16:30:25.452 INFO Adding wasm-target...
+Feb 05 16:30:25.545 INFO Adding wasm-target was successful.
+Feb 05 16:30:25.545 INFO Building wasm...
+Feb 05 16:30:27.174 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:77
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                             ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:39
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                       ^^^^^^^^^^^^ expected struct `web_sys::Element`, found struct `web_sys::Node`
+    |
+    = note: expected type `web_sys::Element`
+               found type `web_sys::Node`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:53
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                     |
+    |                                                     expected reference, found struct `std::vec::Vec`
+    |                                                     help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:167:43
+    |
+167 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^
+    |                                           |
+    |                                           expected struct `web_sys::Element`, found reference
+    |                                           help: consider removing the borrow: `dom`
+    |
+    = note: expected type `web_sys::Element`
+               found type `&web_sys::Element`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 05 16:30:40.377 INFO Running build command...
+Feb 05 16:30:40.378 INFO Checking rustc version...
+Feb 05 16:30:40.454 INFO rustc version is 32.
+Feb 05 16:30:40.454 INFO Checking crate configuration...
+Feb 05 16:30:40.454 INFO Crate is correctly configured.
+Feb 05 16:30:40.455 INFO Adding wasm-target...
+Feb 05 16:30:40.546 INFO Adding wasm-target was successful.
+Feb 05 16:30:40.547 INFO Building wasm...
+Feb 05 16:30:41.396 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find value `element` in this scope
+   --> src/lib.rs:108:77
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                                             ^^^^^^^ did you mean `v_element`?
+
+error[E0308]: mismatched types
+   --> src/lib.rs:108:53
+    |
+108 |                 update_dom_properties(instance.dom, instance.element.props, element.props);
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^
+    |                                                     |
+    |                                                     expected reference, found struct `std::vec::Vec`
+    |                                                     help: consider borrowing here: `&instance.element.props`
+    |
+    = note: expected type `&std::vec::Vec<(std::string::String, std::string::String)>`
+               found type `std::vec::Vec<(std::string::String, std::string::String)>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:167:43
+    |
+167 |                     update_dom_properties(&dom, &vec![], &props);
+    |                                           ^^^^ expected struct `web_sys::Node`, found reference
+    |
+    = note: expected type `web_sys::Node`
+               found type `&web_sys::Element`
+
+error[E0599]: no method named `set_attribute` found for type `web_sys::Node` in the current scope
+   --> src/lib.rs:214:17
+    |
+214 |             dom.set_attribute(&name, &value);
+    |                 ^^^^^^^^^^^^^
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0425, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+

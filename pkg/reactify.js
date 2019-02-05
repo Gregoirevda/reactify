@@ -1,6 +1,29 @@
 /* tslint:disable */
 import * as wasm from './reactify_bg';
 
+let cachedTextDecoder = new TextDecoder('utf-8');
+
+let cachegetUint8Memory = null;
+function getUint8Memory() {
+    if (cachegetUint8Memory === null || cachegetUint8Memory.buffer !== wasm.memory.buffer) {
+        cachegetUint8Memory = new Uint8Array(wasm.memory.buffer);
+    }
+    return cachegetUint8Memory;
+}
+
+function getStringFromWasm(ptr, len) {
+    return cachedTextDecoder.decode(getUint8Memory().subarray(ptr, ptr + len));
+}
+
+export function __wbg_log_7f3f28d6883ddc00(arg0, arg1) {
+    let varg0 = getStringFromWasm(arg0, arg1);
+    try {
+        console.log(varg0);
+    } catch (e) {
+        console.error("wasm-bindgen: imported JS function that was not marked as `catch` threw an error:", e);
+        throw e;
+    }
+}
 /**
 * @returns {void}
 */
@@ -15,20 +38,6 @@ heap.fill(undefined);
 heap.push(undefined, null, true, false);
 
 function getObject(idx) { return heap[idx]; }
-
-let cachedTextDecoder = new TextDecoder('utf-8');
-
-let cachegetUint8Memory = null;
-function getUint8Memory() {
-    if (cachegetUint8Memory === null || cachegetUint8Memory.buffer !== wasm.memory.buffer) {
-        cachegetUint8Memory = new Uint8Array(wasm.memory.buffer);
-    }
-    return cachegetUint8Memory;
-}
-
-function getStringFromWasm(ptr, len) {
-    return cachedTextDecoder.decode(getUint8Memory().subarray(ptr, ptr + len));
-}
 
 let heap_next = heap.length;
 
@@ -126,6 +135,28 @@ export function __widl_f_append_child_Node(arg0, arg1, exnptr) {
     }
 }
 
+export function __widl_f_remove_child_Node(arg0, arg1, exnptr) {
+    try {
+        return addHeapObject(getObject(arg0).removeChild(getObject(arg1)));
+    } catch (e) {
+        const view = getUint32Memory();
+        view[exnptr / 4] = 1;
+        view[exnptr / 4 + 1] = addHeapObject(e);
+
+    }
+}
+
+export function __widl_f_replace_child_Node(arg0, arg1, arg2, exnptr) {
+    try {
+        return addHeapObject(getObject(arg0).replaceChild(getObject(arg1), getObject(arg2)));
+    } catch (e) {
+        const view = getUint32Memory();
+        view[exnptr / 4] = 1;
+        view[exnptr / 4 + 1] = addHeapObject(e);
+
+    }
+}
+
 export function __widl_instanceof_Window(idx) {
     return getObject(idx) instanceof Window ? 1 : 0;
 }
@@ -174,6 +205,95 @@ function dropObject(idx) {
 }
 
 export function __wbindgen_object_drop_ref(i) { dropObject(i); }
+
+let cachedTextEncoder = new TextEncoder('utf-8');
+
+let WASM_VECTOR_LEN = 0;
+
+function passStringToWasm(arg) {
+
+    if (typeof(arg) !== 'string') throw new Error('expected a string argument');
+
+    const buf = cachedTextEncoder.encode(arg);
+    const ptr = wasm.__wbindgen_malloc(buf.length);
+    getUint8Memory().set(buf, ptr);
+    WASM_VECTOR_LEN = buf.length;
+    return ptr;
+}
+
+export function __wbindgen_debug_string(i, len_ptr) {
+    const toString = Object.prototype.toString;
+    const debug_str = val => {
+        // primitive types
+        const type = typeof val;
+        if (type == 'number' || type == 'boolean' || val == null) {
+            return  `${val}`;
+        }
+        if (type == 'string') {
+            return `"${val}"`;
+        }
+        if (type == 'symbol') {
+            const description = val.description;
+            if (description == null) {
+                return 'Symbol';
+            } else {
+                return `Symbol(${description})`;
+            }
+        }
+        if (type == 'function') {
+            const name = val.name;
+            if (typeof name == 'string' && name.length > 0) {
+                return `Function(${name})`;
+            } else {
+                return 'Function';
+            }
+        }
+        // objects
+        if (Array.isArray(val)) {
+            const length = val.length;
+            let debug = '[';
+            if (length > 0) {
+                debug += debug_str(val[0]);
+            }
+            for(let i = 1; i < length; i++) {
+                debug += ', ' + debug_str(val[i]);
+            }
+            debug += ']';
+            return debug;
+        }
+        // Test for built-in
+        const builtInMatches = /\[object ([^\]]+)\]/.exec(toString.call(val));
+        let className;
+        if (builtInMatches.length > 1) {
+            className = builtInMatches[1];
+        } else {
+            // Failed to match the standard '[object ClassName]'
+            return toString.call(val);
+        }
+        if (className == 'Object') {
+            // we're a user defined class or Object
+            // JSON.stringify avoids problems with cycles, and is generally much
+            // easier than looping through ownProperties of `val`.
+            try {
+                return 'Object(' + JSON.stringify(val) + ')';
+            } catch (_) {
+                return 'Object';
+            }
+        }
+        // errors
+        if (val instanceof Error) {
+        return `${val.name}: ${val.message}
+        ${val.stack}`;
+    }
+    // TODO we could test for more things here, like `Set`s and `Map`s.
+    return className;
+};
+const val = getObject(i);
+const debug = debug_str(val);
+const ptr = passStringToWasm(debug);
+getUint32Memory()[len_ptr / 4] = WASM_VECTOR_LEN;
+return ptr;
+}
 
 export function __wbindgen_defer_start() {
     Promise.resolve().then(() => wasm.__wbindgen_start());

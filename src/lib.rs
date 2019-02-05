@@ -32,7 +32,7 @@ struct VElement {
 struct Instance<'a> {
     dom: web_sys::Node,
     element: &'a VElement,
-    child_instances: Vec<&'a Instance<'a>>
+    child_instances: Vec<Instance<'a>>
 }
 
 #[wasm_bindgen(start)]
@@ -60,7 +60,7 @@ pub fn run() {
     }
 }
 
-fn tick(v_element: &VElement, root_dom: &web_sys::Element, count: u32, root_instance: Option<&Instance>){
+fn tick(v_element: &VElement, root_dom: &web_sys::Element, count: u32, root_instance: Option<Instance>){
     let next_root_instance = render(v_element, root_dom, root_instance);
     if count < 10 { 
         tick(v_element, root_dom, count + 1, next_root_instance);
@@ -70,8 +70,8 @@ fn tick(v_element: &VElement, root_dom: &web_sys::Element, count: u32, root_inst
 fn render<'a>(
     v_element: &'a VElement, 
     container: &web_sys::Element, 
-    root_instance: Option<&Instance>
-) -> Option<&'a Instance<'a>> {
+    root_instance: Option<Instance<'a>>
+) -> Option<Instance<'a>> {
     let previous_instance = root_instance;
     let next_instance = reconcile(container, previous_instance, Some(v_element));
     next_instance
@@ -79,48 +79,56 @@ fn render<'a>(
 
 fn reconcile<'a>(
     parent_dom: &web_sys::Element, 
-    instance: Option<&Instance>,
+    instance: Option<Instance<'a>>,
     v_element: Option<&'a VElement>
-) -> Option<&'a Instance<'a>> {
+) -> Option<Instance<'a>> {
     if instance.is_none() {
+        log("create instance");
         // Create instance
         let new_instance = instantiate(v_element);
         match new_instance {
             None => None,
             Some(new_instance) => {
              parent_dom.append_child(&new_instance.dom);
-             Some(&new_instance)
+             Some(new_instance)
             }
         }
    } else if v_element.is_none() {
+        log("remove instance");
         // Remove instance 
         if let Some(instance) = instance {
             parent_dom.remove_child(&instance.dom);
         }
         None
-   } else if same_type(instance, v_element) {
+   } else if same_type(&instance, v_element) {
+        log("update instance");
         // Update instance
         match (instance, v_element) {
             (Some(instance), Some(v_element)) => {
-                // TODO
-                None
+                // TODO update_dom_properties is called with a web_sys::Node and web_sys::Element (down)
+                // The function needs to call set_attribute, which only exist on Element.
+                // there is no way to know if the param is a Node or Element, Element and Text
+                // should be divided in 2 enums
+                // update_dom_properties(instance.dom, instance.element.props, element.props);
+                Some(instance)
             },
             _ => None
         }
    } else {
+       log("replace_instance");
         // replace instance
         let new_instance = instantiate(v_element);
         match (new_instance, instance) {
             (Some(new_instance), Some(instance)) => {
                 parent_dom.replace_child(&new_instance.dom, &instance.dom);
-                Some(&new_instance)
+                Some(new_instance)
             },
             _ => None
         }
    }
 }
 
-fn same_type(instance: Option<&Instance>, v_element: Option<&VElement>) -> bool {
+fn same_type(instance: &Option<Instance>, v_element: Option<&VElement>) -> bool {
     match instance {
         None => false,
         Some(instance) => 
@@ -131,7 +139,7 @@ fn same_type(instance: Option<&Instance>, v_element: Option<&VElement>) -> bool 
     }
 }
 
-fn instantiate<'a>(v_element: Option<&VElement>) -> Option<&'a Instance<>> {
+fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance<'a>> {
     match v_element {
         None => None,
         Some(v_element) => {
@@ -145,16 +153,16 @@ fn instantiate<'a>(v_element: Option<&VElement>) -> Option<&'a Instance<>> {
                     let mut node_value = "";
                     for (name, value) in props {
                       if name == "nodeValue" {
-                        node_value = &value;  
+                        node_value = value;  
                       }  
                     }
-                    let text_node = document.create_text_node("");
+                    let text_node = document.create_text_node(node_value);
                     let instance = Instance {
                         dom: web_sys::Node::from(text_node),
                         element: v_element,
                         child_instances: vec![]
                     };
-                    Some(&instance)
+                    Some(instance)
                 },
                 _ => {
                     let dom = document.create_element(&type_)
@@ -187,7 +195,7 @@ fn instantiate<'a>(v_element: Option<&VElement>) -> Option<&'a Instance<>> {
                                 element: v_element,
                                 child_instances: child_instances
                             };
-                            Some(&instance)
+                            Some(instance)
                         }
                     }
                 }
