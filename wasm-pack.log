@@ -8776,3 +8776,380 @@ error: Could not compile `reactify`.
 
 To learn more, run the command again with --verbose.
 
+Feb 06 07:33:23.320 INFO Running build command...
+Feb 06 07:33:23.322 INFO Checking rustc version...
+Feb 06 07:33:23.449 INFO rustc version is 32.
+Feb 06 07:33:23.449 INFO Checking crate configuration...
+Feb 06 07:33:23.450 INFO Crate is correctly configured.
+Feb 06 07:33:23.450 INFO Adding wasm-target...
+Feb 06 07:33:23.563 INFO Adding wasm-target was successful.
+Feb 06 07:33:23.563 INFO Building wasm...
+Feb 06 07:33:25.784 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 06 07:33:25.784 INFO Creating a pkg directory...
+Feb 06 07:33:25.784 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 06 07:33:25.784 INFO Writing a package.json...
+Feb 06 07:33:25.785 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 06 07:33:25.785 INFO Copying readme from crate...
+Feb 06 07:33:25.785 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 06 07:33:25.785 INFO Identifying wasm-bindgen dependency...
+Feb 06 07:33:25.845 INFO Installing wasm-bindgen-cli...
+Feb 06 07:33:25.873 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 06 07:33:25.873 INFO Installing wasm-bindgen-cli was successful.
+Feb 06 07:33:25.874 INFO Getting the crate name from the manifest...
+Feb 06 07:33:25.874 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 06 07:33:25.874 INFO Building the wasm bindings...
+Feb 06 07:33:25.949 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 06 07:33:25.950 INFO Done in 2 seconds.
+Feb 06 07:33:25.950 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 06 07:42:48.636 INFO Running build command...
+Feb 06 07:42:48.637 INFO Checking rustc version...
+Feb 06 07:42:48.691 INFO rustc version is 32.
+Feb 06 07:42:48.691 INFO Checking crate configuration...
+Feb 06 07:42:48.691 INFO Crate is correctly configured.
+Feb 06 07:42:48.691 INFO Adding wasm-target...
+Feb 06 07:42:48.768 INFO Adding wasm-target was successful.
+Feb 06 07:42:48.768 INFO Building wasm...
+Feb 06 07:42:49.920 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `!`, `.`, `::`, `?`, `{`, or an operator, found `}`
+   --> src/lib.rs:243:1
+    |
+242 |     for i in 0..count
+    |                      - expected one of `!`, `.`, `::`, `?`, `{`, or an operator here
+243 | }
+    | ^ unexpected token
+
+error[E0433]: failed to resolve: use of undeclared type or module `cmp`
+   --> src/lib.rs:240:17
+    |
+240 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |                 ^^^ use of undeclared type or module `cmp`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:110:68
+    |
+110 |                 let child_instances = reconcile_children(instance, v_element);
+    |                                                                    ^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error[E0599]: no method named `len` found for type `std::option::Option<std::vec::Vec<VElement>>` in the current scope
+   --> src/lib.rs:240:69
+    |
+240 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |                                                                     ^^^
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0308, E0433, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 06 07:42:53.256 INFO Running build command...
+Feb 06 07:42:53.257 INFO Checking rustc version...
+Feb 06 07:42:53.307 INFO rustc version is 32.
+Feb 06 07:42:53.307 INFO Checking crate configuration...
+Feb 06 07:42:53.307 INFO Crate is correctly configured.
+Feb 06 07:42:53.308 INFO Adding wasm-target...
+Feb 06 07:42:53.383 INFO Adding wasm-target was successful.
+Feb 06 07:42:53.383 INFO Building wasm...
+Feb 06 07:42:54.028 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0433]: failed to resolve: use of undeclared type or module `cmp`
+   --> src/lib.rs:240:17
+    |
+240 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |                 ^^^ use of undeclared type or module `cmp`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:110:68
+    |
+110 |                 let child_instances = reconcile_children(instance, v_element);
+    |                                                                    ^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error[E0599]: no method named `len` found for type `std::option::Option<std::vec::Vec<VElement>>` in the current scope
+   --> src/lib.rs:240:69
+    |
+240 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |                                                                     ^^^
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0308, E0433, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 06 07:45:00.769 INFO Running build command...
+Feb 06 07:45:00.770 INFO Checking rustc version...
+Feb 06 07:45:00.817 INFO rustc version is 32.
+Feb 06 07:45:00.817 INFO Checking crate configuration...
+Feb 06 07:45:00.817 INFO Crate is correctly configured.
+Feb 06 07:45:00.817 INFO Adding wasm-target...
+Feb 06 07:45:00.898 INFO Adding wasm-target was successful.
+Feb 06 07:45:00.898 INFO Building wasm...
+Feb 06 07:45:01.524 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:111:68
+    |
+111 |                 let child_instances = reconcile_children(instance, v_element);
+    |                                                                    ^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error[E0599]: no method named `len` found for type `std::option::Option<std::vec::Vec<VElement>>` in the current scope
+   --> src/lib.rs:241:69
+    |
+241 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |                                                                     ^^^
+
+error: aborting due to 2 previous errors
+
+Some errors occurred: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 06 07:46:29.668 INFO Running build command...
+Feb 06 07:46:29.669 INFO Checking rustc version...
+Feb 06 07:46:29.718 INFO rustc version is 32.
+Feb 06 07:46:29.719 INFO Checking crate configuration...
+Feb 06 07:46:29.719 INFO Crate is correctly configured.
+Feb 06 07:46:29.719 INFO Adding wasm-target...
+Feb 06 07:46:29.797 INFO Adding wasm-target was successful.
+Feb 06 07:46:29.797 INFO Building wasm...
+Feb 06 07:46:30.492 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected expression, found statement (`let`)
+   --> src/lib.rs:243:5
+    |
+242 |     match 
+    |     ----- while parsing this match expression
+243 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |     ^^^ expected expression
+    |
+    = note: variable declaration using `let` is a statement
+
+warning: unused import: `std::cmp`
+ --> src/lib.rs:6:5
+  |
+6 | use std::cmp;
+  |     ^^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+error[E0308]: mismatched types
+   --> src/lib.rs:111:68
+    |
+111 |                 let child_instances = reconcile_children(instance, v_element);
+    |                                                                    ^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:178:25
+    |
+178 |                         None => None,
+    |                         ^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<VElement>`
+               found type `std::option::Option<_>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:179:25
+    |
+179 |                         Some(child_elements) => {
+    |                         ^^^^^^^^^^^^^^^^^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<VElement>`
+               found type `std::option::Option<_>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:263:19
+    |
+263 |         children: children
+    |                   ^^^^^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<_>`
+               found type `std::option::Option<std::vec::Vec<_>>`
+
+error: aborting due to 5 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 06 07:49:41.027 INFO Running build command...
+Feb 06 07:49:41.028 INFO Checking rustc version...
+Feb 06 07:49:41.078 INFO rustc version is 32.
+Feb 06 07:49:41.078 INFO Checking crate configuration...
+Feb 06 07:49:41.079 INFO Crate is correctly configured.
+Feb 06 07:49:41.079 INFO Adding wasm-target...
+Feb 06 07:49:41.158 INFO Adding wasm-target was successful.
+Feb 06 07:49:41.158 INFO Building wasm...
+Feb 06 07:49:41.922 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected expression, found statement (`let`)
+   --> src/lib.rs:245:5
+    |
+244 |     match 
+    |     ----- while parsing this match expression
+245 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |     ^^^ expected expression
+    |
+    = note: variable declaration using `let` is a statement
+
+warning: unused import: `std::cmp`
+ --> src/lib.rs:6:5
+  |
+6 | use std::cmp;
+  |     ^^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+error[E0308]: mismatched types
+   --> src/lib.rs:111:68
+    |
+111 |                 let child_instances = reconcile_children(instance, v_element);
+    |                                                                    ^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error[E0609]: no field `children` on type `&std::vec::Vec<(std::string::String, std::string::String)>`
+   --> src/lib.rs:177:48
+    |
+177 |                     let child_elements = props.children || vec![];
+    |                                                ^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src/lib.rs:177:60
+    |
+177 |                     let child_elements = props.children || vec![];
+    |                                                            ^^^^^^ expected bool, found struct `std::vec::Vec`
+    |
+    = note: expected type `bool`
+               found type `std::vec::Vec<_>`
+    = note: this error originates in a macro outside of the current crate (in Nightly builds, run with -Z external-macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> src/lib.rs:180:25
+    |
+180 |                         None => None,
+    |                         ^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<VElement>`
+               found type `std::option::Option<_>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:181:25
+    |
+181 |                         Some(child_elements) => {
+    |                         ^^^^^^^^^^^^^^^^^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<VElement>`
+               found type `std::option::Option<_>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:265:19
+    |
+265 |         children: children
+    |                   ^^^^^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<_>`
+               found type `std::option::Option<std::vec::Vec<_>>`
+
+error: aborting due to 7 previous errors
+
+Some errors occurred: E0308, E0609.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 06 07:52:14.026 INFO Running build command...
+Feb 06 07:52:14.027 INFO Checking rustc version...
+Feb 06 07:52:14.073 INFO rustc version is 32.
+Feb 06 07:52:14.074 INFO Checking crate configuration...
+Feb 06 07:52:14.074 INFO Crate is correctly configured.
+Feb 06 07:52:14.074 INFO Adding wasm-target...
+Feb 06 07:52:14.153 INFO Adding wasm-target was successful.
+Feb 06 07:52:14.153 INFO Building wasm...
+Feb 06 07:52:14.738 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected expression, found statement (`let`)
+   --> src/lib.rs:245:5
+    |
+244 |     match 
+    |     ----- while parsing this match expression
+245 |     let count = cmp::max(child_instances.len(), next_child_elements.len());
+    |     ^^^ expected expression
+    |
+    = note: variable declaration using `let` is a statement
+
+warning: unused import: `std::cmp`
+ --> src/lib.rs:6:5
+  |
+6 | use std::cmp;
+  |     ^^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+error[E0308]: mismatched types
+   --> src/lib.rs:111:68
+    |
+111 |                 let child_instances = reconcile_children(instance, v_element);
+    |                                                                    ^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:180:25
+    |
+180 |                         None => None,
+    |                         ^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<VElement>`
+               found type `std::option::Option<_>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:181:25
+    |
+181 |                         Some(child_elements) => {
+    |                         ^^^^^^^^^^^^^^^^^^^^ expected struct `std::vec::Vec`, found enum `std::option::Option`
+    |
+    = note: expected type `std::vec::Vec<VElement>`
+               found type `std::option::Option<_>`
+
+error: aborting due to 4 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
