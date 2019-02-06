@@ -111,10 +111,10 @@ fn reconcile<'a>(
         // Update instance
         match (instance, v_element) {
             (Some(instance), Some(v_element)) => {
+                // TODO pass instance and return instance with attrs and all set on instance.dom
                 let dom = update_dom_properties_ref(&instance.dom, &instance.element.props, &v_element.props);
                 let child_instances = reconcile_children(instance, v_element);
-                // Some(Instance { dom: *dom, element: instance.element, child_instances })
-                None
+                Some(Instance { dom: *dom, element: instance.element, child_instances })
             },
             _ => None
         }
