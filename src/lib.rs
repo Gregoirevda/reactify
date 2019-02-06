@@ -100,7 +100,7 @@ fn reconcile<'a>(
         log("remove instance");
         // Remove instance 
         if let Some(instance) = instance {
-            match instance.dom {
+            match &instance.dom {
                 Node::Element(dom_element) => parent_dom.remove_child(&dom_element),
                 Node::Text(text_element) => parent_dom.remove_child(&text_element),
             };
@@ -112,8 +112,9 @@ fn reconcile<'a>(
         match (instance, v_element) {
             (Some(instance), Some(v_element)) => {
                 let dom = update_dom_properties(instance.dom, &instance.element.props, &v_element.props);
-                let child_instances = reconcile_children(instance, v_element);
-                Some(Instance { dom, element: instance.element, child_instances })
+                // let child_instances = reconcile_children(&instance, v_element);
+                // Some(Instance { dom: *dom, element: instance.element, child_instances })
+                None
             },
             _ => None
         }
@@ -236,7 +237,7 @@ fn update_dom_properties(
     dom
 }
 
-fn reconcile_children<'a>(instance: Instance<'a>, element: &'a VElement) -> Vec<Instance<'a>> {
+fn reconcile_children<'a>(instance: &Instance<'a>, element: &'a VElement) -> Vec<Instance<'a>> {
     let dom = instance.dom;
     let child_instances = instance.child_instances;
     let next_child_elements = &element.children;
@@ -262,7 +263,6 @@ fn reconcile_children<'a>(instance: Instance<'a>, element: &'a VElement) -> Vec<
         .take(max_children);
 
     for (child_instance, child_element) in iter {
-
         let new_child_instance = reconcile(&dom, child_instance, child_element);
         if let Some(new_child_instance) = new_child_instance {
             new_child_instances.push(new_child_instance);
