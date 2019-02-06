@@ -111,8 +111,8 @@ fn reconcile<'a>(
         // Update instance
         match (instance, v_element) {
             (Some(instance), Some(v_element)) => {
-                let dom = update_dom_properties(instance.dom, &instance.element.props, &v_element.props);
-                // let child_instances = reconcile_children(&instance, v_element);
+                let dom = update_dom_properties_ref(&instance.dom, &instance.element.props, &v_element.props);
+                let child_instances = reconcile_children(instance, v_element);
                 // Some(Instance { dom: *dom, element: instance.element, child_instances })
                 None
             },
@@ -214,7 +214,29 @@ fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance<'a>> {
     }
 }
 
-fn update_dom_properties(
+fn update_dom_properties_ref<'a>(
+    dom: &'a Node, 
+    prev_props: &Vec<(String, String)>, 
+    next_props: &Vec<(String, String)>
+) -> &'a Node {
+    // TODO diff changes
+    // Add attributes
+    for (name, value) in prev_props {
+        if is_listener(&name) {
+            let callback = js_sys::Function::new_no_args(&value);
+            match &dom {
+                Node::Element(dom_element) => dom_element.add_event_listener_with_callback(&name.to_lowercase()[2..], &callback),
+                Node::Text(dom_text) => dom_text.add_event_listener_with_callback(&name.to_lowercase()[2..], &callback),
+            };
+        } else {
+            if let Node::Element(dom_element) = &dom {
+                dom_element.set_attribute(&name, &value);
+            }
+        }
+    };
+    dom
+}
+fn update_dom_properties<'a>(
     dom: Node, 
     prev_props: &Vec<(String, String)>, 
     next_props: &Vec<(String, String)>
@@ -237,7 +259,7 @@ fn update_dom_properties(
     dom
 }
 
-fn reconcile_children<'a>(instance: &Instance<'a>, element: &'a VElement) -> Vec<Instance<'a>> {
+fn reconcile_children<'a>(instance: Instance<'a>, element: &'a VElement) -> Vec<Instance<'a>> {
     let dom = instance.dom;
     let child_instances = instance.child_instances;
     let next_child_elements = &element.children;
