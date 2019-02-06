@@ -20,12 +20,13 @@ struct VElement {
     children: Vec<VElement>
 }
 
+#[derive(Clone)]
 enum Node {
     Element(web_sys::Element),
     Text(web_sys::Text),
-    Empty
 }
 
+#[derive(Clone)]
 struct Instance<'a> {
     dom: Node,
     element: &'a VElement,
@@ -112,7 +113,7 @@ fn reconcile<'a>(
             (Some(instance), Some(v_element)) => {
                 let dom = update_dom_properties(instance.dom, &instance.element.props, &v_element.props);
                 let child_instances = reconcile_children(instance, v_element);
-                Some(Instance { dom, child_instances, ..instance })
+                Some(Instance { dom, element: instance.element, child_instances })
             },
             _ => None
         }
@@ -241,38 +242,26 @@ fn reconcile_children<'a>(instance: Instance<'a>, element: &'a VElement) -> Vec<
     let next_child_elements = &element.children;
     let mut new_child_instances: Vec<Instance> = vec![];
 
-    // Hack
-    let empty_element = VElement {
-        type_ : "NONE".to_string(),
-        props: vec![],
-        children: vec![]
-    }; 
-
-    let empty_instance = Instance {
-        dom: Node::Empty,
-        element: &empty_element,
-        child_instances: vec![]
+    let dom: web_sys::Node = match dom {
+        Node::Element(dom_element) => web_sys::Node::from(dom_element),
+        Node::Text(dom_text) => web_sys::Node::from(dom_text)
     };
 
     let max_children = cmp::max(child_instances.len(), next_child_elements.len());
     // TODO should children by Optional?, would avoid extra mapping cost
     let iter = child_instances
-            .iter()
+            .into_iter()
             .map(|n| Some(n))
             .chain(iter::repeat(None))
         .zip(
             next_child_elements
-            .iter()
+            .into_iter()
             .map(|n| Some(n))
             .chain(iter::repeat(None))
         )
         .take(max_children);
 
     for (child_instance, child_element) in iter {
-        let dom: web_sys::Node = match dom {
-            Node::Element(dom_element) => web_sys::Node::from(dom_element),
-            Node::Text(dom_text) => web_sys::Node::from(dom_text)
-        };
 
         let new_child_instance = reconcile(&dom, child_instance, child_element);
         if let Some(new_child_instance) = new_child_instance {
