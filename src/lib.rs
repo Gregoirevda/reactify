@@ -14,6 +14,7 @@ extern "C" {
     fn log(s: &str);
 }
 
+#[derive(Clone)]
 struct VElement {
     type_: String,
     props: Vec<(String, String)>,
@@ -27,10 +28,10 @@ enum Node {
 }
 
 #[derive(Clone)]
-struct Instance<'a> {
+struct Instance {
     dom: Node,
-    element: &'a VElement,
-    child_instances: Vec<Instance<'a>>
+    element: VElement,
+    child_instances: Vec<Instance>
 }
 
 #[wasm_bindgen(start)]
@@ -54,7 +55,7 @@ pub fn run() {
     if let Some(root_dom) = root_dom_opt {
         // User passed a root dom that was found on the document
        let root_instance = None;
-        let next_root_instance = render(&v_element, root_dom, root_instance);
+        let next_root_instance = render(v_element, root_dom, root_instance);
     }
 }
 
@@ -66,26 +67,26 @@ fn tick(v_element: &VElement, root_dom: &web_sys::Element, count: u32, root_inst
 }
 */
 
-fn render<'a>(
-    v_element: &'a VElement, 
+fn render(
+    v_element: VElement, 
     container: web_sys::Element, 
-    root_instance: Option<Instance<'a>>
-) -> Option<Instance<'a>> {
+    root_instance: Option<Instance>
+) -> Option<Instance> {
     let previous_instance = root_instance;
     // container needs to be an element, but reconcile can be called with any node
     let next_instance = reconcile(&web_sys::Node::from(container), previous_instance, Some(v_element));
     next_instance
 }
 
-fn reconcile<'a>(
+fn reconcile(
     parent_dom: &web_sys::Node, 
-    instance: Option<Instance<'a>>,
-    v_element: Option<&'a VElement>
-) -> Option<Instance<'a>> {
+    instance: Option<Instance>,
+    v_element: Option<VElement>
+) -> Option<Instance> {
     if instance.is_none() {
         log("create instance");
         // Create instance
-        let new_instance = instantiate(v_element);
+        let new_instance = instantiate(&v_element);
         match new_instance {
             None => None,
             Some(new_instance) => {
@@ -106,22 +107,22 @@ fn reconcile<'a>(
             };
         }
         None
-   } else if same_type(&instance, v_element) {
+   } else if same_type(&instance, &v_element) {
         log("update instance");
         // Update instance
         match (instance, v_element) {
             (Some(instance), Some(v_element)) => {
                 // TODO pass instance and return instance with attrs and all set on instance.dom
-                let dom = update_dom_properties_ref(&instance.dom, &instance.element.props, &v_element.props);
-                let child_instances = reconcile_children(instance, v_element);
-                Some(Instance { dom: *dom, element: instance.element, child_instances })
+                let instance = update_dom_properties_instance(instance, &v_element.props);
+                let child_instances = reconcile_children(instance.clone(), v_element.clone());
+                Some(Instance { dom: instance.dom, element: v_element, child_instances })
             },
             _ => None
         }
    } else {
        log("replace_instance");
         // replace instance
-        let new_instance = instantiate(v_element);
+        let new_instance = instantiate(&v_element);
         match (new_instance, instance) {
             (Some(new_instance), Some(instance)) => {
                 match (&new_instance.dom, &instance.dom) {
@@ -137,7 +138,7 @@ fn reconcile<'a>(
    }
 }
 
-fn same_type(instance: &Option<Instance>, v_element: Option<&VElement>) -> bool {
+fn same_type(instance: &Option<Instance>, v_element: &Option<VElement>) -> bool {
     match instance {
         None => false,
         Some(instance) => 
@@ -148,7 +149,7 @@ fn same_type(instance: &Option<Instance>, v_element: Option<&VElement>) -> bool 
     }
 }
 
-fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance<'a>> {
+fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
     match v_element {
         None => None,
         Some(v_element) => {
@@ -165,10 +166,10 @@ fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance<'a>> {
                         node_value = value;  
                       }  
                     }
-                    let text_node = document.create_text_node(node_value);
+                    let text_node = document.create_text_node(&node_value);
                     let instance = Instance {
                         dom: Node::Text(text_node),
-                        element: v_element,
+                        element: v_element.clone(),
                         child_instances: vec![]
                     };
                     Some(instance)
@@ -183,7 +184,7 @@ fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance<'a>> {
 
                     let mut child_instances = vec![];
                     for child_element in child_elements {
-                        if let Some(instance) = instantiate(Some(child_element)) {
+                        if let Some(instance) = instantiate(&Some(child_element.clone())) {
                             child_instances.push(instance);
                         }
                     };
@@ -204,7 +205,7 @@ fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance<'a>> {
 
                     let instance = Instance {
                         dom: dom,
-                        element: v_element,
+                        element: v_element.clone(),
                         child_instances: child_instances
                     };
                     Some(instance)
@@ -214,29 +215,28 @@ fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance<'a>> {
     }
 }
 
-fn update_dom_properties_ref<'a>(
-    dom: &'a Node, 
-    prev_props: &Vec<(String, String)>, 
+fn update_dom_properties_instance(
+    instance: Instance,
     next_props: &Vec<(String, String)>
-) -> &'a Node {
+) -> Instance {
     // TODO diff changes
     // Add attributes
-    for (name, value) in prev_props {
+    for (name, value) in &instance.element.props {
         if is_listener(&name) {
             let callback = js_sys::Function::new_no_args(&value);
-            match &dom {
+            match &instance.dom {
                 Node::Element(dom_element) => dom_element.add_event_listener_with_callback(&name.to_lowercase()[2..], &callback),
                 Node::Text(dom_text) => dom_text.add_event_listener_with_callback(&name.to_lowercase()[2..], &callback),
             };
         } else {
-            if let Node::Element(dom_element) = &dom {
+            if let Node::Element(dom_element) = &instance.dom {
                 dom_element.set_attribute(&name, &value);
             }
         }
     };
-    dom
+    instance
 }
-fn update_dom_properties<'a>(
+fn update_dom_properties(
     dom: Node, 
     prev_props: &Vec<(String, String)>, 
     next_props: &Vec<(String, String)>
@@ -259,10 +259,10 @@ fn update_dom_properties<'a>(
     dom
 }
 
-fn reconcile_children<'a>(instance: Instance<'a>, element: &'a VElement) -> Vec<Instance<'a>> {
+fn reconcile_children(instance: Instance, element: VElement) -> Vec<Instance> {
     let dom = instance.dom;
     let child_instances = instance.child_instances;
-    let next_child_elements = &element.children;
+    let next_child_elements = element.children;
     let mut new_child_instances: Vec<Instance> = vec![];
 
     let dom: web_sys::Node = match dom {
