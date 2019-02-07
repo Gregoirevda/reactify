@@ -9153,3 +9153,3168 @@ error: Could not compile `reactify`.
 
 To learn more, run the command again with --verbose.
 
+Feb 07 16:28:39.668 INFO Running build command...
+Feb 07 16:28:39.669 INFO Checking rustc version...
+Feb 07 16:28:39.736 INFO rustc version is 32.
+Feb 07 16:28:39.737 INFO Checking crate configuration...
+Feb 07 16:28:39.737 INFO Crate is correctly configured.
+Feb 07 16:28:39.737 INFO Adding wasm-target...
+Feb 07 16:28:39.873 INFO Adding wasm-target was successful.
+Feb 07 16:28:39.874 INFO Building wasm...
+Feb 07 16:28:41.544 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 16:28:41.544 INFO Creating a pkg directory...
+Feb 07 16:28:41.545 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 16:28:41.545 INFO Writing a package.json...
+Feb 07 16:28:41.545 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 16:28:41.545 INFO Copying readme from crate...
+Feb 07 16:28:41.546 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:28:41.546 INFO Identifying wasm-bindgen dependency...
+Feb 07 16:28:41.597 INFO Installing wasm-bindgen-cli...
+Feb 07 16:28:41.626 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 16:28:41.626 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 16:28:41.627 INFO Getting the crate name from the manifest...
+Feb 07 16:28:41.627 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 16:28:41.627 INFO Building the wasm bindings...
+Feb 07 16:28:41.707 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:28:41.707 INFO Done in 2 seconds.
+Feb 07 16:28:41.707 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:33:52.878 INFO Running build command...
+Feb 07 16:33:52.880 INFO Checking rustc version...
+Feb 07 16:33:52.929 INFO rustc version is 32.
+Feb 07 16:33:52.929 INFO Checking crate configuration...
+Feb 07 16:33:52.929 INFO Crate is correctly configured.
+Feb 07 16:33:52.930 INFO Adding wasm-target...
+Feb 07 16:33:53.008 INFO Adding wasm-target was successful.
+Feb 07 16:33:53.008 INFO Building wasm...
+Feb 07 16:33:53.776 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0422]: cannot find struct, variant or union type `Story` in this scope
+  --> src/lib.rs:48:24
+   |
+48 |     let stories = vec![Story {
+   |                        ^^^^^ not found in this scope
+
+error[E0422]: cannot find struct, variant or union type `Story` in this scope
+  --> src/lib.rs:52:8
+   |
+52 |     }, Story {
+   |        ^^^^^ not found in this scope
+
+error[E0308]: mismatched types
+  --> src/lib.rs:61:41
+   |
+61 |                button(vec![], vec![text("hello")])
+   |                                         ^^^^^^^
+   |                                         |
+   |                                         expected struct `std::string::String`, found reference
+   |                                         help: try using a conversion method: `"hello".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0308, E0422.
+For more information about an error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 16:34:24.027 INFO Running build command...
+Feb 07 16:34:24.028 INFO Checking rustc version...
+Feb 07 16:34:24.073 INFO rustc version is 32.
+Feb 07 16:34:24.074 INFO Checking crate configuration...
+Feb 07 16:34:24.074 INFO Crate is correctly configured.
+Feb 07 16:34:24.075 INFO Adding wasm-target...
+Feb 07 16:34:24.161 INFO Adding wasm-target was successful.
+Feb 07 16:34:24.161 INFO Building wasm...
+Feb 07 16:34:24.906 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:54:15
+   |
+54 |         name: "Hello",
+   |               ^^^^^^^
+   |               |
+   |               expected struct `std::string::String`, found reference
+   |               help: try using a conversion method: `"Hello".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:55:14
+   |
+55 |         url: "http://bit.ly/2pX7HNn",
+   |              ^^^^^^^^^^^^^^^^^^^^^^^
+   |              |
+   |              expected struct `std::string::String`, found reference
+   |              help: try using a conversion method: `"http://bit.ly/2pX7HNn".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:58:15
+   |
+58 |         name: "World",
+   |               ^^^^^^^
+   |               |
+   |               expected struct `std::string::String`, found reference
+   |               help: try using a conversion method: `"World".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:59:14
+   |
+59 |         url: "http://bit.ly/2pX7HNn",
+   |              ^^^^^^^^^^^^^^^^^^^^^^^
+   |              |
+   |              expected struct `std::string::String`, found reference
+   |              help: try using a conversion method: `"http://bit.ly/2pX7HNn".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error[E0308]: mismatched types
+  --> src/lib.rs:66:41
+   |
+66 |                button(vec![], vec![text("hello")])
+   |                                         ^^^^^^^
+   |                                         |
+   |                                         expected struct `std::string::String`, found reference
+   |                                         help: try using a conversion method: `"hello".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error: aborting due to 5 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 16:34:46.394 INFO Running build command...
+Feb 07 16:34:46.395 INFO Checking rustc version...
+Feb 07 16:34:46.443 INFO rustc version is 32.
+Feb 07 16:34:46.443 INFO Checking crate configuration...
+Feb 07 16:34:46.443 INFO Crate is correctly configured.
+Feb 07 16:34:46.443 INFO Adding wasm-target...
+Feb 07 16:34:46.526 INFO Adding wasm-target was successful.
+Feb 07 16:34:46.526 INFO Building wasm...
+Feb 07 16:34:47.112 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+  --> src/lib.rs:66:41
+   |
+66 |                button(vec![], vec![text("hello")])
+   |                                         ^^^^^^^
+   |                                         |
+   |                                         expected struct `std::string::String`, found reference
+   |                                         help: try using a conversion method: `"hello".to_string()`
+   |
+   = note: expected type `std::string::String`
+              found type `&'static str`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 16:34:54.165 INFO Running build command...
+Feb 07 16:34:54.166 INFO Checking rustc version...
+Feb 07 16:34:54.213 INFO rustc version is 32.
+Feb 07 16:34:54.213 INFO Checking crate configuration...
+Feb 07 16:34:54.213 INFO Crate is correctly configured.
+Feb 07 16:34:54.213 INFO Adding wasm-target...
+Feb 07 16:34:54.296 INFO Adding wasm-target was successful.
+Feb 07 16:34:54.297 INFO Building wasm...
+Feb 07 16:34:55.390 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 16:34:55.390 INFO Creating a pkg directory...
+Feb 07 16:34:55.391 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 16:34:55.391 INFO Writing a package.json...
+Feb 07 16:34:55.391 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 16:34:55.391 INFO Copying readme from crate...
+Feb 07 16:34:55.391 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:34:55.392 INFO Identifying wasm-bindgen dependency...
+Feb 07 16:34:55.430 INFO Installing wasm-bindgen-cli...
+Feb 07 16:34:55.444 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 16:34:55.444 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 16:34:55.445 INFO Getting the crate name from the manifest...
+Feb 07 16:34:55.445 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 16:34:55.445 INFO Building the wasm bindings...
+Feb 07 16:34:55.502 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:34:55.502 INFO Done in 1 second.
+Feb 07 16:34:55.502 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:36:39.345 INFO Running build command...
+Feb 07 16:36:39.346 INFO Checking rustc version...
+Feb 07 16:36:39.390 INFO rustc version is 32.
+Feb 07 16:36:39.391 INFO Checking crate configuration...
+Feb 07 16:36:39.391 INFO Crate is correctly configured.
+Feb 07 16:36:39.391 INFO Adding wasm-target...
+Feb 07 16:36:39.474 INFO Adding wasm-target was successful.
+Feb 07 16:36:39.475 INFO Building wasm...
+Feb 07 16:36:40.345 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 16:36:40.345 INFO Creating a pkg directory...
+Feb 07 16:36:40.345 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 16:36:40.346 INFO Writing a package.json...
+Feb 07 16:36:40.346 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 16:36:40.346 INFO Copying readme from crate...
+Feb 07 16:36:40.346 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:36:40.346 INFO Identifying wasm-bindgen dependency...
+Feb 07 16:36:40.383 INFO Installing wasm-bindgen-cli...
+Feb 07 16:36:40.397 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 16:36:40.397 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 16:36:40.397 INFO Getting the crate name from the manifest...
+Feb 07 16:36:40.398 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 16:36:40.398 INFO Building the wasm bindings...
+Feb 07 16:36:40.453 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:36:40.454 INFO Done in 1 second.
+Feb 07 16:36:40.454 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:37:28.024 INFO Running build command...
+Feb 07 16:37:28.025 INFO Checking rustc version...
+Feb 07 16:37:28.068 INFO rustc version is 32.
+Feb 07 16:37:28.068 INFO Checking crate configuration...
+Feb 07 16:37:28.068 INFO Crate is correctly configured.
+Feb 07 16:37:28.068 INFO Adding wasm-target...
+Feb 07 16:37:28.145 INFO Adding wasm-target was successful.
+Feb 07 16:37:28.146 INFO Building wasm...
+Feb 07 16:37:29.110 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 16:37:29.110 INFO Creating a pkg directory...
+Feb 07 16:37:29.110 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 16:37:29.110 INFO Writing a package.json...
+Feb 07 16:37:29.111 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 16:37:29.111 INFO Copying readme from crate...
+Feb 07 16:37:29.111 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:37:29.111 INFO Identifying wasm-bindgen dependency...
+Feb 07 16:37:29.149 INFO Installing wasm-bindgen-cli...
+Feb 07 16:37:29.166 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 16:37:29.166 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 16:37:29.166 INFO Getting the crate name from the manifest...
+Feb 07 16:37:29.167 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 16:37:29.167 INFO Building the wasm bindings...
+Feb 07 16:37:29.223 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 16:37:29.223 INFO Done in 1 second.
+Feb 07 16:37:29.223 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:35:53.350 INFO Running build command...
+Feb 07 17:35:53.353 INFO Checking rustc version...
+Feb 07 17:35:53.452 INFO rustc version is 32.
+Feb 07 17:35:53.452 INFO Checking crate configuration...
+Feb 07 17:35:53.452 INFO Crate is correctly configured.
+Feb 07 17:35:53.452 INFO Adding wasm-target...
+Feb 07 17:35:53.538 INFO Adding wasm-target was successful.
+Feb 07 17:35:53.539 INFO Building wasm...
+Feb 07 17:35:54.925 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `if`
+   --> src/lib.rs:205:25
+    |
+204 |                         log("child_element")
+    |                                             - expected one of `.`, `;`, `?`, `}`, or an operator here
+205 |                         if let Some(instance) = instantiate(&Some(child_element.clone())) {
+    |                         ^^ unexpected token
+
+error[E0282]: type annotations needed
+   --> src/lib.rs:212:47
+    |
+202 |                     let mut child_instances = vec![];
+    |                         ------------------- consider giving `child_instances` a type
+...
+212 |                         child_doms.push(Some(&child_instance.dom));
+    |                                               ^^^^^^^^^^^^^^^^^^ cannot infer type for `T`
+    |
+    = note: type must be known at this point
+
+error[E0609]: no field `dom` on type `&_`
+   --> src/lib.rs:212:62
+    |
+212 |                         child_doms.push(Some(&child_instance.dom));
+    |                                                              ^^^
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0282, E0609.
+For more information about an error, try `rustc --explain E0282`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:36:00.346 INFO Running build command...
+Feb 07 17:36:00.347 INFO Checking rustc version...
+Feb 07 17:36:00.392 INFO rustc version is 32.
+Feb 07 17:36:00.393 INFO Checking crate configuration...
+Feb 07 17:36:00.393 INFO Crate is correctly configured.
+Feb 07 17:36:00.393 INFO Adding wasm-target...
+Feb 07 17:36:00.474 INFO Adding wasm-target was successful.
+Feb 07 17:36:00.474 INFO Building wasm...
+Feb 07 17:36:01.759 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:36:01.759 INFO Creating a pkg directory...
+Feb 07 17:36:01.759 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:36:01.760 INFO Writing a package.json...
+Feb 07 17:36:01.760 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:36:01.760 INFO Copying readme from crate...
+Feb 07 17:36:01.761 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:36:01.761 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:36:01.802 INFO Installing wasm-bindgen-cli...
+Feb 07 17:36:01.829 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:36:01.829 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:36:01.829 INFO Getting the crate name from the manifest...
+Feb 07 17:36:01.830 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:36:01.830 INFO Building the wasm bindings...
+Feb 07 17:36:01.897 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:36:01.897 INFO Done in 1 second.
+Feb 07 17:36:01.897 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:36:46.087 INFO Running build command...
+Feb 07 17:36:46.089 INFO Checking rustc version...
+Feb 07 17:36:46.132 INFO rustc version is 32.
+Feb 07 17:36:46.133 INFO Checking crate configuration...
+Feb 07 17:36:46.133 INFO Crate is correctly configured.
+Feb 07 17:36:46.133 INFO Adding wasm-target...
+Feb 07 17:36:46.209 INFO Adding wasm-target was successful.
+Feb 07 17:36:46.210 INFO Building wasm...
+Feb 07 17:36:46.644 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `child_instances`
+   --> src/lib.rs:206:29
+    |
+205 |                             log("pushing child instance")
+    |                                                          - expected one of `.`, `;`, `?`, `}`, or an operator here
+206 |                             child_instances.push(instance);
+    |                             ^^^^^^^^^^^^^^^ unexpected token
+
+error[E0282]: type annotations needed
+   --> src/lib.rs:212:47
+    |
+202 |                     let mut child_instances = vec![];
+    |                         ------------------- consider giving `child_instances` a type
+...
+212 |                         child_doms.push(Some(&child_instance.dom));
+    |                                               ^^^^^^^^^^^^^^^^^^ cannot infer type for `T`
+    |
+    = note: type must be known at this point
+
+error[E0609]: no field `dom` on type `&_`
+   --> src/lib.rs:212:62
+    |
+212 |                         child_doms.push(Some(&child_instance.dom));
+    |                                                              ^^^
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0282, E0609.
+For more information about an error, try `rustc --explain E0282`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:36:48.777 INFO Running build command...
+Feb 07 17:36:48.779 INFO Checking rustc version...
+Feb 07 17:36:48.826 INFO rustc version is 32.
+Feb 07 17:36:48.826 INFO Checking crate configuration...
+Feb 07 17:36:48.826 INFO Crate is correctly configured.
+Feb 07 17:36:48.827 INFO Adding wasm-target...
+Feb 07 17:36:48.905 INFO Adding wasm-target was successful.
+Feb 07 17:36:48.905 INFO Building wasm...
+Feb 07 17:36:49.904 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:36:49.904 INFO Creating a pkg directory...
+Feb 07 17:36:49.904 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:36:49.904 INFO Writing a package.json...
+Feb 07 17:36:49.905 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:36:49.905 INFO Copying readme from crate...
+Feb 07 17:36:49.905 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:36:49.905 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:36:49.944 INFO Installing wasm-bindgen-cli...
+Feb 07 17:36:49.959 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:36:49.959 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:36:49.960 INFO Getting the crate name from the manifest...
+Feb 07 17:36:49.960 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:36:49.960 INFO Building the wasm bindings...
+Feb 07 17:36:50.019 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:36:50.020 INFO Done in 1 second.
+Feb 07 17:36:50.020 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:38:32.303 INFO Running build command...
+Feb 07 17:38:32.304 INFO Checking rustc version...
+Feb 07 17:38:32.346 INFO rustc version is 32.
+Feb 07 17:38:32.346 INFO Checking crate configuration...
+Feb 07 17:38:32.346 INFO Crate is correctly configured.
+Feb 07 17:38:32.347 INFO Adding wasm-target...
+Feb 07 17:38:32.424 INFO Adding wasm-target was successful.
+Feb 07 17:38:32.424 INFO Building wasm...
+Feb 07 17:38:33.419 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:38:33.419 INFO Creating a pkg directory...
+Feb 07 17:38:33.419 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:38:33.419 INFO Writing a package.json...
+Feb 07 17:38:33.419 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:38:33.420 INFO Copying readme from crate...
+Feb 07 17:38:33.420 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:38:33.420 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:38:33.457 INFO Installing wasm-bindgen-cli...
+Feb 07 17:38:33.472 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:38:33.472 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:38:33.472 INFO Getting the crate name from the manifest...
+Feb 07 17:38:33.472 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:38:33.472 INFO Building the wasm bindings...
+Feb 07 17:38:33.532 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:38:33.532 INFO Done in 1 second.
+Feb 07 17:38:33.532 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:38:37.312 INFO Running build command...
+Feb 07 17:38:37.315 INFO Checking rustc version...
+Feb 07 17:38:37.412 INFO rustc version is 32.
+Feb 07 17:38:37.412 INFO Checking crate configuration...
+Feb 07 17:38:37.412 INFO Crate is correctly configured.
+Feb 07 17:38:37.413 INFO Adding wasm-target...
+Feb 07 17:38:37.533 INFO Adding wasm-target was successful.
+Feb 07 17:38:37.534 INFO Building wasm...
+Feb 07 17:38:38.516 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:38:38.517 INFO Creating a pkg directory...
+Feb 07 17:38:38.517 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:38:38.517 INFO Writing a package.json...
+Feb 07 17:38:38.517 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:38:38.517 INFO Copying readme from crate...
+Feb 07 17:38:38.518 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:38:38.518 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:38:38.555 INFO Installing wasm-bindgen-cli...
+Feb 07 17:38:38.568 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:38:38.569 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:38:38.569 INFO Getting the crate name from the manifest...
+Feb 07 17:38:38.569 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:38:38.569 INFO Building the wasm bindings...
+Feb 07 17:38:38.625 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:38:38.626 INFO Done in 1 second.
+Feb 07 17:38:38.626 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:39:43.222 INFO Running build command...
+Feb 07 17:39:43.223 INFO Checking rustc version...
+Feb 07 17:39:43.272 INFO rustc version is 32.
+Feb 07 17:39:43.272 INFO Checking crate configuration...
+Feb 07 17:39:43.273 INFO Crate is correctly configured.
+Feb 07 17:39:43.273 INFO Adding wasm-target...
+Feb 07 17:39:43.359 INFO Adding wasm-target was successful.
+Feb 07 17:39:43.359 INFO Building wasm...
+Feb 07 17:39:43.815 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:217:84
+    |
+217 |                                 Node::Element(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                    ^^^^^^^^^
+    |                                                                                    |
+    |                                                                                    expected reference, found struct `web_sys::Element`
+    |                                                                                    help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Element`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:218:81
+    |
+218 |                                 Node::Text(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                 ^^^^^^^^^
+    |                                                                                 |
+    |                                                                                 expected reference, found struct `web_sys::Text`
+    |                                                                                 help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Text`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:39:55.583 INFO Running build command...
+Feb 07 17:39:55.584 INFO Checking rustc version...
+Feb 07 17:39:55.634 INFO rustc version is 32.
+Feb 07 17:39:55.634 INFO Checking crate configuration...
+Feb 07 17:39:55.634 INFO Crate is correctly configured.
+Feb 07 17:39:55.635 INFO Adding wasm-target...
+Feb 07 17:39:55.712 INFO Adding wasm-target was successful.
+Feb 07 17:39:55.712 INFO Building wasm...
+Feb 07 17:39:56.251 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:237:5
+    |
+237 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:259:5
+    |
+259 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0507]: cannot move out of borrowed content
+   --> src/lib.rs:211:46
+    |
+211 |                         child_doms.push(Some(child_instance.dom));
+    |                                              ^^^^^^^^^^^^^^^^^^ cannot move out of borrowed content
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0507`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:40:03.945 INFO Running build command...
+Feb 07 17:40:03.946 INFO Checking rustc version...
+Feb 07 17:40:03.993 INFO rustc version is 32.
+Feb 07 17:40:03.993 INFO Checking crate configuration...
+Feb 07 17:40:03.994 INFO Crate is correctly configured.
+Feb 07 17:40:03.994 INFO Adding wasm-target...
+Feb 07 17:40:04.071 INFO Adding wasm-target was successful.
+Feb 07 17:40:04.071 INFO Building wasm...
+Feb 07 17:40:04.739 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:40:04.739 INFO Creating a pkg directory...
+Feb 07 17:40:04.740 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:40:04.740 INFO Writing a package.json...
+Feb 07 17:40:04.740 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:40:04.740 INFO Copying readme from crate...
+Feb 07 17:40:04.741 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:40:04.741 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:40:04.778 INFO Installing wasm-bindgen-cli...
+Feb 07 17:40:04.792 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:40:04.792 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:40:04.792 INFO Getting the crate name from the manifest...
+Feb 07 17:40:04.792 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:40:04.793 INFO Building the wasm bindings...
+Feb 07 17:40:04.852 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:40:04.852 INFO Done in 0 seconds.
+Feb 07 17:40:04.852 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:40:31.005 INFO Running build command...
+Feb 07 17:40:31.006 INFO Checking rustc version...
+Feb 07 17:40:31.051 INFO rustc version is 32.
+Feb 07 17:40:31.051 INFO Checking crate configuration...
+Feb 07 17:40:31.051 INFO Crate is correctly configured.
+Feb 07 17:40:31.052 INFO Adding wasm-target...
+Feb 07 17:40:31.129 INFO Adding wasm-target was successful.
+Feb 07 17:40:31.130 INFO Building wasm...
+Feb 07 17:40:31.561 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `match`
+   --> src/lib.rs:217:29
+    |
+216 |                             log("in here")
+    |                                           - expected one of `.`, `;`, `?`, `}`, or an operator here
+217 |                             match child_dom {
+    |                             ^^^^^ unexpected token
+
+error: aborting due to previous error
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:40:35.831 INFO Running build command...
+Feb 07 17:40:35.832 INFO Checking rustc version...
+Feb 07 17:40:35.882 INFO rustc version is 32.
+Feb 07 17:40:35.882 INFO Checking crate configuration...
+Feb 07 17:40:35.883 INFO Crate is correctly configured.
+Feb 07 17:40:35.883 INFO Adding wasm-target...
+Feb 07 17:40:35.961 INFO Adding wasm-target was successful.
+Feb 07 17:40:35.961 INFO Building wasm...
+Feb 07 17:40:36.985 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:40:36.986 INFO Creating a pkg directory...
+Feb 07 17:40:36.986 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:40:36.986 INFO Writing a package.json...
+Feb 07 17:40:36.986 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:40:36.986 INFO Copying readme from crate...
+Feb 07 17:40:36.986 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:40:36.987 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:40:37.024 INFO Installing wasm-bindgen-cli...
+Feb 07 17:40:37.038 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:40:37.038 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:40:37.039 INFO Getting the crate name from the manifest...
+Feb 07 17:40:37.039 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:40:37.039 INFO Building the wasm bindings...
+Feb 07 17:40:37.097 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:40:37.097 INFO Done in 1 second.
+Feb 07 17:40:37.097 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:41:00.693 INFO Running build command...
+Feb 07 17:41:00.695 INFO Checking rustc version...
+Feb 07 17:41:00.739 INFO rustc version is 32.
+Feb 07 17:41:00.740 INFO Checking crate configuration...
+Feb 07 17:41:00.740 INFO Crate is correctly configured.
+Feb 07 17:41:00.740 INFO Adding wasm-target...
+Feb 07 17:41:00.820 INFO Adding wasm-target was successful.
+Feb 07 17:41:00.820 INFO Building wasm...
+Feb 07 17:41:01.284 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:217:84
+    |
+217 |                                 Node::Element(child_dom) => child_dom.append_child(*child_dom),
+    |                                                                                    ^^^^^^^^^^
+    |                                                                                    |
+    |                                                                                    expected reference, found struct `web_sys::Element`
+    |                                                                                    help: consider borrowing here: `&*child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Element`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:218:81
+    |
+218 |                                 Node::Text(child_dom) => child_dom.append_child(*child_dom),
+    |                                                                                 ^^^^^^^^^^
+    |                                                                                 |
+    |                                                                                 expected reference, found struct `web_sys::Text`
+    |                                                                                 help: consider borrowing here: `&*child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Text`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:41:12.334 INFO Running build command...
+Feb 07 17:41:12.335 INFO Checking rustc version...
+Feb 07 17:41:12.383 INFO rustc version is 32.
+Feb 07 17:41:12.383 INFO Checking crate configuration...
+Feb 07 17:41:12.384 INFO Crate is correctly configured.
+Feb 07 17:41:12.384 INFO Adding wasm-target...
+Feb 07 17:41:12.464 INFO Adding wasm-target was successful.
+Feb 07 17:41:12.464 INFO Building wasm...
+Feb 07 17:41:13.558 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:41:13.558 INFO Creating a pkg directory...
+Feb 07 17:41:13.559 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:41:13.559 INFO Writing a package.json...
+Feb 07 17:41:13.559 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:41:13.559 INFO Copying readme from crate...
+Feb 07 17:41:13.559 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:41:13.559 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:41:13.608 INFO Installing wasm-bindgen-cli...
+Feb 07 17:41:13.626 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:41:13.626 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:41:13.626 INFO Getting the crate name from the manifest...
+Feb 07 17:41:13.626 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:41:13.626 INFO Building the wasm bindings...
+Feb 07 17:41:13.690 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:41:13.690 INFO Done in 1 second.
+Feb 07 17:41:13.690 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:41:22.556 INFO Running build command...
+Feb 07 17:41:22.557 INFO Checking rustc version...
+Feb 07 17:41:22.604 INFO rustc version is 32.
+Feb 07 17:41:22.604 INFO Checking crate configuration...
+Feb 07 17:41:22.604 INFO Crate is correctly configured.
+Feb 07 17:41:22.604 INFO Adding wasm-target...
+Feb 07 17:41:22.682 INFO Adding wasm-target was successful.
+Feb 07 17:41:22.683 INFO Building wasm...
+Feb 07 17:41:23.264 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:204:67
+    |
+204 |                         if let Some(instance) = instantiate(&Some(child_element)) {
+    |                                                                   ^^^^^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:41:26.457 INFO Running build command...
+Feb 07 17:41:26.458 INFO Checking rustc version...
+Feb 07 17:41:26.504 INFO rustc version is 32.
+Feb 07 17:41:26.504 INFO Checking crate configuration...
+Feb 07 17:41:26.504 INFO Crate is correctly configured.
+Feb 07 17:41:26.505 INFO Adding wasm-target...
+Feb 07 17:41:26.588 INFO Adding wasm-target was successful.
+Feb 07 17:41:26.588 INFO Building wasm...
+Feb 07 17:41:27.262 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:41:27.262 INFO Creating a pkg directory...
+Feb 07 17:41:27.262 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:41:27.262 INFO Writing a package.json...
+Feb 07 17:41:27.263 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:41:27.263 INFO Copying readme from crate...
+Feb 07 17:41:27.263 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:41:27.263 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:41:27.302 INFO Installing wasm-bindgen-cli...
+Feb 07 17:41:27.316 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:41:27.316 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:41:27.316 INFO Getting the crate name from the manifest...
+Feb 07 17:41:27.316 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:41:27.317 INFO Building the wasm bindings...
+Feb 07 17:41:27.373 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:41:27.373 INFO Done in 0 seconds.
+Feb 07 17:41:27.374 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:44:03.356 INFO Running build command...
+Feb 07 17:44:03.357 INFO Checking rustc version...
+Feb 07 17:44:03.400 INFO rustc version is 32.
+Feb 07 17:44:03.400 INFO Checking crate configuration...
+Feb 07 17:44:03.400 INFO Crate is correctly configured.
+Feb 07 17:44:03.400 INFO Adding wasm-target...
+Feb 07 17:44:03.477 INFO Adding wasm-target was successful.
+Feb 07 17:44:03.477 INFO Building wasm...
+Feb 07 17:44:03.913 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:217:84
+    |
+217 |                                 Node::Element(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                    ^^^^^^^^^
+    |                                                                                    |
+    |                                                                                    expected reference, found struct `web_sys::Element`
+    |                                                                                    help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Element`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:218:81
+    |
+218 |                                 Node::Text(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                 ^^^^^^^^^
+    |                                                                                 |
+    |                                                                                 expected reference, found struct `web_sys::Text`
+    |                                                                                 help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Text`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:44:09.945 INFO Running build command...
+Feb 07 17:44:09.947 INFO Checking rustc version...
+Feb 07 17:44:09.994 INFO rustc version is 32.
+Feb 07 17:44:09.994 INFO Checking crate configuration...
+Feb 07 17:44:09.994 INFO Crate is correctly configured.
+Feb 07 17:44:09.995 INFO Adding wasm-target...
+Feb 07 17:44:10.072 INFO Adding wasm-target was successful.
+Feb 07 17:44:10.073 INFO Building wasm...
+Feb 07 17:44:10.603 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:237:5
+    |
+237 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:259:5
+    |
+259 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0597]: `child_instance.dom` does not live long enough
+   --> src/lib.rs:211:46
+    |
+211 |                         child_doms.push(Some(&child_instance.dom));
+    |                         ----------           ^^^^^^^^^^^^^^^^^^^ borrowed value does not live long enough
+    |                         |
+    |                         borrow used here, in later iteration of loop
+212 |                     };
+    |                     - `child_instance.dom` dropped here while still borrowed
+
+error[E0382]: use of moved value: `child_instances`
+   --> src/lib.rs:226:42
+    |
+210 |                     for child_instance in child_instances {
+    |                                           --------------- value moved here
+...
+226 |                         child_instances: child_instances
+    |                                          ^^^^^^^^^^^^^^^ value used here after move
+    |
+    = note: move occurs because `child_instances` has type `std::vec::Vec<Instance>`, which does not implement the `Copy` trait
+
+error: aborting due to 2 previous errors
+
+Some errors occurred: E0382, E0597.
+For more information about an error, try `rustc --explain E0382`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:44:25.574 INFO Running build command...
+Feb 07 17:44:25.575 INFO Checking rustc version...
+Feb 07 17:44:25.618 INFO rustc version is 32.
+Feb 07 17:44:25.619 INFO Checking crate configuration...
+Feb 07 17:44:25.619 INFO Crate is correctly configured.
+Feb 07 17:44:25.619 INFO Adding wasm-target...
+Feb 07 17:44:25.699 INFO Adding wasm-target was successful.
+Feb 07 17:44:25.700 INFO Building wasm...
+Feb 07 17:44:26.354 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:44:26.354 INFO Creating a pkg directory...
+Feb 07 17:44:26.355 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:44:26.355 INFO Writing a package.json...
+Feb 07 17:44:26.355 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:44:26.355 INFO Copying readme from crate...
+Feb 07 17:44:26.355 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:44:26.355 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:44:26.393 INFO Installing wasm-bindgen-cli...
+Feb 07 17:44:26.408 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:44:26.408 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:44:26.408 INFO Getting the crate name from the manifest...
+Feb 07 17:44:26.408 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:44:26.409 INFO Building the wasm bindings...
+Feb 07 17:44:26.466 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:44:26.466 INFO Done in 0 seconds.
+Feb 07 17:44:26.466 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:48:53.564 INFO Running build command...
+Feb 07 17:48:53.565 INFO Checking rustc version...
+Feb 07 17:48:53.610 INFO rustc version is 32.
+Feb 07 17:48:53.611 INFO Checking crate configuration...
+Feb 07 17:48:53.611 INFO Crate is correctly configured.
+Feb 07 17:48:53.611 INFO Adding wasm-target...
+Feb 07 17:48:53.691 INFO Adding wasm-target was successful.
+Feb 07 17:48:53.691 INFO Building wasm...
+Feb 07 17:48:54.220 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `let`
+   --> src/lib.rs:181:21
+    |
+180 |                     log("create text")
+    |                                       - expected one of `.`, `;`, `?`, `}`, or an operator here
+181 |                     let mut node_value = "";
+    |                     ^^^ unexpected token
+
+error[E0308]: mismatched types
+   --> src/lib.rs:180:21
+    |
+169 | fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
+    |                                                 ---------------- expected `std::option::Option<Instance>` because of return type
+...
+180 |                     log("create text")
+    |                     ^^^^^^^^^^^^^^^^^^ expected enum `std::option::Option`, found ()
+    |
+    = note: expected type `std::option::Option<Instance>`
+               found type `()`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:48:55.619 INFO Running build command...
+Feb 07 17:48:55.620 INFO Checking rustc version...
+Feb 07 17:48:55.668 INFO rustc version is 32.
+Feb 07 17:48:55.668 INFO Checking crate configuration...
+Feb 07 17:48:55.668 INFO Crate is correctly configured.
+Feb 07 17:48:55.668 INFO Adding wasm-target...
+Feb 07 17:48:55.745 INFO Adding wasm-target was successful.
+Feb 07 17:48:55.746 INFO Building wasm...
+Feb 07 17:48:56.787 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:48:56.787 INFO Creating a pkg directory...
+Feb 07 17:48:56.787 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:48:56.787 INFO Writing a package.json...
+Feb 07 17:48:56.788 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:48:56.788 INFO Copying readme from crate...
+Feb 07 17:48:56.788 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:48:56.788 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:48:56.826 INFO Installing wasm-bindgen-cli...
+Feb 07 17:48:56.840 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:48:56.840 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:48:56.840 INFO Getting the crate name from the manifest...
+Feb 07 17:48:56.841 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:48:56.841 INFO Building the wasm bindings...
+Feb 07 17:48:56.900 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:48:56.900 INFO Done in 1 second.
+Feb 07 17:48:56.900 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:53:20.423 INFO Running build command...
+Feb 07 17:53:20.424 INFO Checking rustc version...
+Feb 07 17:53:20.470 INFO rustc version is 32.
+Feb 07 17:53:20.470 INFO Checking crate configuration...
+Feb 07 17:53:20.471 INFO Crate is correctly configured.
+Feb 07 17:53:20.471 INFO Adding wasm-target...
+Feb 07 17:53:20.548 INFO Adding wasm-target was successful.
+Feb 07 17:53:20.549 INFO Building wasm...
+Feb 07 17:53:21.562 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 17:53:21.562 INFO Creating a pkg directory...
+Feb 07 17:53:21.562 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 17:53:21.562 INFO Writing a package.json...
+Feb 07 17:53:21.563 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 17:53:21.563 INFO Copying readme from crate...
+Feb 07 17:53:21.563 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:53:21.563 INFO Identifying wasm-bindgen dependency...
+Feb 07 17:53:21.602 INFO Installing wasm-bindgen-cli...
+Feb 07 17:53:21.619 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 17:53:21.619 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 17:53:21.619 INFO Getting the crate name from the manifest...
+Feb 07 17:53:21.620 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 17:53:21.620 INFO Building the wasm bindings...
+Feb 07 17:53:21.684 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:53:21.684 INFO Done in 1 second.
+Feb 07 17:53:21.685 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 17:55:48.617 INFO Running build command...
+Feb 07 17:55:48.618 INFO Checking rustc version...
+Feb 07 17:55:48.690 INFO rustc version is 32.
+Feb 07 17:55:48.691 INFO Checking crate configuration...
+Feb 07 17:55:48.691 INFO Crate is correctly configured.
+Feb 07 17:55:48.691 INFO Adding wasm-target...
+Feb 07 17:55:48.772 INFO Adding wasm-target was successful.
+Feb 07 17:55:48.773 INFO Building wasm...
+Feb 07 17:55:50.400 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:183:38
+    |
+183 |                         node_value = value;  
+    |                                      ^^^^^
+    |                                      |
+    |                                      expected &str, found struct `std::string::String`
+    |                                      help: consider borrowing here: `&value`
+    |
+    = note: expected type `&str`
+               found type `std::string::String`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:189:34
+    |
+189 |                         element: v_element,
+    |                                  ^^^^^^^^^ expected struct `VElement`, found &VElement
+    |
+    = note: expected type `VElement`
+               found type `&VElement`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:55:59.755 INFO Running build command...
+Feb 07 17:55:59.756 INFO Checking rustc version...
+Feb 07 17:55:59.808 INFO rustc version is 32.
+Feb 07 17:55:59.808 INFO Checking crate configuration...
+Feb 07 17:55:59.809 INFO Crate is correctly configured.
+Feb 07 17:55:59.809 INFO Adding wasm-target...
+Feb 07 17:55:59.889 INFO Adding wasm-target was successful.
+Feb 07 17:55:59.889 INFO Building wasm...
+Feb 07 17:56:00.454 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:183:38
+    |
+183 |                         node_value = value;  
+    |                                      ^^^^^
+    |                                      |
+    |                                      expected &str, found struct `std::string::String`
+    |                                      help: consider borrowing here: `&value`
+    |
+    = note: expected type `&str`
+               found type `std::string::String`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:56:13.652 INFO Running build command...
+Feb 07 17:56:13.654 INFO Checking rustc version...
+Feb 07 17:56:13.714 INFO rustc version is 32.
+Feb 07 17:56:13.715 INFO Checking crate configuration...
+Feb 07 17:56:13.715 INFO Crate is correctly configured.
+Feb 07 17:56:13.715 INFO Adding wasm-target...
+Feb 07 17:56:13.797 INFO Adding wasm-target was successful.
+Feb 07 17:56:13.797 INFO Building wasm...
+Feb 07 17:56:14.635 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:183:38
+    |
+183 |                         node_value = value;  
+    |                                      ^^^^^
+    |                                      |
+    |                                      expected &str, found struct `std::string::String`
+    |                                      help: consider borrowing here: `&value`
+    |
+    = note: expected type `&str`
+               found type `std::string::String`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:57:28.985 INFO Running build command...
+Feb 07 17:57:28.986 INFO Checking rustc version...
+Feb 07 17:57:29.033 INFO rustc version is 32.
+Feb 07 17:57:29.034 INFO Checking crate configuration...
+Feb 07 17:57:29.034 INFO Crate is correctly configured.
+Feb 07 17:57:29.034 INFO Adding wasm-target...
+Feb 07 17:57:29.110 INFO Adding wasm-target was successful.
+Feb 07 17:57:29.110 INFO Building wasm...
+Feb 07 17:57:29.638 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:238:5
+    |
+238 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:260:5
+    |
+260 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0597]: `value` does not live long enough
+   --> src/lib.rs:183:38
+    |
+183 |                         node_value = &value;  
+    |                                      ^^^^^^ borrowed value does not live long enough
+184 |                       }  
+185 |                     }
+    |                     - `value` dropped here while still borrowed
+186 |                     let text_node = document.create_text_node(&node_value);
+    |                                                               ----------- borrow used here, in later iteration of loop
+
+error[E0507]: cannot move out of borrowed content
+   --> src/lib.rs:189:34
+    |
+189 |                         element: *v_element,
+    |                                  ^^^^^^^^^^ cannot move out of borrowed content
+
+error[E0507]: cannot move out of borrowed content
+   --> src/lib.rs:226:34
+    |
+226 |                         element: *v_element,
+    |                                  ^^^^^^^^^^ cannot move out of borrowed content
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0507, E0597.
+For more information about an error, try `rustc --explain E0507`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:57:39.553 INFO Running build command...
+Feb 07 17:57:39.554 INFO Checking rustc version...
+Feb 07 17:57:39.602 INFO rustc version is 32.
+Feb 07 17:57:39.602 INFO Checking crate configuration...
+Feb 07 17:57:39.602 INFO Crate is correctly configured.
+Feb 07 17:57:39.602 INFO Adding wasm-target...
+Feb 07 17:57:39.681 INFO Adding wasm-target was successful.
+Feb 07 17:57:39.681 INFO Building wasm...
+Feb 07 17:57:40.212 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:183:38
+    |
+183 |                         node_value = value;  
+    |                                      ^^^^^
+    |                                      |
+    |                                      expected &str, found struct `std::string::String`
+    |                                      help: consider borrowing here: `&value`
+    |
+    = note: expected type `&str`
+               found type `std::string::String`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:57:52.131 INFO Running build command...
+Feb 07 17:57:52.132 INFO Checking rustc version...
+Feb 07 17:57:52.179 INFO rustc version is 32.
+Feb 07 17:57:52.179 INFO Checking crate configuration...
+Feb 07 17:57:52.179 INFO Crate is correctly configured.
+Feb 07 17:57:52.180 INFO Adding wasm-target...
+Feb 07 17:57:52.270 INFO Adding wasm-target was successful.
+Feb 07 17:57:52.270 INFO Building wasm...
+Feb 07 17:57:53.337 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:238:5
+    |
+238 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:260:5
+    |
+260 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0507]: cannot move out of borrowed content
+   --> src/lib.rs:189:34
+    |
+189 |                         element: *v_element,
+    |                                  ^^^^^^^^^^ cannot move out of borrowed content
+
+error[E0507]: cannot move out of borrowed content
+   --> src/lib.rs:226:34
+    |
+226 |                         element: *v_element,
+    |                                  ^^^^^^^^^^ cannot move out of borrowed content
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0507`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 17:59:43.233 INFO Running build command...
+Feb 07 17:59:43.235 INFO Checking rustc version...
+Feb 07 17:59:43.319 INFO rustc version is 32.
+Feb 07 17:59:43.319 INFO Checking crate configuration...
+Feb 07 17:59:43.319 INFO Crate is correctly configured.
+Feb 07 17:59:43.319 INFO Adding wasm-target...
+Feb 07 17:59:43.410 INFO Adding wasm-target was successful.
+Feb 07 17:59:43.411 INFO Building wasm...
+Feb 07 17:59:45.086 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `copy` found for type `&VElement` in the current scope
+   --> src/lib.rs:173:65
+    |
+173 |             let VElement { type_, props, children } = v_element.copy();
+    |                                                                 ^^^^
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0599`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:00:33.003 INFO Running build command...
+Feb 07 18:00:33.004 INFO Checking rustc version...
+Feb 07 18:00:33.046 INFO rustc version is 32.
+Feb 07 18:00:33.046 INFO Checking crate configuration...
+Feb 07 18:00:33.047 INFO Crate is correctly configured.
+Feb 07 18:00:33.047 INFO Adding wasm-target...
+Feb 07 18:00:33.135 INFO Adding wasm-target was successful.
+Feb 07 18:00:33.135 INFO Building wasm...
+Feb 07 18:00:33.522 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0204]: the trait `Copy` may not be implemented for this type
+  --> src/lib.rs:30:17
+   |
+30 | #[derive(Clone, Copy)]
+   |                 ^^^^
+31 | struct Instance {
+32 |     dom: Node,
+   |     --------- this field does not implement `Copy`
+33 |     element: VElement,
+   |     ----------------- this field does not implement `Copy`
+34 |     child_instances: Vec<Instance>
+   |     ------------------------------ this field does not implement `Copy`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0204`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:00:37.505 INFO Running build command...
+Feb 07 18:00:37.507 INFO Checking rustc version...
+Feb 07 18:00:37.553 INFO rustc version is 32.
+Feb 07 18:00:37.553 INFO Checking crate configuration...
+Feb 07 18:00:37.553 INFO Crate is correctly configured.
+Feb 07 18:00:37.554 INFO Adding wasm-target...
+Feb 07 18:00:37.635 INFO Adding wasm-target was successful.
+Feb 07 18:00:37.635 INFO Building wasm...
+Feb 07 18:00:38.028 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0204]: the trait `Copy` may not be implemented for this type
+  --> src/lib.rs:24:17
+   |
+24 | #[derive(Clone, Copy)]
+   |                 ^^^^
+25 | enum Node {
+26 |     Element(web_sys::Element),
+   |             ---------------- this field does not implement `Copy`
+27 |     Text(web_sys::Text),
+   |          ------------- this field does not implement `Copy`
+
+error[E0204]: the trait `Copy` may not be implemented for this type
+  --> src/lib.rs:30:17
+   |
+30 | #[derive(Clone, Copy)]
+   |                 ^^^^
+...
+33 |     element: VElement,
+   |     ----------------- this field does not implement `Copy`
+34 |     child_instances: Vec<Instance>
+   |     ------------------------------ this field does not implement `Copy`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0204`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:00:44.081 INFO Running build command...
+Feb 07 18:00:44.082 INFO Checking rustc version...
+Feb 07 18:00:44.130 INFO rustc version is 32.
+Feb 07 18:00:44.130 INFO Checking crate configuration...
+Feb 07 18:00:44.131 INFO Crate is correctly configured.
+Feb 07 18:00:44.131 INFO Adding wasm-target...
+Feb 07 18:00:44.209 INFO Adding wasm-target was successful.
+Feb 07 18:00:44.209 INFO Building wasm...
+Feb 07 18:00:44.652 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0204]: the trait `Copy` may not be implemented for this type
+  --> src/lib.rs:17:17
+   |
+17 | #[derive(Clone, Copy)]
+   |                 ^^^^
+18 | struct VElement {
+19 |     type_: String,
+   |     ------------- this field does not implement `Copy`
+20 |     props: Vec<(String, String)>,
+   |     ---------------------------- this field does not implement `Copy`
+21 |     children: Vec<VElement>
+   |     ----------------------- this field does not implement `Copy`
+
+error[E0204]: the trait `Copy` may not be implemented for this type
+  --> src/lib.rs:24:17
+   |
+24 | #[derive(Clone, Copy)]
+   |                 ^^^^
+25 | enum Node {
+26 |     Element(web_sys::Element),
+   |             ---------------- this field does not implement `Copy`
+27 |     Text(web_sys::Text),
+   |          ------------- this field does not implement `Copy`
+
+error[E0204]: the trait `Copy` may not be implemented for this type
+  --> src/lib.rs:30:17
+   |
+30 | #[derive(Clone, Copy)]
+   |                 ^^^^
+...
+34 |     child_instances: Vec<Instance>
+   |     ------------------------------ this field does not implement `Copy`
+
+error: aborting due to 3 previous errors
+
+For more information about this error, try `rustc --explain E0204`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:00:58.259 INFO Running build command...
+Feb 07 18:00:58.260 INFO Checking rustc version...
+Feb 07 18:00:58.308 INFO rustc version is 32.
+Feb 07 18:00:58.309 INFO Checking crate configuration...
+Feb 07 18:00:58.309 INFO Crate is correctly configured.
+Feb 07 18:00:58.309 INFO Adding wasm-target...
+Feb 07 18:00:58.388 INFO Adding wasm-target was successful.
+Feb 07 18:00:58.388 INFO Building wasm...
+Feb 07 18:00:59.755 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:00:59.756 INFO Creating a pkg directory...
+Feb 07 18:00:59.756 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:00:59.756 INFO Writing a package.json...
+Feb 07 18:00:59.756 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:00:59.757 INFO Copying readme from crate...
+Feb 07 18:00:59.757 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:00:59.757 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:00:59.800 INFO Installing wasm-bindgen-cli...
+Feb 07 18:00:59.828 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:00:59.828 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:00:59.828 INFO Getting the crate name from the manifest...
+Feb 07 18:00:59.828 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:00:59.828 INFO Building the wasm bindings...
+Feb 07 18:00:59.893 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:00:59.894 INFO Done in 1 second.
+Feb 07 18:00:59.894 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:05:04.067 INFO Running build command...
+Feb 07 18:05:04.068 INFO Checking rustc version...
+Feb 07 18:05:04.111 INFO rustc version is 32.
+Feb 07 18:05:04.111 INFO Checking crate configuration...
+Feb 07 18:05:04.111 INFO Crate is correctly configured.
+Feb 07 18:05:04.112 INFO Adding wasm-target...
+Feb 07 18:05:04.193 INFO Adding wasm-target was successful.
+Feb 07 18:05:04.194 INFO Building wasm...
+Feb 07 18:05:04.624 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:219:84
+    |
+219 |                                 Node::Element(child_dom) => child_dom.append_child(*child_dom),
+    |                                                                                    ^^^^^^^^^^
+    |                                                                                    |
+    |                                                                                    expected reference, found struct `web_sys::Element`
+    |                                                                                    help: consider borrowing here: `&*child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Element`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:05:10.330 INFO Running build command...
+Feb 07 18:05:10.331 INFO Checking rustc version...
+Feb 07 18:05:10.379 INFO rustc version is 32.
+Feb 07 18:05:10.379 INFO Checking crate configuration...
+Feb 07 18:05:10.379 INFO Crate is correctly configured.
+Feb 07 18:05:10.379 INFO Adding wasm-target...
+Feb 07 18:05:10.456 INFO Adding wasm-target was successful.
+Feb 07 18:05:10.456 INFO Building wasm...
+Feb 07 18:05:11.124 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:05:11.124 INFO Creating a pkg directory...
+Feb 07 18:05:11.124 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:05:11.124 INFO Writing a package.json...
+Feb 07 18:05:11.125 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:05:11.125 INFO Copying readme from crate...
+Feb 07 18:05:11.125 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:05:11.125 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:05:11.173 INFO Installing wasm-bindgen-cli...
+Feb 07 18:05:11.188 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:05:11.188 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:05:11.188 INFO Getting the crate name from the manifest...
+Feb 07 18:05:11.188 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:05:11.188 INFO Building the wasm bindings...
+Feb 07 18:05:11.245 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:05:11.245 INFO Done in 0 seconds.
+Feb 07 18:05:11.245 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:06:46.815 INFO Running build command...
+Feb 07 18:06:46.817 INFO Checking rustc version...
+Feb 07 18:06:46.869 INFO rustc version is 32.
+Feb 07 18:06:46.869 INFO Checking crate configuration...
+Feb 07 18:06:46.869 INFO Crate is correctly configured.
+Feb 07 18:06:46.870 INFO Adding wasm-target...
+Feb 07 18:06:46.951 INFO Adding wasm-target was successful.
+Feb 07 18:06:46.951 INFO Building wasm...
+Feb 07 18:06:47.663 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `=>`, `if`, or `|`, found `;`
+   --> src/lib.rs:111:44
+    |
+111 |                     log("append to parent");
+    |                                            ^ expected one of `=>`, `if`, or `|` here
+
+warning: unreachable expression
+   --> src/lib.rs:115:17
+    |
+115 |                 Some(new_instance)
+    |                 ^^^^^^^^^^^^^^^^^^
+    |
+    = note: #[warn(unreachable_code)] on by default
+
+error: aborting due to previous error
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:06:59.969 INFO Running build command...
+Feb 07 18:06:59.970 INFO Checking rustc version...
+Feb 07 18:07:00.023 INFO rustc version is 32.
+Feb 07 18:07:00.023 INFO Checking crate configuration...
+Feb 07 18:07:00.023 INFO Crate is correctly configured.
+Feb 07 18:07:00.023 INFO Adding wasm-target...
+Feb 07 18:07:00.100 INFO Adding wasm-target was successful.
+Feb 07 18:07:00.100 INFO Building wasm...
+Feb 07 18:07:01.364 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:07:01.364 INFO Creating a pkg directory...
+Feb 07 18:07:01.364 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:07:01.364 INFO Writing a package.json...
+Feb 07 18:07:01.364 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:07:01.365 INFO Copying readme from crate...
+Feb 07 18:07:01.365 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:01.365 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:07:01.414 INFO Installing wasm-bindgen-cli...
+Feb 07 18:07:01.429 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:07:01.429 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:07:01.430 INFO Getting the crate name from the manifest...
+Feb 07 18:07:01.430 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:07:01.430 INFO Building the wasm bindings...
+Feb 07 18:07:01.486 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:01.486 INFO Done in 1 second.
+Feb 07 18:07:01.486 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:05.543 INFO Running build command...
+Feb 07 18:07:05.554 INFO Checking rustc version...
+Feb 07 18:07:05.668 INFO rustc version is 32.
+Feb 07 18:07:05.669 INFO Checking crate configuration...
+Feb 07 18:07:05.669 INFO Crate is correctly configured.
+Feb 07 18:07:05.669 INFO Adding wasm-target...
+Feb 07 18:07:05.803 INFO Adding wasm-target was successful.
+Feb 07 18:07:05.803 INFO Building wasm...
+Feb 07 18:07:06.434 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:241:5
+    |
+241 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:263:5
+    |
+263 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0382]: use of moved value: `new_instance`
+   --> src/lib.rs:116:22
+    |
+113 |                     Node::Element(dom_element) => parent_dom.append_child(&dom_element),
+    |                                   ----------- value moved here
+...
+116 |                 Some(new_instance)
+    |                      ^^^^^^^^^^^^ value used here after move
+    |
+    = note: move occurs because value has type `web_sys::Element`, which does not implement the `Copy` trait
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:07:17.866 INFO Running build command...
+Feb 07 18:07:17.867 INFO Checking rustc version...
+Feb 07 18:07:17.913 INFO rustc version is 32.
+Feb 07 18:07:17.914 INFO Checking crate configuration...
+Feb 07 18:07:17.914 INFO Crate is correctly configured.
+Feb 07 18:07:17.914 INFO Adding wasm-target...
+Feb 07 18:07:17.993 INFO Adding wasm-target was successful.
+Feb 07 18:07:17.993 INFO Building wasm...
+Feb 07 18:07:18.607 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:07:18.607 INFO Creating a pkg directory...
+Feb 07 18:07:18.607 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:07:18.608 INFO Writing a package.json...
+Feb 07 18:07:18.608 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:07:18.608 INFO Copying readme from crate...
+Feb 07 18:07:18.608 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:18.608 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:07:18.645 INFO Installing wasm-bindgen-cli...
+Feb 07 18:07:18.660 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:07:18.660 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:07:18.661 INFO Getting the crate name from the manifest...
+Feb 07 18:07:18.661 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:07:18.661 INFO Building the wasm bindings...
+Feb 07 18:07:18.719 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:18.719 INFO Done in 0 seconds.
+Feb 07 18:07:18.719 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:27.701 INFO Running build command...
+Feb 07 18:07:27.702 INFO Checking rustc version...
+Feb 07 18:07:27.747 INFO rustc version is 32.
+Feb 07 18:07:27.747 INFO Checking crate configuration...
+Feb 07 18:07:27.747 INFO Crate is correctly configured.
+Feb 07 18:07:27.747 INFO Adding wasm-target...
+Feb 07 18:07:27.828 INFO Adding wasm-target was successful.
+Feb 07 18:07:27.829 INFO Building wasm...
+Feb 07 18:07:28.790 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:07:28.790 INFO Creating a pkg directory...
+Feb 07 18:07:28.790 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:07:28.790 INFO Writing a package.json...
+Feb 07 18:07:28.791 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:07:28.791 INFO Copying readme from crate...
+Feb 07 18:07:28.791 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:28.791 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:07:28.844 INFO Installing wasm-bindgen-cli...
+Feb 07 18:07:28.862 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:07:28.862 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:07:28.862 INFO Getting the crate name from the manifest...
+Feb 07 18:07:28.863 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:07:28.863 INFO Building the wasm bindings...
+Feb 07 18:07:28.925 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:28.925 INFO Done in 1 second.
+Feb 07 18:07:28.926 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:32.831 INFO Running build command...
+Feb 07 18:07:32.833 INFO Checking rustc version...
+Feb 07 18:07:32.917 INFO rustc version is 32.
+Feb 07 18:07:32.918 INFO Checking crate configuration...
+Feb 07 18:07:32.919 INFO Crate is correctly configured.
+Feb 07 18:07:32.919 INFO Adding wasm-target...
+Feb 07 18:07:33.039 INFO Adding wasm-target was successful.
+Feb 07 18:07:33.039 INFO Building wasm...
+Feb 07 18:07:34.285 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:07:34.286 INFO Creating a pkg directory...
+Feb 07 18:07:34.286 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:07:34.286 INFO Writing a package.json...
+Feb 07 18:07:34.286 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:07:34.286 INFO Copying readme from crate...
+Feb 07 18:07:34.287 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:34.287 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:07:34.338 INFO Installing wasm-bindgen-cli...
+Feb 07 18:07:34.354 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:07:34.355 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:07:34.355 INFO Getting the crate name from the manifest...
+Feb 07 18:07:34.355 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:07:34.356 INFO Building the wasm bindings...
+Feb 07 18:07:34.418 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:07:34.418 INFO Done in 1 second.
+Feb 07 18:07:34.418 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:08:16.384 INFO Running build command...
+Feb 07 18:08:16.385 INFO Checking rustc version...
+Feb 07 18:08:16.427 INFO rustc version is 32.
+Feb 07 18:08:16.427 INFO Checking crate configuration...
+Feb 07 18:08:16.428 INFO Crate is correctly configured.
+Feb 07 18:08:16.428 INFO Adding wasm-target...
+Feb 07 18:08:16.506 INFO Adding wasm-target was successful.
+Feb 07 18:08:16.506 INFO Building wasm...
+Feb 07 18:08:16.952 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `child_dom`
+   --> src/lib.rs:223:37
+    |
+222 |                                     log("append to child parent")
+    |                                                                  - expected one of `.`, `;`, `?`, `}`, or an operator here
+223 |                                     child_dom.append_child(child_dom)
+    |                                     ^^^^^^^^^ unexpected token
+
+error[E0308]: match arms have incompatible types
+   --> src/lib.rs:220:29
+    |
+220 | /                             match child_dom {
+221 | |                                 Node::Element(child_dom) => {
+222 | |                                     log("append to child parent")
+223 | |                                     child_dom.append_child(child_dom)
+224 | |                                 },
+225 | |                                 Node::Text(child_dom) => child_dom.append_child(child_dom),
+    | |                                                          --------------------------------- match arm with an incompatible type
+226 | |                             };
+    | |_____________________________^ expected (), found enum `std::result::Result`
+    |
+    = note: expected type `()`
+               found type `std::result::Result<web_sys::Node, wasm_bindgen::JsValue>`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:08:18.602 INFO Running build command...
+Feb 07 18:08:18.603 INFO Checking rustc version...
+Feb 07 18:08:18.654 INFO rustc version is 32.
+Feb 07 18:08:18.655 INFO Checking crate configuration...
+Feb 07 18:08:18.655 INFO Crate is correctly configured.
+Feb 07 18:08:18.655 INFO Adding wasm-target...
+Feb 07 18:08:18.732 INFO Adding wasm-target was successful.
+Feb 07 18:08:18.733 INFO Building wasm...
+Feb 07 18:08:19.793 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:08:19.793 INFO Creating a pkg directory...
+Feb 07 18:08:19.793 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:08:19.793 INFO Writing a package.json...
+Feb 07 18:08:19.794 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:08:19.794 INFO Copying readme from crate...
+Feb 07 18:08:19.794 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:08:19.794 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:08:19.843 INFO Installing wasm-bindgen-cli...
+Feb 07 18:08:19.869 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:08:19.869 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:08:19.870 INFO Getting the crate name from the manifest...
+Feb 07 18:08:19.870 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:08:19.870 INFO Building the wasm bindings...
+Feb 07 18:08:19.937 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:08:19.937 INFO Done in 1 second.
+Feb 07 18:08:19.938 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:09:20.596 INFO Running build command...
+Feb 07 18:09:20.597 INFO Checking rustc version...
+Feb 07 18:09:20.644 INFO rustc version is 32.
+Feb 07 18:09:20.655 INFO Checking crate configuration...
+Feb 07 18:09:20.655 INFO Crate is correctly configured.
+Feb 07 18:09:20.655 INFO Adding wasm-target...
+Feb 07 18:09:20.733 INFO Adding wasm-target was successful.
+Feb 07 18:09:20.734 INFO Building wasm...
+Feb 07 18:09:21.906 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:09:21.906 INFO Creating a pkg directory...
+Feb 07 18:09:21.906 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:09:21.906 INFO Writing a package.json...
+Feb 07 18:09:21.907 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:09:21.907 INFO Copying readme from crate...
+Feb 07 18:09:21.907 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:09:21.907 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:09:21.955 INFO Installing wasm-bindgen-cli...
+Feb 07 18:09:21.981 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:09:21.981 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:09:21.981 INFO Getting the crate name from the manifest...
+Feb 07 18:09:21.981 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:09:21.982 INFO Building the wasm bindings...
+Feb 07 18:09:22.046 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:09:22.046 INFO Done in 1 second.
+Feb 07 18:09:22.046 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:11:17.717 INFO Running build command...
+Feb 07 18:11:17.719 INFO Checking rustc version...
+Feb 07 18:11:17.768 INFO rustc version is 32.
+Feb 07 18:11:17.768 INFO Checking crate configuration...
+Feb 07 18:11:17.768 INFO Crate is correctly configured.
+Feb 07 18:11:17.768 INFO Adding wasm-target...
+Feb 07 18:11:17.872 INFO Adding wasm-target was successful.
+Feb 07 18:11:17.872 INFO Building wasm...
+Feb 07 18:11:18.441 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:211:84
+    |
+211 |                                 Node::Element(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                    ^^^^^^^^^
+    |                                                                                    |
+    |                                                                                    expected reference, found struct `web_sys::Element`
+    |                                                                                    help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Element`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:212:81
+    |
+212 |                                 Node::Text(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                 ^^^^^^^^^
+    |                                                                                 |
+    |                                                                                 expected reference, found struct `web_sys::Text`
+    |                                                                                 help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Text`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:11:51.941 INFO Running build command...
+Feb 07 18:11:51.943 INFO Checking rustc version...
+Feb 07 18:11:52.002 INFO rustc version is 32.
+Feb 07 18:11:52.002 INFO Checking crate configuration...
+Feb 07 18:11:52.003 INFO Crate is correctly configured.
+Feb 07 18:11:52.003 INFO Adding wasm-target...
+Feb 07 18:11:52.084 INFO Adding wasm-target was successful.
+Feb 07 18:11:52.084 INFO Building wasm...
+Feb 07 18:11:52.741 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:231:5
+    |
+231 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:253:5
+    |
+253 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0382]: use of moved value
+   --> src/lib.rs:211:47
+    |
+209 |                             child_instances.push(instance);
+    |                                                  -------- value moved here
+210 |                             match instance.dom {
+211 |                                 Node::Element(child_dom) => child_dom.append_child(&child_dom),
+    |                                               ^^^^^^^^^ value used here after move
+    |
+    = note: move occurs because `instance` has type `Instance`, which does not implement the `Copy` trait
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:12:06.804 INFO Running build command...
+Feb 07 18:12:06.805 INFO Checking rustc version...
+Feb 07 18:12:06.854 INFO rustc version is 32.
+Feb 07 18:12:06.855 INFO Checking crate configuration...
+Feb 07 18:12:06.855 INFO Crate is correctly configured.
+Feb 07 18:12:06.855 INFO Adding wasm-target...
+Feb 07 18:12:06.941 INFO Adding wasm-target was successful.
+Feb 07 18:12:06.941 INFO Building wasm...
+Feb 07 18:12:07.458 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:231:5
+    |
+231 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:253:5
+    |
+253 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0382]: borrow of moved value: `instance`
+   --> src/lib.rs:210:35
+    |
+209 |                             child_instances.push(instance);
+    |                                                  -------- value moved here
+210 |                             match &instance.dom {
+    |                                   ^^^^^^^^^^^^^ value borrowed here after move
+    |
+    = note: move occurs because `instance` has type `Instance`, which does not implement the `Copy` trait
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:15:26.285 INFO Running build command...
+Feb 07 18:15:26.286 INFO Checking rustc version...
+Feb 07 18:15:26.388 INFO rustc version is 32.
+Feb 07 18:15:26.389 INFO Checking crate configuration...
+Feb 07 18:15:26.389 INFO Crate is correctly configured.
+Feb 07 18:15:26.389 INFO Adding wasm-target...
+Feb 07 18:15:26.476 INFO Adding wasm-target was successful.
+Feb 07 18:15:26.477 INFO Building wasm...
+Feb 07 18:15:27.740 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:210:84
+    |
+210 |                                 Node::Element(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                    ^^^^^^^^^
+    |                                                                                    |
+    |                                                                                    expected reference, found struct `web_sys::Element`
+    |                                                                                    help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Element`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:211:81
+    |
+211 |                                 Node::Text(child_dom) => child_dom.append_child(child_dom),
+    |                                                                                 ^^^^^^^^^
+    |                                                                                 |
+    |                                                                                 expected reference, found struct `web_sys::Text`
+    |                                                                                 help: consider borrowing here: `&child_dom`
+    |
+    = note: expected type `&web_sys::Node`
+               found type `web_sys::Text`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:15:38.803 INFO Running build command...
+Feb 07 18:15:38.804 INFO Checking rustc version...
+Feb 07 18:15:38.854 INFO rustc version is 32.
+Feb 07 18:15:38.854 INFO Checking crate configuration...
+Feb 07 18:15:38.854 INFO Crate is correctly configured.
+Feb 07 18:15:38.855 INFO Adding wasm-target...
+Feb 07 18:15:38.937 INFO Adding wasm-target was successful.
+Feb 07 18:15:38.937 INFO Building wasm...
+Feb 07 18:15:39.659 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `next_props`
+   --> src/lib.rs:231:5
+    |
+231 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:253:5
+    |
+253 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:75:13
+   |
+75 |         let next_root_instance = render(v_element, root_dom, root_instance);
+   |             ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0382]: use of moved value: `instance`
+   --> src/lib.rs:213:50
+    |
+210 |                                 Node::Element(child_dom) => child_dom.append_child(&child_dom),
+    |                                               --------- value moved here
+...
+213 |                             child_instances.push(instance);
+    |                                                  ^^^^^^^^ value used here after move
+    |
+    = note: move occurs because value has type `web_sys::Element`, which does not implement the `Copy` trait
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:15:58.795 INFO Running build command...
+Feb 07 18:15:58.796 INFO Checking rustc version...
+Feb 07 18:15:58.844 INFO rustc version is 32.
+Feb 07 18:15:58.845 INFO Checking crate configuration...
+Feb 07 18:15:58.845 INFO Crate is correctly configured.
+Feb 07 18:15:58.845 INFO Adding wasm-target...
+Feb 07 18:15:58.922 INFO Adding wasm-target was successful.
+Feb 07 18:15:58.923 INFO Building wasm...
+Feb 07 18:16:00.395 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:16:00.395 INFO Creating a pkg directory...
+Feb 07 18:16:00.395 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:16:00.395 INFO Writing a package.json...
+Feb 07 18:16:00.396 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:16:00.396 INFO Copying readme from crate...
+Feb 07 18:16:00.396 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:16:00.396 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:16:00.445 INFO Installing wasm-bindgen-cli...
+Feb 07 18:16:00.484 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:16:00.484 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:16:00.484 INFO Getting the crate name from the manifest...
+Feb 07 18:16:00.484 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:16:00.485 INFO Building the wasm bindings...
+Feb 07 18:16:00.558 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:16:00.561 INFO Done in 1 second.
+Feb 07 18:16:00.562 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:20:16.693 INFO Running build command...
+Feb 07 18:20:16.694 INFO Checking rustc version...
+Feb 07 18:20:16.796 INFO rustc version is 32.
+Feb 07 18:20:16.796 INFO Checking crate configuration...
+Feb 07 18:20:16.796 INFO Crate is correctly configured.
+Feb 07 18:20:16.796 INFO Adding wasm-target...
+Feb 07 18:20:16.886 INFO Adding wasm-target was successful.
+Feb 07 18:20:16.886 INFO Building wasm...
+Feb 07 18:20:18.683 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:106:40
+    |
+106 |         let new_instance = instantiate(&v_element);
+    |                                        ^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:144:40
+    |
+144 |         let new_instance = instantiate(&v_element);
+    |                                        ^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:20:28.747 INFO Running build command...
+Feb 07 18:20:28.748 INFO Checking rustc version...
+Feb 07 18:20:28.800 INFO rustc version is 32.
+Feb 07 18:20:28.800 INFO Checking crate configuration...
+Feb 07 18:20:28.800 INFO Crate is correctly configured.
+Feb 07 18:20:28.801 INFO Adding wasm-target...
+Feb 07 18:20:28.879 INFO Adding wasm-target was successful.
+Feb 07 18:20:28.879 INFO Building wasm...
+Feb 07 18:20:29.531 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:106:40
+    |
+106 |         let new_instance = instantiate(&v_element);
+    |                                        ^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:144:40
+    |
+144 |         let new_instance = instantiate(v_element);
+    |                                        ^^^^^^^^^ expected &VElement, found struct `VElement`
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `std::option::Option<VElement>`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:21:09.782 INFO Running build command...
+Feb 07 18:21:09.783 INFO Checking rustc version...
+Feb 07 18:21:09.830 INFO rustc version is 32.
+Feb 07 18:21:09.830 INFO Checking crate configuration...
+Feb 07 18:21:09.831 INFO Crate is correctly configured.
+Feb 07 18:21:09.831 INFO Adding wasm-target...
+Feb 07 18:21:09.911 INFO Adding wasm-target was successful.
+Feb 07 18:21:09.911 INFO Building wasm...
+Feb 07 18:21:10.500 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:106:40
+    |
+106 |         let new_instance = instantiate(&v_element);
+    |                                        ^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:144:40
+    |
+144 |         let new_instance = instantiate(&v_element);
+    |                                        ^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:208:66
+    |
+208 |                         if let Some(instance) = instantiate(Some(child_element.clone())) {
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^
+    |                                                                  |
+    |                                                                  expected &VElement, found struct `VElement`
+    |                                                                  help: consider borrowing here: `&child_element.clone()`
+    |
+    = note: expected type `&VElement`
+               found type `VElement`
+
+error: aborting due to 3 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:21:14.417 INFO Running build command...
+Feb 07 18:21:14.418 INFO Checking rustc version...
+Feb 07 18:21:14.467 INFO rustc version is 32.
+Feb 07 18:21:14.468 INFO Checking crate configuration...
+Feb 07 18:21:14.468 INFO Crate is correctly configured.
+Feb 07 18:21:14.468 INFO Adding wasm-target...
+Feb 07 18:21:14.548 INFO Adding wasm-target was successful.
+Feb 07 18:21:14.548 INFO Building wasm...
+Feb 07 18:21:15.245 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:106:40
+    |
+106 |         let new_instance = instantiate(&v_element);
+    |                                        ^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:144:40
+    |
+144 |         let new_instance = instantiate(&v_element);
+    |                                        ^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:208:61
+    |
+208 |                         if let Some(instance) = instantiate(&Some(child_element.clone())) {
+    |                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected enum `std::option::Option`, found reference
+    |
+    = note: expected type `std::option::Option<&VElement>`
+               found type `&std::option::Option<VElement>`
+
+error: aborting due to 3 previous errors
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:21:19.371 INFO Running build command...
+Feb 07 18:21:19.372 INFO Checking rustc version...
+Feb 07 18:21:19.422 INFO rustc version is 32.
+Feb 07 18:21:19.422 INFO Checking crate configuration...
+Feb 07 18:21:19.422 INFO Crate is correctly configured.
+Feb 07 18:21:19.423 INFO Adding wasm-target...
+Feb 07 18:21:19.501 INFO Adding wasm-target was successful.
+Feb 07 18:21:19.501 INFO Building wasm...
+Feb 07 18:21:20.490 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:21:20.490 INFO Creating a pkg directory...
+Feb 07 18:21:20.490 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:21:20.491 INFO Writing a package.json...
+Feb 07 18:21:20.491 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:21:20.492 INFO Copying readme from crate...
+Feb 07 18:21:20.492 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:21:20.492 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:21:20.545 INFO Installing wasm-bindgen-cli...
+Feb 07 18:21:20.571 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:21:20.571 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:21:20.572 INFO Getting the crate name from the manifest...
+Feb 07 18:21:20.572 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:21:20.572 INFO Building the wasm bindings...
+Feb 07 18:21:20.638 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:21:20.639 INFO Done in 1 second.
+Feb 07 18:21:20.639 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:22:13.774 INFO Running build command...
+Feb 07 18:22:13.775 INFO Checking rustc version...
+Feb 07 18:22:13.823 INFO rustc version is 32.
+Feb 07 18:22:13.823 INFO Checking crate configuration...
+Feb 07 18:22:13.823 INFO Crate is correctly configured.
+Feb 07 18:22:13.824 INFO Adding wasm-target...
+Feb 07 18:22:13.904 INFO Adding wasm-target was successful.
+Feb 07 18:22:13.904 INFO Building wasm...
+Feb 07 18:22:15.120 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:22:15.120 INFO Creating a pkg directory...
+Feb 07 18:22:15.120 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:22:15.120 INFO Writing a package.json...
+Feb 07 18:22:15.121 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:22:15.121 INFO Copying readme from crate...
+Feb 07 18:22:15.121 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:22:15.121 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:22:15.163 INFO Installing wasm-bindgen-cli...
+Feb 07 18:22:15.190 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:22:15.191 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:22:15.191 INFO Getting the crate name from the manifest...
+Feb 07 18:22:15.191 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:22:15.191 INFO Building the wasm bindings...
+Feb 07 18:22:15.255 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:22:15.255 INFO Done in 1 second.
+Feb 07 18:22:15.255 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:22:43.050 INFO Running build command...
+Feb 07 18:22:43.051 INFO Checking rustc version...
+Feb 07 18:22:43.097 INFO rustc version is 32.
+Feb 07 18:22:43.097 INFO Checking crate configuration...
+Feb 07 18:22:43.097 INFO Crate is correctly configured.
+Feb 07 18:22:43.097 INFO Adding wasm-target...
+Feb 07 18:22:43.176 INFO Adding wasm-target was successful.
+Feb 07 18:22:43.176 INFO Building wasm...
+Feb 07 18:22:44.040 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:22:44.040 INFO Creating a pkg directory...
+Feb 07 18:22:44.041 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:22:44.041 INFO Writing a package.json...
+Feb 07 18:22:44.041 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:22:44.041 INFO Copying readme from crate...
+Feb 07 18:22:44.041 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:22:44.042 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:22:44.089 INFO Installing wasm-bindgen-cli...
+Feb 07 18:22:44.115 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:22:44.115 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:22:44.115 INFO Getting the crate name from the manifest...
+Feb 07 18:22:44.115 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:22:44.115 INFO Building the wasm bindings...
+Feb 07 18:22:44.180 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:22:44.181 INFO Done in 1 second.
+Feb 07 18:22:44.181 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:23:29.475 INFO Running build command...
+Feb 07 18:23:29.476 INFO Checking rustc version...
+Feb 07 18:23:29.519 INFO rustc version is 32.
+Feb 07 18:23:29.520 INFO Checking crate configuration...
+Feb 07 18:23:29.520 INFO Crate is correctly configured.
+Feb 07 18:23:29.520 INFO Adding wasm-target...
+Feb 07 18:23:29.605 INFO Adding wasm-target was successful.
+Feb 07 18:23:29.605 INFO Building wasm...
+Feb 07 18:23:30.736 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:23:30.736 INFO Creating a pkg directory...
+Feb 07 18:23:30.736 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:23:30.736 INFO Writing a package.json...
+Feb 07 18:23:30.736 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:23:30.737 INFO Copying readme from crate...
+Feb 07 18:23:30.737 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:23:30.737 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:23:30.784 INFO Installing wasm-bindgen-cli...
+Feb 07 18:23:30.808 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:23:30.808 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:23:30.809 INFO Getting the crate name from the manifest...
+Feb 07 18:23:30.809 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:23:30.809 INFO Building the wasm bindings...
+Feb 07 18:23:30.883 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:23:30.883 INFO Done in 1 second.
+Feb 07 18:23:30.884 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:25:14.378 INFO Running build command...
+Feb 07 18:25:14.379 INFO Checking rustc version...
+Feb 07 18:25:14.450 INFO rustc version is 32.
+Feb 07 18:25:14.450 INFO Checking crate configuration...
+Feb 07 18:25:14.450 INFO Crate is correctly configured.
+Feb 07 18:25:14.450 INFO Adding wasm-target...
+Feb 07 18:25:14.557 INFO Adding wasm-target was successful.
+Feb 07 18:25:14.557 INFO Building wasm...
+Feb 07 18:25:17.096 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:25:17.096 INFO Creating a pkg directory...
+Feb 07 18:25:17.096 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:25:17.096 INFO Writing a package.json...
+Feb 07 18:25:17.097 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:25:17.097 INFO Copying readme from crate...
+Feb 07 18:25:17.098 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:25:17.098 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:25:17.152 INFO Installing wasm-bindgen-cli...
+Feb 07 18:25:17.180 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:25:17.180 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:25:17.180 INFO Getting the crate name from the manifest...
+Feb 07 18:25:17.181 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:25:17.181 INFO Building the wasm bindings...
+Feb 07 18:25:17.247 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:25:17.247 INFO Done in 2 seconds.
+Feb 07 18:25:17.248 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:40:52.506 INFO Running build command...
+Feb 07 18:40:52.507 INFO Checking rustc version...
+Feb 07 18:40:52.599 INFO rustc version is 32.
+Feb 07 18:40:52.599 INFO Checking crate configuration...
+Feb 07 18:40:52.599 INFO Crate is correctly configured.
+Feb 07 18:40:52.600 INFO Adding wasm-target...
+Feb 07 18:40:52.684 INFO Adding wasm-target was successful.
+Feb 07 18:40:52.684 INFO Building wasm...
+Feb 07 18:40:54.027 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0599]: no method named `append_child` found for type `Node` in the current scope
+   --> src/lib.rs:212:65
+    |
+25  | enum Node {
+    | --------- method `append_child` not found for this
+...
+212 |                                 Node::Element(child_dom) => dom.append_child(child_dom),
+    |                                                                 ^^^^^^^^^^^^
+
+error[E0599]: no method named `append_child` found for type `Node` in the current scope
+   --> src/lib.rs:213:62
+    |
+25  | enum Node {
+    | --------- method `append_child` not found for this
+...
+213 |                                 Node::Text(child_dom) => dom.append_child(child_dom),
+    |                                                              ^^^^^^^^^^^^
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0599`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:43:13.633 INFO Running build command...
+Feb 07 18:43:13.634 INFO Checking rustc version...
+Feb 07 18:43:13.677 INFO rustc version is 32.
+Feb 07 18:43:13.677 INFO Checking crate configuration...
+Feb 07 18:43:13.677 INFO Crate is correctly configured.
+Feb 07 18:43:13.677 INFO Adding wasm-target...
+Feb 07 18:43:13.756 INFO Adding wasm-target was successful.
+Feb 07 18:43:13.757 INFO Building wasm...
+Feb 07 18:43:14.380 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unnecessary parentheses around pattern
+   --> src/lib.rs:211:36
+    |
+211 |                             if let (Node::Element(dom)) = dom {
+    |                                    ^^^^^^^^^^^^^^^^^^^^ help: remove these parentheses
+    |
+    = note: #[warn(unused_parens)] on by default
+
+warning: unused variable: `dom`
+   --> src/lib.rs:211:51
+    |
+211 |                             if let (Node::Element(dom)) = dom {
+    |                                                   ^^^ help: consider using `_dom` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:235:5
+    |
+235 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:257:5
+    |
+257 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:77:12
+   |
+77 |        let next_root_instance = render(v_element, root_dom, root_instance);
+   |            ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0382]: use of moved value
+   --> src/lib.rs:211:51
+    |
+211 |                             if let (Node::Element(dom)) = dom {
+    |                                                   ^^^ value moved here, in previous iteration of loop
+    |
+    = note: move occurs because value has type `web_sys::Element`, which does not implement the `Copy` trait
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:43:29.020 INFO Running build command...
+Feb 07 18:43:29.022 INFO Checking rustc version...
+Feb 07 18:43:29.066 INFO rustc version is 32.
+Feb 07 18:43:29.066 INFO Checking crate configuration...
+Feb 07 18:43:29.066 INFO Crate is correctly configured.
+Feb 07 18:43:29.067 INFO Adding wasm-target...
+Feb 07 18:43:29.144 INFO Adding wasm-target was successful.
+Feb 07 18:43:29.145 INFO Building wasm...
+Feb 07 18:43:29.649 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+warning: unused variable: `dom`
+   --> src/lib.rs:211:50
+    |
+211 |                             if let Node::Element(dom) = dom {
+    |                                                  ^^^ help: consider using `_dom` instead
+    |
+    = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:235:5
+    |
+235 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `next_props`
+   --> src/lib.rs:257:5
+    |
+257 |     next_props: &Vec<(String, String)>
+    |     ^^^^^^^^^^ help: consider using `_next_props` instead
+
+warning: unused variable: `span`
+  --> src/lib.rs:41:9
+   |
+41 |     let span = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^^^ help: consider using `_span` instead
+
+warning: unused variable: `li`
+  --> src/lib.rs:42:9
+   |
+42 |     let li = |props, children| primitive_component("span".to_string(), props, children);
+   |         ^^ help: consider using `_li` instead
+
+warning: unused variable: `button`
+  --> src/lib.rs:43:9
+   |
+43 |     let button = |props, children| primitive_component("button".to_string(), props, children);
+   |         ^^^^^^ help: consider using `_button` instead
+
+warning: unused variable: `stories`
+  --> src/lib.rs:53:9
+   |
+53 |     let stories = vec![Story {
+   |         ^^^^^^^ help: consider using `_stories` instead
+
+warning: unused variable: `next_root_instance`
+  --> src/lib.rs:77:12
+   |
+77 |        let next_root_instance = render(v_element, root_dom, root_instance);
+   |            ^^^^^^^^^^^^^^^^^^ help: consider using `_next_root_instance` instead
+
+error[E0382]: use of moved value
+   --> src/lib.rs:211:50
+    |
+211 |                             if let Node::Element(dom) = dom {
+    |                                                  ^^^ value moved here, in previous iteration of loop
+    |
+    = note: move occurs because value has type `web_sys::Element`, which does not implement the `Copy` trait
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 18:43:42.315 INFO Running build command...
+Feb 07 18:43:42.316 INFO Checking rustc version...
+Feb 07 18:43:42.365 INFO rustc version is 32.
+Feb 07 18:43:42.366 INFO Checking crate configuration...
+Feb 07 18:43:42.366 INFO Crate is correctly configured.
+Feb 07 18:43:42.366 INFO Adding wasm-target...
+Feb 07 18:43:42.446 INFO Adding wasm-target was successful.
+Feb 07 18:43:42.447 INFO Building wasm...
+Feb 07 18:43:43.707 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:43:43.707 INFO Creating a pkg directory...
+Feb 07 18:43:43.707 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:43:43.707 INFO Writing a package.json...
+Feb 07 18:43:43.708 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:43:43.708 INFO Copying readme from crate...
+Feb 07 18:43:43.709 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:43:43.709 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:43:43.762 INFO Installing wasm-bindgen-cli...
+Feb 07 18:43:43.789 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:43:43.789 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:43:43.789 INFO Getting the crate name from the manifest...
+Feb 07 18:43:43.790 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:43:43.790 INFO Building the wasm bindings...
+Feb 07 18:43:43.855 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:43:43.855 INFO Done in 1 second.
+Feb 07 18:43:43.856 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:43:47.980 INFO Running build command...
+Feb 07 18:43:47.981 INFO Checking rustc version...
+Feb 07 18:43:48.026 INFO rustc version is 32.
+Feb 07 18:43:48.027 INFO Checking crate configuration...
+Feb 07 18:43:48.027 INFO Crate is correctly configured.
+Feb 07 18:43:48.027 INFO Adding wasm-target...
+Feb 07 18:43:48.111 INFO Adding wasm-target was successful.
+Feb 07 18:43:48.111 INFO Building wasm...
+Feb 07 18:43:49.320 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:43:49.320 INFO Creating a pkg directory...
+Feb 07 18:43:49.320 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:43:49.321 INFO Writing a package.json...
+Feb 07 18:43:49.321 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:43:49.321 INFO Copying readme from crate...
+Feb 07 18:43:49.321 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:43:49.322 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:43:49.399 INFO Installing wasm-bindgen-cli...
+Feb 07 18:43:49.422 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:43:49.423 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:43:49.423 INFO Getting the crate name from the manifest...
+Feb 07 18:43:49.423 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:43:49.424 INFO Building the wasm bindings...
+Feb 07 18:43:49.494 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:43:49.494 INFO Done in 1 second.
+Feb 07 18:43:49.494 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:44:05.816 INFO Running build command...
+Feb 07 18:44:05.817 INFO Checking rustc version...
+Feb 07 18:44:05.865 INFO rustc version is 32.
+Feb 07 18:44:05.865 INFO Checking crate configuration...
+Feb 07 18:44:05.865 INFO Crate is correctly configured.
+Feb 07 18:44:05.865 INFO Adding wasm-target...
+Feb 07 18:44:05.942 INFO Adding wasm-target was successful.
+Feb 07 18:44:05.942 INFO Building wasm...
+Feb 07 18:44:06.798 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:44:06.798 INFO Creating a pkg directory...
+Feb 07 18:44:06.799 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:44:06.799 INFO Writing a package.json...
+Feb 07 18:44:06.799 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:44:06.799 INFO Copying readme from crate...
+Feb 07 18:44:06.799 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:44:06.800 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:44:06.838 INFO Installing wasm-bindgen-cli...
+Feb 07 18:44:06.853 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:44:06.853 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:44:06.853 INFO Getting the crate name from the manifest...
+Feb 07 18:44:06.854 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:44:06.854 INFO Building the wasm bindings...
+Feb 07 18:44:06.910 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:44:06.910 INFO Done in 1 second.
+Feb 07 18:44:06.910 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:47:25Feb 07 18:47:25.993 .INFO993  Running build command...
+INFO FebRunning build command...
+ Feb 070 18:47:25.995 INFO Checking rustc version...
+7 18:47:25.995 INFO Checking rustc version...
+Feb 07 18:47:26.095 INFO rustc version is 32.
+Feb 07 18:47:26.Feb095 INFO Checking crate configuration...
+Feb 07 18:47:26.095 INFO Crate is correctly configured.
+Feb 07 07 18:47:26.095 INFO 18 Adding wasm-target...:47
+:26.095 INFO rustc version is 32.
+Feb 07 18:47:26.096 INFO Checking crate configuration...
+Feb 07 18:47:26.096 INFO Crate is correctly configured.
+Feb 07 18:47:26.096 INFO Adding wasm-target...
+FebFeb 07 18:47: 260.7203  18:47:26.203 INFO Adding wasm-target was successful.
+INFO Adding wasm-target was successful.
+Feb 07 18:47:26.204 INFO Building wasm...
+Feb 07 18:47:26.204 INFO Building wasm...
+Feb 07 18:47:27.835 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:47:27.836 INFO Creating a pkg directory...
+Feb 07 18:47:27.836 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:47:27.836 INFO Writing a package.json...
+Feb 07 18:47:27.836 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:47:27.837 INFO Copying readme from crate...
+Feb 07 18:47:27.837 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:47:27.837 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:47:27.891 INFO Installing wasm-bindgen-cli...
+Feb 07 18:47:27.915 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:47:27.915 INFO Creating a pkg directory...
+Feb 07 18:47:27.915 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:47:27.915 INFO Writing a package.json...
+Feb 07 18:47:27.915 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:47:27.915 INFO Copying readme from crate...
+Feb 07 18:47:27.915 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:47:27.916 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:47:27.916 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:47:27.916 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:47:27.916 INFO Getting the crate name from the manifest...
+Feb 07 18:47:27.916 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:47:27.917 INFO Building the wasm bindings...
+Feb 07 18:47:27.958 INFO Installing wasm-bindgen-cli...
+Feb 07 18:47:27.973 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:47:27.973 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:47:27.974 INFO Getting the crate name from the manifest...
+Feb 07 18:47:27.974 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:47:27.974 INFO Building the wasm bindings...
+Feb 07 18:47:27.983 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:47:27.983 INFO Done in 1 second.
+Feb 07 18:47:27.983 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:47:28.039 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:47:28.039 INFO Done in 2 seconds.
+Feb 07 18:47:28.039 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:48:23.080 INFO Running build command...
+Feb 07 18:48:23.082 INFO Checking rustc version...
+Feb 07 18:48:23.239 INFO rustc version is 32.
+Feb 07 18:48:23.239 INFO Checking crate configuration...
+Feb 07 18:48:23.239 INFO Crate is correctly configured.
+Feb 07 18:48:23.239 INFO Adding wasm-target...
+Feb 07 18:48:23.447 INFO Adding wasm-target was successful.
+Feb 07 18:48:23.448 INFO Building wasm...
+Feb 07 18:48:23.820 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 18:48:23.820 INFO Creating a pkg directory...
+Feb 07 18:48:23.821 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 18:48:23.821 INFO Writing a package.json...
+Feb 07 18:48:23.821 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 18:48:23.821 INFO Copying readme from crate...
+Feb 07 18:48:23.822 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:48:23.822 INFO Identifying wasm-bindgen dependency...
+Feb 07 18:48:23.885 INFO Installing wasm-bindgen-cli...
+Feb 07 18:48:23.919 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 18:48:23.919 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 18:48:23.920 INFO Getting the crate name from the manifest...
+Feb 07 18:48:23.920 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 18:48:23.920 INFO Building the wasm bindings...
+Feb 07 18:48:24.028 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 18:48:24.028 INFO Done in 0 seconds.
+Feb 07 18:48:24.028 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:00:11.838 INFO Running build command...
+Feb 07 19:00:11.839 INFO Checking rustc version...
+Feb 07 19:00:11.926 INFO rustc version is 32.
+Feb 07 19:00:11.926 INFO Checking crate configuration...
+Feb 07 19:00:11.927 INFO Crate is correctly configured.
+Feb 07 19:00:11.927 INFO Adding wasm-target...
+Feb 07 19:00:12.024 INFO Adding wasm-target was successful.
+Feb 07 19:00:12.024 INFO Building wasm...
+Feb 07 19:00:13.174 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 19:00:13.175 INFO Creating a pkg directory...
+Feb 07 19:00:13.175 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 19:00:13.175 INFO Writing a package.json...
+Feb 07 19:00:13.176 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 19:00:13.176 INFO Copying readme from crate...
+Feb 07 19:00:13.177 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:00:13.177 INFO Identifying wasm-bindgen dependency...
+Feb 07 19:00:13.218 INFO Installing wasm-bindgen-cli...
+Feb 07 19:00:13.245 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 19:00:13.245 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 19:00:13.245 INFO Getting the crate name from the manifest...
+Feb 07 19:00:13.245 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 19:00:13.246 INFO Building the wasm bindings...
+Feb 07 19:00:13.313 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:00:13.313 INFO Done in 1 second.
+Feb 07 19:00:13.313 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:00:57.042 INFO Running build command...
+Feb 07 19:00:57.043 INFO Checking rustc version...
+Feb 07 19:00:57.094 INFO rustc version is 32.
+Feb 07 19:00:57.094 INFO Checking crate configuration...
+Feb 07 19:00:57.095 INFO Crate is correctly configured.
+Feb 07 19:00:57.095 INFO Adding wasm-target...
+Feb 07 19:00:57.207 INFO Adding wasm-target was successful.
+Feb 07 19:00:57.207 INFO Building wasm...
+Feb 07 19:00:58.656 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 19:00:58.656 INFO Creating a pkg directory...
+Feb 07 19:00:58.656 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 19:00:58.656 INFO Writing a package.json...
+Feb 07 19:00:58.657 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 19:00:58.657 INFO Copying readme from crate...
+Feb 07 19:00:58.657 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:00:58.657 INFO Identifying wasm-bindgen dependency...
+Feb 07 19:00:58.704 INFO Installing wasm-bindgen-cli...
+Feb 07 19:00:58.729 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 19:00:58.729 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 19:00:58.729 INFO Getting the crate name from the manifest...
+Feb 07 19:00:58.729 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 19:00:58.730 INFO Building the wasm bindings...
+Feb 07 19:00:58.795 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:00:58.795 INFO Done in 1 second.
+Feb 07 19:00:58.796 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:07:42.995 INFO Running build command...
+Feb 07 19:07:42.997 INFO Checking rustc version...
+Feb 07 19:07:43.108 INFO rustc version is 32.
+Feb 07 19:07:43.108 INFO Checking crate configuration...
+Feb 07 19:07:43.108 INFO Crate is correctly configured.
+Feb 07 19:07:43.108 INFO Adding wasm-target...
+Feb 07 19:07:43.207 INFO Adding wasm-target was successful.
+Feb 07 19:07:43.207 INFO Building wasm...
+Feb 07 19:07:44.815 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find function `a` in this scope
+  --> src/lib.rs:69:16
+   |
+69 |                a(vec![href()], vec![
+   |                ^ not found in this scope
+
+error[E0425]: cannot find function `href` in this scope
+  --> src/lib.rs:69:23
+   |
+69 |                a(vec![href()], vec![
+   |                       ^^^^ not found in this scope
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0425`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:08:14.120 INFO Running build command...
+Feb 07 19:08:14.121 INFO Checking rustc version...
+Feb 07 19:08:14.172 INFO rustc version is 32.
+Feb 07 19:08:14.172 INFO Checking crate configuration...
+Feb 07 19:08:14.172 INFO Crate is correctly configured.
+Feb 07 19:08:14.172 INFO Adding wasm-target...
+Feb 07 19:08:14.254 INFO Adding wasm-target was successful.
+Feb 07 19:08:14.254 INFO Building wasm...
+Feb 07 19:08:14.841 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0425]: cannot find function `href` in this scope
+  --> src/lib.rs:71:23
+   |
+71 |                a(vec![href()], vec![
+   |                       ^^^^ not found in this scope
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0425`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:09:21.736 INFO Running build command...
+Feb 07 19:09:21.737 INFO Checking rustc version...
+Feb 07 19:09:21.795 INFO rustc version is 32.
+Feb 07 19:09:21.796 INFO Checking crate configuration...
+Feb 07 19:09:21.796 INFO Crate is correctly configured.
+Feb 07 19:09:21.796 INFO Adding wasm-target...
+Feb 07 19:09:21.876 INFO Adding wasm-target was successful.
+Feb 07 19:09:21.877 INFO Building wasm...
+Feb 07 19:09:22.141 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: incorrect close delimiter: `)`
+   --> src/lib.rs:338:44
+    |
+337 | fn href(value: &str) -> (String, String) {
+    |                                          - un-closed delimiter
+338 |     ("href".to_string()), value.to_string())
+    |                                            ^ incorrect close delimiter
+
+error: unexpected close delimiter: `}`
+   --> src/lib.rs:339:1
+    |
+339 | }
+    | ^ unexpected close delimiter
+
+error: aborting due to 2 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:09:29.073 INFO Running build command...
+Feb 07 19:09:29.075 INFO Checking rustc version...
+Feb 07 19:09:29.122 INFO rustc version is 32.
+Feb 07 19:09:29.122 INFO Checking crate configuration...
+Feb 07 19:09:29.122 INFO Crate is correctly configured.
+Feb 07 19:09:29.122 INFO Adding wasm-target...
+Feb 07 19:09:29.199 INFO Adding wasm-target was successful.
+Feb 07 19:09:29.200 INFO Building wasm...
+Feb 07 19:09:29.729 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0061]: this function takes 1 parameter but 0 parameters were supplied
+   --> src/lib.rs:71:23
+    |
+71  |                a(vec![href()], vec![
+    |                       ^^^^^^ expected 1 parameter
+...
+337 | fn href(value: &str) -> (String, String) {
+    | ---------------------------------------- defined here
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0061`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:10:01.447 INFO Running build command...
+Feb 07 19:10:01.448 INFO Checking rustc version...
+Feb 07 19:10:01.498 INFO rustc version is 32.
+Feb 07 19:10:01.498 INFO Checking crate configuration...
+Feb 07 19:10:01.498 INFO Crate is correctly configured.
+Feb 07 19:10:01.498 INFO Adding wasm-target...
+Feb 07 19:10:01.586 INFO Adding wasm-target was successful.
+Feb 07 19:10:01.586 INFO Building wasm...
+Feb 07 19:10:03.500 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 19:10:03.500 INFO Creating a pkg directory...
+Feb 07 19:10:03.500 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 19:10:03.500 INFO Writing a package.json...
+Feb 07 19:10:03.501 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 19:10:03.502 INFO Copying readme from crate...
+Feb 07 19:10:03.502 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:10:03.502 INFO Identifying wasm-bindgen dependency...
+Feb 07 19:10:03.548 INFO Installing wasm-bindgen-cli...
+Feb 07 19:10:03.571 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 19:10:03.572 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 19:10:03.572 INFO Getting the crate name from the manifest...
+Feb 07 19:10:03.572 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 19:10:03.572 INFO Building the wasm bindings...
+Feb 07 19:10:03.636 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:10:03.636 INFO Done in 2 seconds.
+Feb 07 19:10:03.636 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:11:55.317 INFO Running build command...
+Feb 07 19:11:55.318 INFO Checking rustc version...
+Feb 07 19:11:55.376 INFO rustc version is 32.
+Feb 07 19:11:55.377 INFO Checking crate configuration...
+Feb 07 19:11:55.377 INFO Crate is correctly configured.
+Feb 07 19:11:55.377 INFO Adding wasm-target...
+Feb 07 19:11:55.467 INFO Adding wasm-target was successful.
+Feb 07 19:11:55.468 INFO Building wasm...
+Feb 07 19:11:56.358 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `(` or `<`, found `=`
+  --> src/lib.rs:65:22
+   |
+65 |     fn story_element = (story) => {
+   |                      ^ expected one of `(` or `<` here
+
+error: aborting due to previous error
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:12:00.327 INFO Running build command...
+Feb 07 19:12:00.328 INFO Checking rustc version...
+Feb 07 19:12:00.378 INFO rustc version is 32.
+Feb 07 19:12:00.378 INFO Checking crate configuration...
+Feb 07 19:12:00.378 INFO Crate is correctly configured.
+Feb 07 19:12:00.379 INFO Adding wasm-target...
+Feb 07 19:12:00.462 INFO Adding wasm-target was successful.
+Feb 07 19:12:00.462 INFO Building wasm...
+Feb 07 19:12:00.984 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `:` or `@`, found `)`
+  --> src/lib.rs:65:27
+   |
+65 |     fn story_element(story) => {
+   |                           ^ expected one of `:` or `@` here
+
+error: expected one of `->`, `where`, or `{`, found `=>`
+  --> src/lib.rs:65:29
+   |
+65 |     fn story_element(story) => {
+   |                             ^^ expected one of `->`, `where`, or `{` here
+
+error: aborting due to 2 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:12:03.294 INFO Running build command...
+Feb 07 19:12:03.296 INFO Checking rustc version...
+Feb 07 19:12:03.348 INFO rustc version is 32.
+Feb 07 19:12:03.348 INFO Checking crate configuration...
+Feb 07 19:12:03.348 INFO Crate is correctly configured.
+Feb 07 19:12:03.349 INFO Adding wasm-target...
+Feb 07 19:12:03.431 INFO Adding wasm-target was successful.
+Feb 07 19:12:03.432 INFO Building wasm...
+Feb 07 19:12:03.791 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `:` or `@`, found `)`
+  --> src/lib.rs:65:27
+   |
+65 |     fn story_element(story) {
+   |                           ^ expected one of `:` or `@` here
+
+error: expected one of: `_`, `box`, `-`, literal, parentheses, `&`, square brackets
+
+error: aborting due to 2 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:12:25.018 INFO Running build command...
+Feb 07 19:12:25.019 INFO Checking rustc version...
+Feb 07 19:12:25.068 INFO rustc version is 32.
+Feb 07 19:12:25.069 INFO Checking crate configuration...
+Feb 07 19:12:25.069 INFO Crate is correctly configured.
+Feb 07 19:12:25.069 INFO Adding wasm-target...
+Feb 07 19:12:25.152 INFO Adding wasm-target was successful.
+Feb 07 19:12:25.153 INFO Building wasm...
+Feb 07 19:12:25.501 ERRO Compilation of your program failed. stderr:
+
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected one of `:` or `@`, found `)`
+  --> src/lib.rs:65:27
+   |
+65 |     fn story_element(story) -> () {
+   |                           ^ expected one of `:` or `@` here
+
+error: expected one of: `_`, `box`, `-`, literal, parentheses, `&`, square brackets
+
+error: aborting due to 2 previous errors
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:12:39.520 INFO Running build command...
+Feb 07 19:12:39.521 INFO Checking rustc version...
+Feb 07 19:12:39.572 INFO rustc version is 32.
+Feb 07 19:12:39.572 INFO Checking crate configuration...
+Feb 07 19:12:39.573 INFO Crate is correctly configured.
+Feb 07 19:12:39.573 INFO Adding wasm-target...
+Feb 07 19:12:39.652 INFO Adding wasm-target was successful.
+Feb 07 19:12:39.653 INFO Building wasm...
+Feb 07 19:12:40.176 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0434]: can't capture dynamic environment in a fn item
+  --> src/lib.rs:66:9
+   |
+66 |         li(vec![], vec![
+   |         ^^
+   |
+   = help: use the `|| { ... }` closure form instead
+
+error[E0434]: can't capture dynamic environment in a fn item
+  --> src/lib.rs:67:12
+   |
+67 |            button(vec![], vec![
+   |            ^^^^^^
+   |
+   = help: use the `|| { ... }` closure form instead
+
+error[E0434]: can't capture dynamic environment in a fn item
+  --> src/lib.rs:68:15
+   |
+68 |               text("Click me".to_string())
+   |               ^^^^
+   |
+   = help: use the `|| { ... }` closure form instead
+
+error[E0434]: can't capture dynamic environment in a fn item
+  --> src/lib.rs:70:12
+   |
+70 |            a(vec![href("link")], vec![
+   |            ^
+   |
+   = help: use the `|| { ... }` closure form instead
+
+error[E0434]: can't capture dynamic environment in a fn item
+  --> src/lib.rs:71:15
+   |
+71 |               text("href".to_string())
+   |               ^^^^
+   |
+   = help: use the `|| { ... }` closure form instead
+
+error: aborting due to 5 previous errors
+
+For more information about this error, try `rustc --explain E0434`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 07 19:16:26.184 INFO Running build command...
+Feb 07 19:16:26.188 INFO Checking rustc version...
+Feb 07 19:16:26.271 INFO rustc version is 32.
+Feb 07 19:16:26.272 INFO Checking crate configuration...
+Feb 07 19:16:26.272 INFO Crate is correctly configured.
+Feb 07 19:16:26.272 INFO Adding wasm-target...
+Feb 07 19:16:26.363 INFO Adding wasm-target was successful.
+Feb 07 19:16:26.364 INFO Building wasm...
+Feb 07 19:16:28.190 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 07 19:16:28.190 INFO Creating a pkg directory...
+Feb 07 19:16:28.190 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 07 19:16:28.190 INFO Writing a package.json...
+Feb 07 19:16:28.191 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 07 19:16:28.191 INFO Copying readme from crate...
+Feb 07 19:16:28.191 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:16:28.191 INFO Identifying wasm-bindgen dependency...
+Feb 07 19:16:28.236 INFO Installing wasm-bindgen-cli...
+Feb 07 19:16:28.261 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 07 19:16:28.261 INFO Installing wasm-bindgen-cli was successful.
+Feb 07 19:16:28.261 INFO Getting the crate name from the manifest...
+Feb 07 19:16:28.261 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 07 19:16:28.262 INFO Building the wasm bindings...
+Feb 07 19:16:28.326 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 07 19:16:28.326 INFO Done in 2 seconds.
+Feb 07 19:16:28.327 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".

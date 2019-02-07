@@ -39,12 +39,38 @@ pub fn run() {
     // create primitive components
     let div = |props, children| primitive_component("div".to_string(), props, children);
     let span = |props, children| primitive_component("span".to_string(), props, children);
+    let li = |props, children| primitive_component("span".to_string(), props, children);
+    let button = |props, children| primitive_component("button".to_string(), props, children);
+
+    let a = |props, children| primitive_component("a".to_string(), props, children);
+
     let text = |value| primitive_component("text".to_string(), vec![("nodeValue".to_string(), value)], vec![]);
+
+    struct Story {
+        name: String,
+        url: String,
+        likes: i32
+    }
+
+    let stories = vec![Story {
+        name: "Hello".to_string(),
+        url: "http://bit.ly/2pX7HNn".to_string(),
+        likes: 32
+    }, Story {
+        name: "World".to_string(),
+        url: "http://bit.ly/2pX7HNn".to_string(),
+        likes: 42
+    }];
 
     let v_element = 
         div(vec![id("container")], vec![
-            span(vec![id("child"), on_click("console.log(arguments)".to_string())], vec![
-                text("Hello World".to_string())
+            li(vec![], vec![
+               button(vec![], vec![
+                  text("Click me".to_string())
+               ]),
+               a(vec![href("link")], vec![
+                  text("href".to_string())
+               ])
             ])
         ]);
 
@@ -55,13 +81,14 @@ pub fn run() {
     if let Some(root_dom) = root_dom_opt {
         // User passed a root dom that was found on the document
        let root_instance = None;
-        let next_root_instance = render(v_element, root_dom, root_instance);
+       let next_root_instance = render(v_element, root_dom, root_instance);
     }
 }
 
 /*
 fn tick(v_element: &VElement, root_dom: &web_sys::Element, count: u32, root_instance: Option<Instance>){
     if count < 10 { 
+        let next_root_instance = render(v_element, root_dom, root_instance);
         tick(v_element, root_dom, count + 1, next_root_instance);
     }
 }
@@ -90,9 +117,10 @@ fn reconcile(
         match new_instance {
             None => None,
             Some(new_instance) => {
+                log("append to parent");
                 match &new_instance.dom {
-                    Node::Element(dom_element) => parent_dom.append_child(&dom_element),
-                    Node::Text(dom_text) => parent_dom.append_child(&dom_text),
+                    Node::Element(dom_element) => parent_dom.append_child(dom_element),
+                    Node::Text(dom_text) => parent_dom.append_child(dom_text),
                 };
                 Some(new_instance)
             }
@@ -175,6 +203,7 @@ fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
                     Some(instance)
                 },
                 _ => {
+                    log("create div");
                     let dom = document.create_element(&type_)
                         .expect("it to be there");
 
@@ -184,23 +213,16 @@ fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
 
                     let mut child_instances = vec![];
                     for child_element in child_elements {
+                        log("instantiate children");
                         if let Some(instance) = instantiate(&Some(child_element.clone())) {
+                            if let Node::Element(dom) = &dom {
+                                match &instance.dom {
+                                    Node::Element(child_dom) => dom.append_child(child_dom),
+                                    Node::Text(child_dom) => dom.append_child(child_dom),
+                                };
+                            };
                             child_instances.push(instance);
                         }
-                    };
-
-                    let mut child_doms = vec![];
-                    for child_instance in &child_instances {
-                        child_doms.push(Some(&child_instance.dom));
-                    };
-
-                    for child_dom in child_doms {
-                        if let Some(child_dom) = child_dom {
-                            match child_dom {
-                                Node::Element(child_dom) => child_dom.append_child(&child_dom),
-                                Node::Text(child_dom) => child_dom.append_child(&child_dom),
-                            };
-                        }; 
                     };
 
                     let instance = Instance {
@@ -310,6 +332,10 @@ fn on_click(js_fn: String) -> (String, String) {
 
 fn id(name: &str) -> (String, String) {
     ("id".to_string(), name.to_string())
+}
+
+fn href(value: &str) -> (String, String) {
+    ("href".to_string(), value.to_string())
 }
 
 // Helper functions
