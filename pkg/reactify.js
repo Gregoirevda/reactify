@@ -24,6 +24,19 @@ export function __wbg_log_7f3f28d6883ddc00(arg0, arg1) {
         throw e;
     }
 }
+
+function _assertNum(n) {
+    if (typeof(n) !== 'number') throw new Error('expected a number argument');
+}
+/**
+* @param {number} arg0
+* @returns {void}
+*/
+export function __reactify__increment_likes(arg0) {
+    _assertNum(arg0);
+    return wasm.__reactify__increment_likes(arg0);
+}
+
 /**
 * @returns {void}
 */
