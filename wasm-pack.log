@@ -16823,3 +16823,535 @@ error: Could not compile `reactify`.
 
 To learn more, run the command again with --verbose.
 
+Feb 11 16:12:46.981 INFO Running build command...
+Feb 11 16:12:46.984 INFO Checking rustc version...
+Feb 11 16:12:47.106 INFO rustc version is 32.
+Feb 11 16:12:47.107 INFO Checking crate configuration...
+Feb 11 16:12:47.107 INFO Crate is correctly configured.
+Feb 11 16:12:47.107 INFO Adding wasm-target...
+Feb 11 16:12:47.212 INFO Adding wasm-target was successful.
+Feb 11 16:12:47.212 INFO Building wasm...
+Feb 11 16:12:59.812 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:12:59.813 INFO Creating a pkg directory...
+Feb 11 16:12:59.813 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:12:59.813 INFO Writing a package.json...
+Feb 11 16:12:59.815 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:12:59.815 INFO Copying readme from crate...
+Feb 11 16:12:59.816 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:12:59.816 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:12:59.866 INFO Installing wasm-bindgen-cli...
+Feb 11 16:12:59.895 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:12:59.896 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:12:59.896 INFO Getting the crate name from the manifest...
+Feb 11 16:12:59.896 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:12:59.897 INFO Building the wasm bindings...
+Feb 11 16:12:59.969 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:12:59.970 INFO Done in 12 seconds.
+Feb 11 16:12:59.970 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:13:44.073 INFO Running build command...
+Feb 11 16:13:44.074 INFO Checking rustc version...
+Feb 11 16:13:44.121 INFO rustc version is 32.
+Feb 11 16:13:44.121 INFO Checking crate configuration...
+Feb 11 16:13:44.121 INFO Crate is correctly configured.
+Feb 11 16:13:44.121 INFO Adding wasm-target...
+Feb 11 16:13:44.204 INFO Adding wasm-target was successful.
+Feb 11 16:13:44.204 INFO Building wasm...
+Feb 11 16:13:45.979 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:13:45.979 INFO Creating a pkg directory...
+Feb 11 16:13:45.980 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:13:45.980 INFO Writing a package.json...
+Feb 11 16:13:45.980 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:13:45.980 INFO Copying readme from crate...
+Feb 11 16:13:45.980 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:13:45.981 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:13:46.025 INFO Installing wasm-bindgen-cli...
+Feb 11 16:13:46.051 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:13:46.052 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:13:46.052 INFO Getting the crate name from the manifest...
+Feb 11 16:13:46.052 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:13:46.052 INFO Building the wasm bindings...
+Feb 11 16:13:46.125 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:13:46.125 INFO Done in 2 seconds.
+Feb 11 16:13:46.125 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:15:32.300 INFO Running build command...
+Feb 11 16:15:32.301 INFO Checking rustc version...
+Feb 11 16:15:32.347 INFO rustc version is 32.
+Feb 11 16:15:32.347 INFO Checking crate configuration...
+Feb 11 16:15:32.347 INFO Crate is correctly configured.
+Feb 11 16:15:32.347 INFO Adding wasm-target...
+Feb 11 16:15:32.432 INFO Adding wasm-target was successful.
+Feb 11 16:15:32.433 INFO Building wasm...
+Feb 11 16:15:34.281 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:15:34.281 INFO Creating a pkg directory...
+Feb 11 16:15:34.281 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:15:34.282 INFO Writing a package.json...
+Feb 11 16:15:34.282 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:15:34.282 INFO Copying readme from crate...
+Feb 11 16:15:34.282 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:15:34.282 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:15:34.323 INFO Installing wasm-bindgen-cli...
+Feb 11 16:15:34.347 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:15:34.347 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:15:34.347 INFO Getting the crate name from the manifest...
+Feb 11 16:15:34.347 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:15:34.348 INFO Building the wasm bindings...
+Feb 11 16:15:34.417 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:15:34.417 INFO Done in 2 seconds.
+Feb 11 16:15:34.418 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:15:41.644 INFO Running build command...
+Feb 11 16:15:41.645 INFO Checking rustc version...
+Feb 11 16:15:41.690 INFO rustc version is 32.
+Feb 11 16:15:41.690 INFO Checking crate configuration...
+Feb 11 16:15:41.690 INFO Crate is correctly configured.
+Feb 11 16:15:41.691 INFO Adding wasm-target...
+Feb 11 16:15:41.768 INFO Adding wasm-target was successful.
+Feb 11 16:15:41.769 INFO Building wasm...
+Feb 11 16:15:42.816 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:15:42.816 INFO Creating a pkg directory...
+Feb 11 16:15:42.816 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:15:42.816 INFO Writing a package.json...
+Feb 11 16:15:42.816 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:15:42.817 INFO Copying readme from crate...
+Feb 11 16:15:42.817 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:15:42.817 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:15:42.862 INFO Installing wasm-bindgen-cli...
+Feb 11 16:15:42.878 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:15:42.878 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:15:42.878 INFO Getting the crate name from the manifest...
+Feb 11 16:15:42.878 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:15:42.878 INFO Building the wasm bindings...
+Feb 11 16:15:42.942 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:15:42.942 INFO Done in 1 second.
+Feb 11 16:15:42.942 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:16:35.300 INFO Running build command...
+Feb 11 16:16:35.302 INFO Checking rustc version...
+Feb 11 16:16:35.343 INFO rustc version is 32.
+Feb 11 16:16:35.343 INFO Checking crate configuration...
+Feb 11 16:16:35.343 INFO Crate is correctly configured.
+Feb 11 16:16:35.343 INFO Adding wasm-target...
+Feb 11 16:16:35.424 INFO Adding wasm-target was successful.
+Feb 11 16:16:35.424 INFO Building wasm...
+Feb 11 16:16:36.628 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:16:36.629 INFO Creating a pkg directory...
+Feb 11 16:16:36.629 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:16:36.629 INFO Writing a package.json...
+Feb 11 16:16:36.629 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:16:36.629 INFO Copying readme from crate...
+Feb 11 16:16:36.630 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:16:36.630 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:16:36.674 INFO Installing wasm-bindgen-cli...
+Feb 11 16:16:36.697 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:16:36.697 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:16:36.697 INFO Getting the crate name from the manifest...
+Feb 11 16:16:36.698 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:16:36.698 INFO Building the wasm bindings...
+Feb 11 16:16:36.771 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:16:36.771 INFO Done in 1 second.
+Feb 11 16:16:36.771 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:17:43.048 INFO Running build command...
+Feb 11 16:17:43.049 INFO Checking rustc version...
+Feb 11 16:17:43.132 INFO rustc version is 32.
+Feb 11 16:17:43.132 INFO Checking crate configuration...
+Feb 11 16:17:43.132 INFO Crate is correctly configured.
+Feb 11 16:17:43.132 INFO Adding wasm-target...
+Feb 11 16:17:43.227 INFO Adding wasm-target was successful.
+Feb 11 16:17:43.228 INFO Building wasm...
+Feb 11 16:17:45.561 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:17:45.562 INFO Creating a pkg directory...
+Feb 11 16:17:45.562 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:17:45.562 INFO Writing a package.json...
+Feb 11 16:17:45.562 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:17:45.563 INFO Copying readme from crate...
+Feb 11 16:17:45.563 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:17:45.563 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:17:45.609 INFO Installing wasm-bindgen-cli...
+Feb 11 16:17:45.631 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:17:45.632 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:17:45.632 INFO Getting the crate name from the manifest...
+Feb 11 16:17:45.632 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:17:45.632 INFO Building the wasm bindings...
+Feb 11 16:17:45.701 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:17:45.701 INFO Done in 2 seconds.
+Feb 11 16:17:45.701 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:19:40.835 INFO Running build command...
+Feb 11 16:19:40.837 INFO Checking rustc version...
+Feb 11 16:19:40.877 INFO rustc version is 32.
+Feb 11 16:19:40.877 INFO Checking crate configuration...
+Feb 11 16:19:40.878 INFO Crate is correctly configured.
+Feb 11 16:19:40.878 INFO Adding wasm-target...
+Feb 11 16:19:40.960 INFO Adding wasm-target was successful.
+Feb 11 16:19:40.960 INFO Building wasm...
+Feb 11 16:19:42.306 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:19:42.306 INFO Creating a pkg directory...
+Feb 11 16:19:42.306 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:19:42.306 INFO Writing a package.json...
+Feb 11 16:19:42.306 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:19:42.307 INFO Copying readme from crate...
+Feb 11 16:19:42.307 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:19:42.307 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:19:42.348 INFO Installing wasm-bindgen-cli...
+Feb 11 16:19:42.377 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:19:42.378 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:19:42.378 INFO Getting the crate name from the manifest...
+Feb 11 16:19:42.378 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:19:42.378 INFO Building the wasm bindings...
+Feb 11 16:19:42.446 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:19:42.446 INFO Done in 1 second.
+Feb 11 16:19:42.446 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:20:30.932 INFO Running build command...
+Feb 11 16:20:30.933 INFO Checking rustc version...
+Feb 11 16:20:30.977 INFO rustc version is 32.
+Feb 11 16:20:30.978 INFO Checking crate configuration...
+Feb 11 16:20:30.978 INFO Crate is correctly configured.
+Feb 11 16:20:30.978 INFO Adding wasm-target...
+Feb 11 16:20:31.056 INFO Adding wasm-target was successful.
+Feb 11 16:20:31.056 INFO Building wasm...
+Feb 11 16:20:31.835 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:317:17
+    |
+317 |                 ClosureHandle(closure)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^- help: try adding a semicolon: `;`
+    |                 |
+    |                 expected (), found struct `ClosureHandle`
+    |
+    = note: expected type `()`
+               found type `ClosureHandle`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:23:09.277 INFO Running build command...
+Feb 11 16:23:09.278 INFO Checking rustc version...
+Feb 11 16:23:09.320 INFO rustc version is 32.
+Feb 11 16:23:09.320 INFO Checking crate configuration...
+Feb 11 16:23:09.321 INFO Crate is correctly configured.
+Feb 11 16:23:09.321 INFO Adding wasm-target...
+Feb 11 16:23:09.401 INFO Adding wasm-target was successful.
+Feb 11 16:23:09.402 INFO Building wasm...
+Feb 11 16:23:09.943 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0609]: no field `event_listener` on type `Instance`
+   --> src/lib.rs:317:26
+    |
+317 |                 instance.event_listener = closure;
+    |                          ^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `dom`, `element`, `child_instances`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0609`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:39:20.169 INFO Running build command...
+Feb 11 16:39:20.170 INFO Checking rustc version...
+Feb 11 16:39:20.269 INFO rustc version is 32.
+Feb 11 16:39:20.269 INFO Checking crate configuration...
+Feb 11 16:39:20.269 INFO Crate is correctly configured.
+Feb 11 16:39:20.269 INFO Adding wasm-target...
+Feb 11 16:39:20.361 INFO Adding wasm-target was successful.
+Feb 11 16:39:20.361 INFO Building wasm...
+Feb 11 16:39:22.006 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected `,`, or `}`, found `element`
+  --> src/lib.rs:41:35
+   |
+41 |     event_listener: Option<String>
+   |                                   ^ help: try adding a comma: `,`
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:181:22
+    |
+181 |                 Some(Instance {
+    |                      ^^^^^^^^ missing `event_listener`
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:250:36
+    |
+250 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:279:36
+    |
+279 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:318:48
+    |
+318 |                 instance.event_listener = Some(closure);
+    |                                                ^^^^^^^ expected struct `std::string::String`, found struct `wasm_bindgen::prelude::Closure`
+    |
+    = note: expected type `std::string::String`
+               found type `wasm_bindgen::prelude::Closure<dyn std::ops::FnMut(web_sys::Event)>`
+
+error: aborting due to 5 previous errors
+
+Some errors occurred: E0063, E0308.
+For more information about an error, try `rustc --explain E0063`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:39:25.977 INFO Running build command...
+Feb 11 16:39:25.978 INFO Checking rustc version...
+Feb 11 16:39:26.024 INFO rustc version is 32.
+Feb 11 16:39:26.024 INFO Checking crate configuration...
+Feb 11 16:39:26.024 INFO Crate is correctly configured.
+Feb 11 16:39:26.024 INFO Adding wasm-target...
+Feb 11 16:39:26.102 INFO Adding wasm-target was successful.
+Feb 11 16:39:26.102 INFO Building wasm...
+Feb 11 16:39:26.776 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:181:22
+    |
+181 |                 Some(Instance {
+    |                      ^^^^^^^^ missing `event_listener`
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:250:36
+    |
+250 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:279:36
+    |
+279 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:318:48
+    |
+318 |                 instance.event_listener = Some(closure);
+    |                                                ^^^^^^^ expected struct `std::string::String`, found struct `wasm_bindgen::prelude::Closure`
+    |
+    = note: expected type `std::string::String`
+               found type `wasm_bindgen::prelude::Closure<dyn std::ops::FnMut(web_sys::Event)>`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0063, E0308.
+For more information about an error, try `rustc --explain E0063`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:39:48.848 INFO Running build command...
+Feb 11 16:39:48.849 INFO Checking rustc version...
+Feb 11 16:39:48.895 INFO rustc version is 32.
+Feb 11 16:39:48.895 INFO Checking crate configuration...
+Feb 11 16:39:48.895 INFO Crate is correctly configured.
+Feb 11 16:39:48.896 INFO Adding wasm-target...
+Feb 11 16:39:48.973 INFO Adding wasm-target was successful.
+Feb 11 16:39:48.973 INFO Building wasm...
+Feb 11 16:39:49.645 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected identifier, found `,`
+   --> src/lib.rs:184:37
+    |
+181 |                 Some(Instance {
+    |                      -------- while parsing this struct
+...
+184 |                     child_instances,,
+    |                                     ^
+    |                                     |
+    |                                     expected identifier
+    |                                     help: remove this comma
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:251:36
+    |
+251 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:280:36
+    |
+280 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:319:48
+    |
+319 |                 instance.event_listener = Some(closure);
+    |                                                ^^^^^^^ expected struct `std::string::String`, found struct `wasm_bindgen::prelude::Closure`
+    |
+    = note: expected type `std::string::String`
+               found type `wasm_bindgen::prelude::Closure<dyn std::ops::FnMut(web_sys::Event)>`
+
+error: aborting due to 4 previous errors
+
+Some errors occurred: E0063, E0308.
+For more information about an error, try `rustc --explain E0063`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:39:53.708 INFO Running build command...
+Feb 11 16:39:53.709 INFO Checking rustc version...
+Feb 11 16:39:53.757 INFO rustc version is 32.
+Feb 11 16:39:53.757 INFO Checking crate configuration...
+Feb 11 16:39:53.757 INFO Crate is correctly configured.
+Feb 11 16:39:53.757 INFO Adding wasm-target...
+Feb 11 16:39:53.841 INFO Adding wasm-target was successful.
+Feb 11 16:39:53.841 INFO Building wasm...
+Feb 11 16:39:54.611 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:251:36
+    |
+251 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0063]: missing field `event_listener` in initializer of `Instance`
+   --> src/lib.rs:280:36
+    |
+280 |                     let instance = Instance {
+    |                                    ^^^^^^^^ missing `event_listener`
+
+error[E0308]: mismatched types
+   --> src/lib.rs:319:48
+    |
+319 |                 instance.event_listener = Some(closure);
+    |                                                ^^^^^^^ expected struct `std::string::String`, found struct `wasm_bindgen::prelude::Closure`
+    |
+    = note: expected type `std::string::String`
+               found type `wasm_bindgen::prelude::Closure<dyn std::ops::FnMut(web_sys::Event)>`
+
+error: aborting due to 3 previous errors
+
+Some errors occurred: E0063, E0308.
+For more information about an error, try `rustc --explain E0063`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:40:59.766 INFO Running build command...
+Feb 11 16:40:59.767 INFO Checking rustc version...
+Feb 11 16:40:59.809 INFO rustc version is 32.
+Feb 11 16:40:59.809 INFO Checking crate configuration...
+Feb 11 16:40:59.810 INFO Crate is correctly configured.
+Feb 11 16:40:59.810 INFO Adding wasm-target...
+Feb 11 16:40:59.889 INFO Adding wasm-target was successful.
+Feb 11 16:40:59.890 INFO Building wasm...
+Feb 11 16:41:00.487 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0308]: mismatched types
+   --> src/lib.rs:321:48
+    |
+321 |                 instance.event_listener = Some(closure);
+    |                                                ^^^^^^^ expected struct `std::string::String`, found struct `wasm_bindgen::prelude::Closure`
+    |
+    = note: expected type `std::string::String`
+               found type `wasm_bindgen::prelude::Closure<dyn std::ops::FnMut(web_sys::Event)>`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:41:49.795 INFO Running build command...
+Feb 11 16:41:49.796 INFO Checking rustc version...
+Feb 11 16:41:49.838 INFO rustc version is 32.
+Feb 11 16:41:49.838 INFO Checking crate configuration...
+Feb 11 16:41:49.839 INFO Crate is correctly configured.
+Feb 11 16:41:49.839 INFO Adding wasm-target...
+Feb 11 16:41:49.931 INFO Adding wasm-target was successful.
+Feb 11 16:41:49.931 INFO Building wasm...
+Feb 11 16:41:50.447 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error: expected type, found `}`
+   --> src/lib.rs:318:13
+    |
+317 |                 instance.event_listener = closure:
+    |                                                  - help: try using a semicolon: `;`
+318 |             },
+    |             ^ expecting a type here because of type ascription
+
+error: aborting due to previous error
+
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:42:00.474 INFO Running build command...
+Feb 11 16:42:00.475 INFO Checking rustc version...
+Feb 11 16:42:00.521 INFO rustc version is 32.
+Feb 11 16:42:00.522 INFO Checking crate configuration...
+Feb 11 16:42:00.522 INFO Crate is correctly configured.
+Feb 11 16:42:00.522 INFO Adding wasm-target...
+Feb 11 16:42:00.600 INFO Adding wasm-target was successful.
+Feb 11 16:42:00.600 INFO Building wasm...
+Feb 11 16:42:01.186 ERRO Compilation of your program failed. stderr:
+
+    Blocking waiting for file lock on build directory
+   Compiling reactify v0.1.0 (/Users/gregoirevda/dev/opensource/reactify)
+error[E0609]: no field `event_listener` on type `Instance`
+   --> src/lib.rs:317:26
+    |
+317 |                 instance.event_listener = closure;
+    |                          ^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `dom`, `element`, `child_instances`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0609`.
+error: Could not compile `reactify`.
+
+To learn more, run the command again with --verbose.
+
+Feb 11 16:42:55.678 INFO Running build command...
+Feb 11 16:42:55.679 INFO Checking rustc version...
+Feb 11 16:42:55.724 INFO rustc version is 32.
+Feb 11 16:42:55.725 INFO Checking crate configuration...
+Feb 11 16:42:55.725 INFO Crate is correctly configured.
+Feb 11 16:42:55.725 INFO Adding wasm-target...
+Feb 11 16:42:55.803 INFO Adding wasm-target was successful.
+Feb 11 16:42:55.803 INFO Building wasm...
+Feb 11 16:42:56.733 INFO wasm built at "/Users/gregoirevda/dev/opensource/reactify/target/wasm32-unknown-unknown/release".
+Feb 11 16:42:56.733 INFO Creating a pkg directory...
+Feb 11 16:42:56.733 INFO Created a pkg directory at "/Users/gregoirevda/dev/opensource/reactify".
+Feb 11 16:42:56.733 INFO Writing a package.json...
+Feb 11 16:42:56.734 INFO Wrote a package.json at "/Users/gregoirevda/dev/opensource/reactify/pkg/package.json".
+Feb 11 16:42:56.734 INFO Copying readme from crate...
+Feb 11 16:42:56.734 INFO Copied readme from crate to "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:42:56.735 INFO Identifying wasm-bindgen dependency...
+Feb 11 16:42:56.775 INFO Installing wasm-bindgen-cli...
+Feb 11 16:42:56.799 INFO Checking installed `wasm-bindgen` version == expected version: 0.2.33 == 0.2.33
+Feb 11 16:42:56.799 INFO Installing wasm-bindgen-cli was successful.
+Feb 11 16:42:56.799 INFO Getting the crate name from the manifest...
+Feb 11 16:42:56.800 INFO Got crate name "reactify" from the manifest at "/Users/gregoirevda/dev/opensource/reactify/Cargo.toml".
+Feb 11 16:42:56.800 INFO Building the wasm bindings...
+Feb 11 16:42:56.869 INFO wasm bindings were built at "/Users/gregoirevda/dev/opensource/reactify/pkg".
+Feb 11 16:42:56.869 INFO Done in 1 second.
+Feb 11 16:42:56.869 INFO Your wasm pkg is ready to publish at "/Users/gregoirevda/dev/opensource/reactify/pkg".

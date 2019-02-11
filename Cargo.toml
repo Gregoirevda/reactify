@@ -21,5 +21,6 @@ features = [
   "Window",
   "EventTarget",
   "EventListener",
-  "Text"
+  "Text",
+  "Event",
 ]

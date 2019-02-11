@@ -308,6 +308,60 @@ getUint32Memory()[len_ptr / 4] = WASM_VECTOR_LEN;
 return ptr;
 }
 
+export function __wbindgen_cb_drop(i) {
+    const obj = getObject(i).original;
+    dropObject(i);
+    if (obj.cnt-- == 1) {
+        obj.a = 0;
+        return 1;
+    }
+    return 0;
+}
+
+export function __wbindgen_closure_wrapper4(a, b, _ignored) {
+    const f = wasm.__wbg_function_table.get(6);
+    const d = wasm.__wbg_function_table.get(7);
+    const cb = function(arg0) {
+        this.cnt++;
+        let a = this.a;
+        this.a = 0;
+        try {
+            return f(a, b, addHeapObject(arg0));
+
+        } finally {
+            this.a = a;
+            if (this.cnt-- == 1) d(this.a, b);
+
+        }
+
+    };
+    cb.a = a;
+    cb.cnt = 1;
+    let real = cb.bind(cb);
+    real.original = cb;
+    return addHeapObject(real);
+}
+
+function freeClosureHandle(ptr) {
+
+    wasm.__wbg_closurehandle_free(ptr);
+}
+/**
+*/
+export class ClosureHandle {
+
+    constructor() {
+        throw new Error('cannot invoke `new` directly');
+    }
+
+    free() {
+        const ptr = this.ptr;
+        this.ptr = 0;
+        freeClosureHandle(ptr);
+    }
+
+}
+
 export function __wbindgen_defer_start() {
     Promise.resolve().then(() => wasm.__wbindgen_start());
 }

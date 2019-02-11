@@ -19,7 +19,7 @@ extern "C" {
 #[derive(Clone)]
 enum Prop {
     Attr(String, String),
-    Listener(String, js_sys::Function)
+    Listener(String, fn(e: web_sys::Event) -> ())
 }
 
 #[derive(Clone)]
@@ -72,11 +72,15 @@ fn app() -> VElement {
         },
     ];
 
+    fn handle_click(e: web_sys::Event) {
+        log("handle click")
+    }
+
     fn story_element(story: Story) -> VElement {
         li(
             vec![],
             vec![
-                button(vec![on_click(format!("increment_likes({})", story.id))],vec![text(story.likes.to_string())]),
+                button(vec![on_click(handle_click)],vec![text(story.likes.to_string())]),
                 a(vec![href(story.url)], vec![text(story.name)]),
             ],
         )
@@ -171,7 +175,7 @@ fn reconcile(
         match (instance, v_element) {
             (Some(instance), Some(v_element)) => {
                 // TODO pass instance and return instance with attrs and all set on instance.dom
-                let instance = update_dom_properties_instance(instance, &v_element.props);
+                let instance = update_dom_properties_instance(instance, v_element.clone().props);
                 let child_instances = reconcile_children(instance.clone(), v_element.clone());
                 Some(Instance {
                     dom: instance.dom,
@@ -253,7 +257,7 @@ fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
                     log("create div");
                     let dom = document.create_element(&type_).expect("it to be there");
 
-                    let dom = update_dom_properties(Node::Element(dom), &vec![], &props);
+                    let dom = update_dom_properties(Node::Element(dom), &vec![], props.to_vec());
 
                     let child_elements = children;
 
@@ -283,20 +287,31 @@ fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
     }
 }
 
+
+#[wasm_bindgen]
+pub struct ClosureHandle(Closure<FnMut(web_sys::Event)>);
+
+
 fn update_dom_properties_instance(
     instance: Instance,
-    next_props: &Vec<Prop>,
+    next_props: Vec<Prop>,
 ) -> Instance {
     // TODO diff changes
     // Add attributes
     for prop in next_props {
         match prop {
-            Prop::Listener(name, cb) => {
+            Prop::Listener(name, callback) => {
+                let closure = Closure::wrap(
+                    Box::new(move |e| {
+                        log("in there");
+                    } ) as Box<FnMut(web_sys::Event)>,
+                );
+
                 match &instance.dom {
                     Node::Element(dom_element) => dom_element
-                        .add_event_listener_with_callback(&name, &cb),
+                        .add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref()),
                     Node::Text(dom_text) => {
-                        dom_text.add_event_listener_with_callback(&name, &cb)
+                        dom_text.add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref())
                     }
                 };
             },
@@ -312,7 +327,7 @@ fn update_dom_properties_instance(
 fn update_dom_properties(
     dom: Node,
     prev_props: &Vec<Prop>,
-    next_props: &Vec<Prop>,
+    next_props: Vec<Prop>,
 ) -> Node {
     // TODO diff changes
     // Add attributes
@@ -323,12 +338,16 @@ fn update_dom_properties(
                     dom_element.set_attribute(&name, &value);
                 }
             },
-            Prop::Listener(name, cb) => {
+            Prop::Listener(name, callback) => {
+                let closure = Closure::wrap(Box::new(move |e: web_sys::Event| {
+                    log("in here");
+                }) as Box<FnMut(web_sys::Event)>);
+
                 match &dom {
                     Node::Element(dom_element) => dom_element
-                        .add_event_listener_with_callback(&name, &cb),
+                        .add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref()),
                     Node::Text(dom_text) => {
-                        dom_text.add_event_listener_with_callback(&name, &cb)
+                        dom_text.add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref())
                     }
                 };
             } 
@@ -419,11 +438,8 @@ fn text(value: String) -> VElement {
 }
 
 // Attribute functions
-fn on_click(js_fn: String) -> Prop {
-    let cb = Closure::wrap(Box::new(move || {
-        log("callback");
-    })  as Box<FnMut()>);
-    Prop::Listener("onClick".to_string(), cb.as_ref().unchecked_ref())
+fn on_click(callback: fn(e: web_sys::Event) -> ()) -> Prop {
+    Prop::Listener("click".to_string(), callback)
 }
 
 fn id(name: String) -> Prop {
