@@ -5,6 +5,8 @@ extern crate web_sys;
 use std::cmp;
 use std::iter;
 use wasm_bindgen::prelude::*;
+use wasm_bindgen::JsCast;
+
 
 #[wasm_bindgen]
 extern "C" {
@@ -15,9 +17,15 @@ extern "C" {
 }
 
 #[derive(Clone)]
+enum Prop {
+    Attr(String, String),
+    Listener(String, js_sys::Function)
+}
+
+#[derive(Clone)]
 struct VElement {
     type_: String,
-    props: Vec<(String, String)>,
+    props: Vec<Prop>,
     children: Vec<VElement>,
 }
 
@@ -34,20 +42,21 @@ struct Instance {
     child_instances: Vec<Instance>,
 }
 
-#[wasm_bindgen]
-pub fn __reactify__increment_likes(story_id: u32) {
-    //render(app, root_dom, root_instance);
+
+struct Story {
+    id: u32,
+    name: String,
+    url: String,
+    likes: i32,
 }
 
-#[wasm_bindgen(start)]
-pub fn run() {
-    struct Story {
-        id: u32,
-        name: String,
-        url: String,
-        likes: i32,
-    }
+#[wasm_bindgen]
+pub fn __reactify__increment_likes(story_id: u32) {
+    log("Rust code")
+    // render(app(), root_dom, root_instance);
+}
 
+fn app() -> VElement {
     let mut stories = vec![
         Story {
             id: 1,
@@ -83,15 +92,22 @@ pub fn run() {
                 .collect(),
         )],
     );
+    app
+}
 
+fn get_root_dom() -> Option<web_sys::Element> {
     let window = web_sys::window().expect("should have a Window");
     let document = window.document().expect("should have a Document");
-    let root_dom_opt = document.get_element_by_id("root");
+    document.get_element_by_id("root")
+}
 
+#[wasm_bindgen(start)]
+pub fn run() {
+    let root_dom_opt = get_root_dom();
     if let Some(root_dom) = root_dom_opt {
         // User passed a root dom that was found on the document
         let root_instance = None;
-        let next_root_instance = render(app, root_dom, root_instance);
+        let next_root_instance = render(app(), root_dom, root_instance);
     }
 }
 
@@ -218,9 +234,11 @@ fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
             match type_.as_ref() {
                 "text" => {
                     let mut node_value = "";
-                    for (name, value) in props {
-                        if name == "nodeValue" {
-                            node_value = value;
+                    for prop in props {
+                        if let Prop::Attr(name, value) = prop {
+                            if name == "nodeValue" {
+                                node_value = value;
+                            }
                         }
                     }
                     let text_node = document.create_text_node(&node_value);
@@ -267,23 +285,25 @@ fn instantiate(v_element: &Option<VElement>) -> Option<Instance> {
 
 fn update_dom_properties_instance(
     instance: Instance,
-    next_props: &Vec<(String, String)>,
+    next_props: &Vec<Prop>,
 ) -> Instance {
     // TODO diff changes
     // Add attributes
-    for (name, value) in next_props {
-        if is_listener(&name) {
-            let callback = js_sys::Function::new_no_args(&value);
-            match &instance.dom {
-                Node::Element(dom_element) => dom_element
-                    .add_event_listener_with_callback(&name.to_lowercase()[2..], &callback),
-                Node::Text(dom_text) => {
-                    dom_text.add_event_listener_with_callback(&name.to_lowercase()[2..], &callback)
+    for prop in next_props {
+        match prop {
+            Prop::Listener(name, cb) => {
+                match &instance.dom {
+                    Node::Element(dom_element) => dom_element
+                        .add_event_listener_with_callback(&name, &cb),
+                    Node::Text(dom_text) => {
+                        dom_text.add_event_listener_with_callback(&name, &cb)
+                    }
+                };
+            },
+            Prop::Attr(name, value) => {
+                if let Node::Element(dom_element) = &instance.dom {
+                    dom_element.set_attribute(&name, &value);
                 }
-            };
-        } else {
-            if let Node::Element(dom_element) = &instance.dom {
-                dom_element.set_attribute(&name, &value);
             }
         }
     }
@@ -291,25 +311,27 @@ fn update_dom_properties_instance(
 }
 fn update_dom_properties(
     dom: Node,
-    prev_props: &Vec<(String, String)>,
-    next_props: &Vec<(String, String)>,
+    prev_props: &Vec<Prop>,
+    next_props: &Vec<Prop>,
 ) -> Node {
     // TODO diff changes
     // Add attributes
-    for (name, value) in next_props {
-        if is_listener(&name) {
-            let callback = js_sys::Function::new_no_args(&value);
-            match &dom {
-                Node::Element(dom_element) => dom_element
-                    .add_event_listener_with_callback(&name.to_lowercase()[2..], &callback),
-                Node::Text(dom_text) => {
-                    dom_text.add_event_listener_with_callback(&name.to_lowercase()[2..], &callback)
+    for prop in next_props {
+        match prop {
+            Prop::Attr(name, value) => {
+                if let Node::Element(dom_element) = &dom {
+                    dom_element.set_attribute(&name, &value);
                 }
-            };
-        } else {
-            if let Node::Element(dom_element) = &dom {
-                dom_element.set_attribute(&name, &value);
-            }
+            },
+            Prop::Listener(name, cb) => {
+                match &dom {
+                    Node::Element(dom_element) => dom_element
+                        .add_event_listener_with_callback(&name, &cb),
+                    Node::Text(dom_text) => {
+                        dom_text.add_event_listener_with_callback(&name, &cb)
+                    }
+                };
+            } 
         }
     }
     dom
@@ -353,7 +375,7 @@ fn reconcile_children(instance: Instance, element: VElement) -> Vec<Instance> {
 // create primitive components
 fn primitive_component(
     type_: String,
-    props: Vec<(String, String)>,
+    props: Vec<Prop>,
     children: Vec<VElement>,
 ) -> VElement {
     VElement {
@@ -364,52 +386,50 @@ fn primitive_component(
 }
 
 // helper functions to create primitive components
-fn div(props: Vec<(String, String)>, children: Vec<VElement>) -> VElement {
+fn div(props: Vec<Prop>, children: Vec<VElement>) -> VElement {
     primitive_component("div".to_string(), props, children)
 }
 
-fn span(props: Vec<(String, String)>, children: Vec<VElement>) -> VElement {
+fn span(props: Vec<Prop>, children: Vec<VElement>) -> VElement {
     primitive_component("span".to_string(), props, children)
 }
 
-fn li(props: Vec<(String, String)>, children: Vec<VElement>) -> VElement {
+fn li(props: Vec<Prop>, children: Vec<VElement>) -> VElement {
     primitive_component("li".to_string(), props, children)
 }
 
-fn ul(props: Vec<(String, String)>, children: Vec<VElement>) -> VElement {
+fn ul(props: Vec<Prop>, children: Vec<VElement>) -> VElement {
     primitive_component("ul".to_string(), props, children)
 }
 
-fn button(props: Vec<(String, String)>, children: Vec<VElement>) -> VElement {
+fn button(props: Vec<Prop>, children: Vec<VElement>) -> VElement {
     primitive_component("button".to_string(), props, children)
 }
 
-fn a(props: Vec<(String, String)>, children: Vec<VElement>) -> VElement {
+fn a(props: Vec<Prop>, children: Vec<VElement>) -> VElement {
     primitive_component("a".to_string(), props, children)
 }
 
 fn text(value: String) -> VElement {
     primitive_component(
         "text".to_string(),
-        vec![("nodeValue".to_string(), value)],
+        vec![Prop::Attr("nodeValue".to_string(), value)],
         vec![],
     )
 }
 
 // Attribute functions
-fn on_click(js_fn: String) -> (String, String) {
-    ("onClick".to_string(), format!("__reactify__{}", js_fn))
+fn on_click(js_fn: String) -> Prop {
+    let cb = Closure::wrap(Box::new(move || {
+        log("callback");
+    })  as Box<FnMut()>);
+    Prop::Listener("onClick".to_string(), cb.as_ref().unchecked_ref())
 }
 
-fn id(name: String) -> (String, String) {
-    ("id".to_string(), name)
+fn id(name: String) -> Prop {
+    Prop::Attr("id".to_string(), name)
 }
 
-fn href(value: String) -> (String, String) {
-    ("href".to_string(), value)
-}
-
-// Helper functions
-fn is_listener(attribute_name: &str) -> bool {
-    attribute_name.starts_with("on")
+fn href(value: String) -> Prop {
+    Prop::Attr("href".to_string(), value)
 }
