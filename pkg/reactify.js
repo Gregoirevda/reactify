@@ -112,6 +112,10 @@ export function __widl_f_get_element_by_id_Document(arg0, arg1, arg2) {
     }
 }
 
+export function __widl_instanceof_Element(idx) {
+    return getObject(idx) instanceof Element ? 1 : 0;
+}
+
 export function __widl_f_set_attribute_Element(arg0, arg1, arg2, arg3, arg4, exnptr) {
     let varg1 = getStringFromWasm(arg1, arg2);
     let varg3 = getStringFromWasm(arg3, arg4);
@@ -340,26 +344,6 @@ export function __wbindgen_closure_wrapper4(a, b, _ignored) {
     let real = cb.bind(cb);
     real.original = cb;
     return addHeapObject(real);
-}
-
-function freeClosureHandle(ptr) {
-
-    wasm.__wbg_closurehandle_free(ptr);
-}
-/**
-*/
-export class ClosureHandle {
-
-    constructor() {
-        throw new Error('cannot invoke `new` directly');
-    }
-
-    free() {
-        const ptr = this.ptr;
-        this.ptr = 0;
-        freeClosureHandle(ptr);
-    }
-
 }
 
 export function __wbindgen_defer_start() {
