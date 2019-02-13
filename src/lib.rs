@@ -50,12 +50,6 @@ pub fn __reactify__increment_likes(story_id: u32) {
 fn app() -> VElement {
     let mut stories = vec![
         Story {
-            id: 1,
-            name: "Hello".to_string(),
-            url: "http://bit.ly/2pX7HNn".to_string(),
-            likes: 32,
-        },
-        Story {
             id: 2,
             name: "World".to_string(),
             url: "http://bit.ly/2pX7HNn".to_string(),
@@ -71,7 +65,7 @@ fn app() -> VElement {
         li(
             vec![],
             vec![
-                button(vec![on_click(handle_click)],vec![text(story.likes.to_string())]),
+                button(vec![on_click(handle_click)], vec![text(story.likes.to_string())]),
                 a(vec![href(story.url)], vec![text(story.name)]),
             ],
         )
@@ -90,15 +84,17 @@ fn app() -> VElement {
     app
 }
 
-fn get_root_dom() -> Option<web_sys::Element> {
+fn get_element_by_id(id: &str) -> Option<web_sys::Element> {
     let window = web_sys::window().expect("should have a Window");
     let document = window.document().expect("should have a Document");
-    document.get_element_by_id("root")
+    document.get_element_by_id(id)
 }
+#[wasm_bindgen]
+pub struct ClosureHandle(Closure<FnMut(web_sys::Event)>);
 
 #[wasm_bindgen(start)]
 pub fn run() {
-    let root_dom_opt = get_root_dom();
+    let root_dom_opt = get_element_by_id("root");
     if let Some(root_dom) = root_dom_opt {
         // User passed a root dom that was found on the document
         let root_instance = None;
@@ -307,6 +303,7 @@ fn update_dom_properties(
             Prop::Listener(name, callback) => {
                 dom
                     .add_event_listener_with_callback(&name, callback.as_ref().unchecked_ref());
+                ClosureHandle(callback);
             } 
         }
     }
@@ -397,7 +394,7 @@ fn text(value: String) -> VElement {
 // Attribute functions
 fn on_click(callback: fn(e: web_sys::Event) -> ()) -> Prop {
     let closure = Closure::wrap(Box::new(move |e: web_sys::Event| {
-        log("in here");
+        callback(e);
     }) as Box<FnMut(web_sys::Event)>);
 
     Prop::Listener("click".to_string(), closure)

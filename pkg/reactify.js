@@ -346,6 +346,26 @@ export function __wbindgen_closure_wrapper4(a, b, _ignored) {
     return addHeapObject(real);
 }
 
+function freeClosureHandle(ptr) {
+
+    wasm.__wbg_closurehandle_free(ptr);
+}
+/**
+*/
+export class ClosureHandle {
+
+    constructor() {
+        throw new Error('cannot invoke `new` directly');
+    }
+
+    free() {
+        const ptr = this.ptr;
+        this.ptr = 0;
+        freeClosureHandle(ptr);
+    }
+
+}
+
 export function __wbindgen_defer_start() {
     Promise.resolve().then(() => wasm.__wbindgen_start());
 }

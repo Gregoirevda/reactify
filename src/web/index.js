@@ -1,6 +1,7 @@
 import('../../pkg/reactify')
   .then(module => {
     console.log("module", module);
+    module.run();
     Object.entries(module)
     .map(([key, value]) => {
       if(isReactifyFunction(key)) {
