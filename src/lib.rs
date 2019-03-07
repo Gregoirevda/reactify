@@ -16,9 +16,12 @@ extern "C" {
     fn log(s: &str);
 }
 
+#[wasm_bindgen]
+pub struct ClosureHandle(Closure<FnMut()>);
+
 enum Prop {
     Attr(String, String),
-    Listener(String, Closure<FnMut(web_sys::Event)>)
+    Listener(String, fn(web_sys::Event) -> ())
 }
 
 struct VElement {
@@ -32,7 +35,6 @@ struct Instance<'a> {
     element: &'a VElement,
     child_instances: Vec<Instance<'a>>,
 }
-
 
 struct Story {
     id: u32,
@@ -58,7 +60,7 @@ fn app() -> VElement {
     ];
 
     fn handle_click(e: web_sys::Event) {
-        log("handle click")
+        log("clicked");
     }
 
     fn story_element(story: Story) -> VElement {
@@ -89,10 +91,8 @@ fn get_element_by_id(id: &str) -> Option<web_sys::Element> {
     let document = window.document().expect("should have a Document");
     document.get_element_by_id(id)
 }
-#[wasm_bindgen]
-pub struct ClosureHandle(Closure<FnMut(web_sys::Event)>);
 
-#[wasm_bindgen(start)]
+#[wasm_bindgen]
 pub fn run() {
     let root_dom_opt = get_element_by_id("root");
     if let Some(root_dom) = root_dom_opt {
@@ -188,7 +188,7 @@ fn same_type(instance: &Option<Instance>, v_element: Option<&VElement>) -> bool 
     }
 }
 
-fn instantiate(v_element: Option<&VElement>) -> Option<Instance> {
+fn instantiate(v_element: Option<&'static VElement>) -> Option<Instance> {
     match v_element {
         None => None,
         Some(v_element) => {
@@ -261,15 +261,20 @@ fn child_instances<'a>(dom: &web_sys::Node, children: &'a Vec<VElement>) -> Vec<
 
 fn update_dom_properties_instance<'a>(
     instance: Instance<'a>,
-    next_props: &Vec<Prop>,
+    next_props: &'static Vec<Prop>,
 ) -> Instance<'a> {
     // TODO diff changes
     // Add attributes
     for prop in next_props {
         match prop {
             Prop::Listener(name, callback) => {
+                let closure = Closure::wrap(Box::new(move |e:web_sys::Event| {
+                    callback(e);
+                }) as Box<FnMut(web_sys::Event) + 'static>);
+                
                 instance.dom
-                    .add_event_listener_with_callback(&name, callback.as_ref().unchecked_ref());
+                    .add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref());
+                closure.forget();
             },
             Prop::Attr(name, value) => {
                 // Attributes can only be set on Element, the public API only allows to set an
@@ -286,7 +291,7 @@ fn update_dom_properties_instance<'a>(
 fn update_dom_properties(
     dom: web_sys::Node,
     prev_props: &Vec<Prop>,
-    next_props: &Vec<Prop>,
+    next_props: &'static Vec<Prop>,
 ) -> web_sys::Node {
     // TODO diff changes
     // Add attributes
@@ -301,9 +306,14 @@ fn update_dom_properties(
                     .set_attribute(&name, &value);
             },
             Prop::Listener(name, callback) => {
+                let closure = Closure::wrap(Box::new(move |e: web_sys::Event| {
+                   callback(e); 
+                }) as Box<FnMut(web_sys::Event) + 'static>);
+                
                 dom
-                    .add_event_listener_with_callback(&name, callback.as_ref().unchecked_ref());
-                ClosureHandle(callback);
+                    .add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref());
+
+                closure.forget();
             } 
         }
     }
@@ -393,11 +403,7 @@ fn text(value: String) -> VElement {
 
 // Attribute functions
 fn on_click(callback: fn(e: web_sys::Event) -> ()) -> Prop {
-    let closure = Closure::wrap(Box::new(move |e: web_sys::Event| {
-        callback(e);
-    }) as Box<FnMut(web_sys::Event)>);
-
-    Prop::Listener("click".to_string(), closure)
+    Prop::Listener("click".to_string(), callback)
 }
 
 fn id(name: String) -> Prop {

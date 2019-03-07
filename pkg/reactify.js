@@ -322,15 +322,17 @@ export function __wbindgen_cb_drop(i) {
     return 0;
 }
 
-export function __wbindgen_closure_wrapper4(a, b, _ignored) {
-    const f = wasm.__wbg_function_table.get(6);
-    const d = wasm.__wbg_function_table.get(7);
-    const cb = function(arg0) {
+export const __wbindgen_cb_forget = dropObject;
+
+export function __wbindgen_closure_wrapper260(a, b, _ignored) {
+    const f = wasm.__wbg_function_table.get(19);
+    const d = wasm.__wbg_function_table.get(20);
+    const cb = function() {
         this.cnt++;
         let a = this.a;
         this.a = 0;
         try {
-            return f(a, b, addHeapObject(arg0));
+            return f(a, b);
 
         } finally {
             this.a = a;
@@ -364,10 +366,6 @@ export class ClosureHandle {
         freeClosureHandle(ptr);
     }
 
-}
-
-export function __wbindgen_defer_start() {
-    Promise.resolve().then(() => wasm.__wbindgen_start());
 }
 
 export function __wbindgen_throw(ptr, len) {
