@@ -288,6 +288,7 @@ fn update_dom_properties_instance<'a>(
     }
     instance
 }
+
 fn update_dom_properties(
     dom: web_sys::Node,
     prev_props: &Vec<Prop>,
