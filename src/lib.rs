@@ -19,7 +19,7 @@ pub struct ClosureHandle(Closure<FnMut()>);
 
 enum Prop {
     Attr(String, String),
-    Listener(String, fn(web_sys::Event) -> ())
+    Listener(String, wasm_bindgen::prelude::Closure<Fn(web_sys::Event)>)
 }
 
 // Virtual element representation
@@ -275,20 +275,16 @@ fn child_instances<'a>(dom: &web_sys::Node, children: &'a Vec<VElement>) -> Vec<
 // Adds next properties on the dom of the Instance struct
 fn update_dom_properties_instance<'a>(
     instance: Instance<'a>,
-    next_props: &'static Vec<Prop>,
+    next_props: &Vec<Prop>,
 ) -> Instance<'a> {
     // TODO diff changes
     // Add attributes
     for prop in next_props {
         match prop {
             Prop::Listener(name, callback) => {
-                let closure = Closure::wrap(Box::new(move |e:web_sys::Event| {
-                    callback(e);
-                }) as Box<FnMut(web_sys::Event) + 'static>);
-                
                 instance.dom
-                    .add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref());
-                closure.forget();
+                    .add_event_listener_with_callback(&name, callback.as_ref().unchecked_ref());
+                //callback.forget();
             },
             Prop::Attr(name, value) => {
                 // Attributes can only be set on Element, the public API only allows to set an
@@ -307,7 +303,7 @@ fn update_dom_properties_instance<'a>(
 fn update_dom_properties(
     dom: web_sys::Node,
     prev_props: &Vec<Prop>,
-    next_props: &'static Vec<Prop>,
+    next_props: &Vec<Prop>,
 ) -> web_sys::Node {
     // TODO diff changes
     // Add attributes
@@ -322,14 +318,8 @@ fn update_dom_properties(
                     .set_attribute(&name, &value);
             },
             Prop::Listener(name, callback) => {
-                let closure = Closure::wrap(Box::new(move |e: web_sys::Event| {
-                   callback(e); 
-                }) as Box<FnMut(web_sys::Event) + 'static>);
-                
                 dom
-                    .add_event_listener_with_callback(&name, closure.as_ref().unchecked_ref());
-
-                closure.forget();
+                    .add_event_listener_with_callback(&name, callback.as_ref().unchecked_ref());
             } 
         }
     }
@@ -419,7 +409,11 @@ fn text(value: String) -> VElement {
 
 // Attribute functions
 fn on_click(callback: fn(e: web_sys::Event) -> ()) -> Prop {
-    Prop::Listener("click".to_string(), callback)
+    let closure_boxed_callback = Closure::wrap(Box::new(move |e| {
+        callback(e);
+    }) as Box<Fn(web_sys::Event)>);
+
+    Prop::Listener("click".to_string(), closure_boxed_callback)
 }
 
 fn id(name: String) -> Prop {

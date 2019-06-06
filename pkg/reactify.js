@@ -322,20 +322,15 @@ export function __wbindgen_cb_drop(i) {
     return 0;
 }
 
-export const __wbindgen_cb_forget = dropObject;
-
-export function __wbindgen_closure_wrapper260(a, b, _ignored) {
-    const f = wasm.__wbg_function_table.get(19);
-    const d = wasm.__wbg_function_table.get(20);
-    const cb = function() {
+export function __wbindgen_closure_wrapper262(a, b, _ignored) {
+    const f = wasm.__wbg_function_table.get(4);
+    const d = wasm.__wbg_function_table.get(5);
+    const cb = function(arg0) {
         this.cnt++;
-        let a = this.a;
-        this.a = 0;
         try {
-            return f(a, b);
+            return f(this.a, b, addHeapObject(arg0));
 
         } finally {
-            this.a = a;
             if (this.cnt-- == 1) d(this.a, b);
 
         }
