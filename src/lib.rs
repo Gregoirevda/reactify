@@ -2,8 +2,6 @@ extern crate js_sys;
 extern crate wasm_bindgen;
 extern crate web_sys;
 
-use std::cmp;
-use std::iter;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::{closure::Closure, JsCast};
 
@@ -24,12 +22,17 @@ enum Prop {
     Listener(String, fn(web_sys::Event) -> ())
 }
 
+// Virtual element representation
 struct VElement {
     type_: String,
     props: Vec<Prop>,
     children: Vec<VElement>,
 }
 
+// Keeps the relation between the virtual element and it's instantiation
+// The users virtual tree is created, then only we instantiate it as a dom representation. 
+// For this reason, we keep a reference to the virtual dom
+// 
 struct Instance<'a> {
     dom: web_sys::Node,
     element: &'a VElement,
@@ -188,7 +191,12 @@ fn same_type(instance: &Option<Instance>, v_element: Option<&VElement>) -> bool 
     }
 }
 
-fn instantiate(v_element: Option<&'static VElement>) -> Option<Instance> {
+// Creates the Instance Struct holding the Virtual Element and it's dom representatoin
+// but doesn't append the created dom to the parent dom 
+// Reconciler create branch calls instantiate and then appends it to the parent dom
+// Reconciler replace branch calls instantiate and then updates it on the parent dom
+// Child instances calls instantiate and appends it to the parent dom
+fn instantiate<'a>(v_element: Option<&'a VElement>) -> Option<Instance> {
     match v_element {
         None => None,
         Some(v_element) => {
@@ -203,6 +211,7 @@ fn instantiate(v_element: Option<&'static VElement>) -> Option<Instance> {
 
             match type_.as_ref() {
                 "text" => {
+                    log("create a text node");
                     let mut node_value = "";
                     for prop in props {
                         if let Prop::Attr(name, value) = prop {
@@ -220,14 +229,18 @@ fn instantiate(v_element: Option<&'static VElement>) -> Option<Instance> {
                     Some(instance)
                 }
                 _ => {
-                    log("create div");
+                    log("create a node");
+                    // Create the node with the type
                     let dom = document.create_element(&type_).expect("it to be there");
 
                     for child in children {
                         log("child");
                     }
 
+                    // Currently simply adds the next props to the dom element
                     let dom = update_dom_properties(web_sys::Node::from(dom), &vec![], &props);
+                    //Creates an instance holding the dom representation of the virtual dom and
+                    //child instances
                     let instance = Instance {
                         child_instances: child_instances(&dom, children),
                         dom: dom,
@@ -240,6 +253,7 @@ fn instantiate(v_element: Option<&'static VElement>) -> Option<Instance> {
     }
 }
 
+// Instantiate all Virtual elements children and appends the created dom element to the parent dom
 fn child_instances<'a>(dom: &web_sys::Node, children: &'a Vec<VElement>) -> Vec<Instance<'a>>{
     let mut child_instances = vec![];
 
@@ -258,7 +272,7 @@ fn child_instances<'a>(dom: &web_sys::Node, children: &'a Vec<VElement>) -> Vec<
     child_instances
 }
 
-
+// Adds next properties on the dom of the Instance struct
 fn update_dom_properties_instance<'a>(
     instance: Instance<'a>,
     next_props: &'static Vec<Prop>,
@@ -289,6 +303,7 @@ fn update_dom_properties_instance<'a>(
     instance
 }
 
+// Adds next props to dom element
 fn update_dom_properties(
     dom: web_sys::Node,
     prev_props: &Vec<Prop>,
