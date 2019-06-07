@@ -23,7 +23,8 @@ enum Prop {
 }
 
 // Virtual element representation
-struct VElement {
+#[wasm_bindgen]
+pub struct VElement {
     type_: String,
     props: Vec<Prop>,
     children: Vec<VElement>,
@@ -46,7 +47,6 @@ struct Story {
     likes: i32,
 }
 
-#[wasm_bindgen]
 pub fn __reactify__increment_likes(story_id: u32) {
     log("Rust code")
     // render(app(), root_dom, root_instance);
@@ -96,12 +96,15 @@ fn get_element_by_id(id: &str) -> Option<web_sys::Element> {
 }
 
 #[wasm_bindgen]
-pub fn run() {
+pub fn run() -> VElement {
     let root_dom_opt = get_element_by_id("root");
     if let Some(root_dom) = root_dom_opt {
         // User passed a root dom that was found on the document
         let root_instance = None;
-        let next_root_instance = render(app(), root_dom, root_instance);
+        let v_tree = render(app(), root_dom, root_instance);
+        v_tree
+    } else {
+        VElement { type_: String::from(""), props: vec![], children: vec![] }
     }
 }
 
@@ -118,7 +121,7 @@ fn render(
     v_element: VElement,
     container: web_sys::Element,
     root_instance: Option<Instance>,
-) {
+) -> VElement {
     let previous_instance = root_instance;
     // container needs to be an element, but reconcile can be called with any node
     let next_instance = reconcile(
@@ -126,6 +129,7 @@ fn render(
         previous_instance,
         Some(&v_element),
     );
+    v_element
 }
 
 fn reconcile<'a>(

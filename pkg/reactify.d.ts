@@ -1,9 +1,11 @@
 /* tslint:disable */
-export function __reactify__increment_likes(arg0: number): void;
-
-export function run(): void;
+export function run(): VElement;
 
 export class ClosureHandle {
+free(): void;
+
+}
+export class VElement {
 free(): void;
 
 }

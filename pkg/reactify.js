@@ -24,24 +24,11 @@ export function __wbg_log_7f3f28d6883ddc00(arg0, arg1) {
         throw e;
     }
 }
-
-function _assertNum(n) {
-    if (typeof(n) !== 'number') throw new Error('expected a number argument');
-}
 /**
-* @param {number} arg0
-* @returns {void}
-*/
-export function __reactify__increment_likes(arg0) {
-    _assertNum(arg0);
-    return wasm.__reactify__increment_likes(arg0);
-}
-
-/**
-* @returns {void}
+* @returns {VElement}
 */
 export function run() {
-    return wasm.run();
+    return VElement.__wrap(wasm.run());
 }
 
 const heap = new Array(32);
@@ -322,7 +309,7 @@ export function __wbindgen_cb_drop(i) {
     return 0;
 }
 
-export function __wbindgen_closure_wrapper262(a, b, _ignored) {
+export function __wbindgen_closure_wrapper268(a, b, _ignored) {
     const f = wasm.__wbg_function_table.get(4);
     const d = wasm.__wbg_function_table.get(5);
     const cb = function(arg0) {
@@ -359,6 +346,33 @@ export class ClosureHandle {
         const ptr = this.ptr;
         this.ptr = 0;
         freeClosureHandle(ptr);
+    }
+
+}
+
+function freeVElement(ptr) {
+
+    wasm.__wbg_velement_free(ptr);
+}
+/**
+*/
+export class VElement {
+
+    constructor() {
+        throw new Error('cannot invoke `new` directly');
+    }
+
+    static __wrap(ptr) {
+        const obj = Object.create(VElement.prototype);
+        obj.ptr = ptr;
+
+        return obj;
+    }
+
+    free() {
+        const ptr = this.ptr;
+        this.ptr = 0;
+        freeVElement(ptr);
     }
 
 }
